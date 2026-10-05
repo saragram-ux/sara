@@ -14,17 +14,17 @@ export default function PlaygroundPage() {
         eyebrow={
           <>
             <span>Playground</span>
-            <span className="tabular-nums">({String(visiblePlayground.length).padStart(2, '0')} entries)</span>
+            <span className="tabular-nums">001 — {visiblePlayground[0]?.id ?? '000'}</span>
           </>
         }
         title={
           <>
-            small <em>things.</em>
+            Small things. Big rabbit <em>holes.</em>
           </>
         }
         lead={
           <>
-            <p>What I’m building and learning while I study frontend development. Some of it works. Some of it is an idea.</p>
+            <p>Experiments, tools and exercises from studying frontend development. Some of it works. Some of it is an idea.</p>
             <p className="mt-4 text-ink-muted">The live ones run right here on the page — no screenshots.</p>
           </>
         }

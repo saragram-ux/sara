@@ -39,13 +39,13 @@ export function useScrollReveal(scope: RefObject<HTMLElement | null>) {
       mm.add(MOTION_OK, () => {
         const items = Array.from(scope.current?.querySelectorAll<HTMLElement>('[data-reveal]') ?? [])
         if (!items.length) return
-        gsap.set(items, { autoAlpha: 0, y: 24 })
+        gsap.set(items, { autoAlpha: 0, y: 12 })
         ScrollTrigger.batch(items, {
           start: 'top 88%',
           once: true,
           onEnter: (batch) =>
             revealGate.wait().then(() =>
-              gsap.to(batch, { autoAlpha: 1, y: 0, duration: duration.slow + 0.3, ease: ease.out, stagger: 0.08, overwrite: true }),
+              gsap.to(batch, { autoAlpha: 1, y: 0, duration: duration.slow + 0.14, ease: ease.out, stagger: 0.05, overwrite: true }),
             ),
         })
       })

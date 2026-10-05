@@ -23,12 +23,9 @@ export function SectionContact() {
       <Grid className="mt-12 gap-y-14 md:mt-16">
         <div data-reveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-3">
           <p className="font-serif text-display-lg">
-            say <em className="text-accent-ink">hi.</em>
+            Inbox <em>open.</em>
           </p>
-          <p className="mt-6 max-w-md text-lead text-ink-muted">
-            Open for freelance and contract work. Remote, across Europe. If that sounds like a fit, just reach out — always
-            happy to chat.
-          </p>
+          <p className="mt-6 max-w-md text-lead text-ink-muted">Freelance and contract work. Remote, across Europe.</p>
 
           {/* Art-directed size: large enough to read as the call to action, small enough to fit on one line. */}
           <a

@@ -32,16 +32,16 @@ export default function CommandMenu({ open, onOpenChange }: { open: boolean; onO
         <CommandEmpty>Nothing here. Try “work” or “email”.</CommandEmpty>
         <CommandGroup heading="Pages">
           <CommandItem onSelect={run(() => go('/'))}>
-            <House /> home
+            <House /> Index
           </CommandItem>
           <CommandItem onSelect={run(() => go('/playground'))}>
-            <Flask /> playground
+            <Flask /> Playground
           </CommandItem>
           <CommandItem onSelect={run(() => go('/about'))}>
-            <User /> about
+            <User /> About
           </CommandItem>
           <CommandItem onSelect={run(() => go('#contact'))}>
-            <EnvelopeSimple /> contact — say hi
+            <EnvelopeSimple /> Contact
           </CommandItem>
         </CommandGroup>
         <CommandGroup heading="Work">
@@ -54,13 +54,13 @@ export default function CommandMenu({ open, onOpenChange }: { open: boolean; onO
         </CommandGroup>
         <CommandGroup heading="Actions">
           <CommandItem onSelect={run(() => navigator.clipboard?.writeText(profile.email))}>
-            <Copy /> copy email address
+            <Copy /> Copy email address
           </CommandItem>
           <CommandItem onSelect={run(() => window.open(profile.linkedin, '_blank', 'noopener'))}>
-            <LinkedinLogo /> open linkedin
+            <LinkedinLogo /> Open LinkedIn
           </CommandItem>
           <CommandItem onSelect={run(toggleGrid)}>
-            <GridFour /> toggle the layout grid
+            <GridFour /> Toggle the layout grid
             <CommandShortcut>G</CommandShortcut>
           </CommandItem>
         </CommandGroup>

@@ -26,7 +26,7 @@ Everything you'd want to update lives in `src/data/`:
 
 | File | What it holds |
 | --- | --- |
-| `brand.ts` | The brand: name, descriptor, menu-card line, sign-off, page-title helper |
+| `brand.ts` | The brand: name, descriptor (UI / Product / Frontend), index helpers (`pad3`, `workIndex`), page titles |
 | `profile.ts` | Name, email, LinkedIn, location, availability, career path, languages, the lines of your own voice used around the site |
 | `projects.ts` | Case studies: metadata, sections, notes, figures. Order = order on the site |
 | `currently.ts` | The **Currently** panel. Bump `updated` when you edit it |
@@ -103,7 +103,7 @@ src/
 ├── data/                      all content, typed (types.ts)
 ├── components/
 │   ├── ui/                    shadcn primitives — never renamed or branded
-│   ├── brand/                 Wordmark (sara lou● — the dot pulses while open for work)
+│   ├── brand/                 Wordmark (sara lou▪ — mono, with an LED that blinks while open for work)
 │   ├── layout/                Container, Section, Grid, Stack, Cluster; SiteLayout, SiteHeader, SiteFooter,
 │   │                          PageHeader, SectionLabel, GridOverlay
 │   ├── navigation/            SiteNav, NavLink, MobileNav, MobileNavTrigger, CommandMenu(+Trigger),
@@ -172,7 +172,7 @@ When adding a custom token, also add it to `extendTailwindMerge` in `src/lib/uti
 
 ## Design tokens
 
-- **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, and one matcha `accent` for dots, fills and selection, plus `accent-ink` for any accent *text*. Never put text in `accent`; it's 2.3:1. All text tokens are ≥ 4.5:1 on paper.
+- **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, and one acid-green `accent` for status LEDs and selection, plus `accent-ink` for the rare accent *text*. Never put text in `accent` on paper. All text tokens are ≥ 4.5:1 on paper.
 - **Type:** three families with fixed roles. *Instrument Serif* for display, *Geist* for reading, *Geist Mono* for metadata. A fluid scale: `text-display-xl/lg/md/sm`, `text-title`, `text-lead`, `text-body`, `text-small`, `text-meta`, `text-micro`, `text-nano`.
 - **Radius / shadow:** `rounded-xs…xl` (crisp by default; `lg` only on iOS-style panels), `shadow-paper/lift/float`.
 

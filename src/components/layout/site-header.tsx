@@ -9,7 +9,7 @@ import { profile } from '@/data/profile'
 import { cn } from '@/lib/utils'
 import { Container } from './container'
 
-/** The sticky top bar: wordmark (+ Sara's full name on wide screens), desktop nav, mobile menu button. */
+/** The sticky top bar: sara lou / UI / PRODUCT / FRONTEND, the nav, the menu button. */
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
 
@@ -28,11 +28,10 @@ export function SiteHeader() {
       )}
     >
       <Container className="flex h-full items-center justify-between gap-6">
-        <TransitionLink to="/" className="group/home -m-1 flex items-baseline gap-4 p-1" aria-label={`${brand.name}, ${profile.name} — home`}>
-          <Wordmark className="transition-colors duration-base group-hover/home:text-accent-ink" />
-          <span className="hidden type-label text-ink-muted xl:inline">
-            {profile.name} · {profile.disciplines.join(' / ')}
-          </span>
+        {/* The lockup: a personal name next to a technical one. Left unresolved on purpose. */}
+        <TransitionLink to="/" className="-m-1 flex items-baseline gap-5 p-1" aria-label={`${brand.name} — ${profile.name}, index`}>
+          <Wordmark />
+          <span className="hidden type-label text-ink-muted lg:inline">{brand.descriptor}</span>
         </TransitionLink>
 
         <SiteNav />

@@ -6,16 +6,16 @@ gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 /** Motion tokens — mirror the CSS variables in globals.css. Seconds, for GSAP. */
 export const duration = {
-  fast: 0.16,
-  base: 0.28,
-  slow: 0.6,
+  fast: 0.12,
+  base: 0.2,
+  slow: 0.36,
   /** one half of a page turn */
-  page: 0.5,
+  page: 0.42,
 } as const
 
 export const ease = {
-  /** arrivals: fast start, long soft landing */
-  out: 'expo.out',
+  /** arrivals: fast start, short landing */
+  out: 'power4.out',
   /** things that travel across the screen */
   inOut: 'power3.inOut',
   /** small, quiet adjustments */

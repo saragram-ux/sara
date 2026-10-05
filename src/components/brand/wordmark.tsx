@@ -4,14 +4,14 @@ import { brand } from '@/data/brand'
 import { profile } from '@/data/profile'
 import { cn } from '@/lib/utils'
 
-const wordmarkVariants = cva('inline-flex items-baseline font-serif leading-none tracking-[-0.02em] whitespace-nowrap', {
+const wordmarkVariants = cva('inline-flex items-baseline font-mono leading-none tracking-[0.01em] whitespace-nowrap', {
   variants: {
     size: {
-      /** header, mobile menu */
-      sm: 'text-[1.5rem]',
-      /** footer sign-off */
-      md: 'text-display-sm',
-      /** inherits the surrounding size (the hero) */
+      /** header, mobile menu, page turn */
+      sm: 'text-[0.9375rem]',
+      /** footer */
+      md: 'text-lead',
+      /** inherits the surrounding size */
       inherit: '',
     },
   },
@@ -21,8 +21,8 @@ const wordmarkVariants = cva('inline-flex items-baseline font-serif leading-none
 type WordmarkProps = VariantProps<typeof wordmarkVariants> & { className?: string }
 
 /**
- * sara lou● — the wordmark. Lowercase Instrument Serif, and a matcha dot where
- * the period would be. The dot pulses while Sara is open for work.
+ * sara lou▪ — set like a product label: lowercase mono, a tiny acid-green LED after it.
+ * The LED blinks while Sara is open for work.
  */
 export function Wordmark({ size, className }: WordmarkProps) {
   return (
@@ -31,7 +31,7 @@ export function Wordmark({ size, className }: WordmarkProps) {
       <span
         aria-hidden
         className={cn(
-          'ml-[0.06em] inline-block size-[max(0.16em,5px)] shrink-0 rounded-full bg-accent',
+          'ml-[0.3em] inline-block size-[0.36em] shrink-0 translate-y-[-0.02em] bg-accent',
           profile.availability.open && 'animate-pulse-dot',
         )}
       />

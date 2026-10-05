@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react'
 
+import { workIndex } from '@/data/brand'
 import type { Figure, Project } from '@/data/types'
 import { withBase } from '@/lib/base'
 import { cn } from '@/lib/utils'
@@ -39,7 +40,6 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
   // Placeholder figures stay neutral so they recede; covers carry the project's tone.
   const tone = figure ? tones.paper : tones[project.plate.tone]
   const Icon = project.plate.icon
-  const no = String(index + 1).padStart(2, '0')
 
   if (image?.src) {
     return (
@@ -74,7 +74,7 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
       <CropMarks />
       <div data-plate-inner className="absolute inset-0 flex flex-col justify-between p-[max(1rem,4.5cqw)]">
         <div className="flex items-start justify-between gap-4 type-label">
-          <span>{figure ? `Fig. ${String(figureIndex ?? 1).padStart(2, '0')}` : `Plate ${no}`}</span>
+          <span>{figure ? `Fig. ${String(figureIndex ?? 1).padStart(2, '0')}` : workIndex(index)}</span>
           <span className="text-right opacity-70">
             {project.title} / {project.year}
           </span>

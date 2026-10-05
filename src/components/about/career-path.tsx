@@ -24,7 +24,7 @@ export function CareerPath() {
                   <StatusDot tone="accent" />
                 )}
               </span>
-              <span className={current ? 'text-small text-accent-ink' : 'text-small'}>
+              <span className="text-small">
                 {step.label}
                 {current && <span className="text-ink-muted"> — in progress</span>}
               </span>

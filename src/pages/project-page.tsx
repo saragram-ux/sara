@@ -21,6 +21,7 @@ export default function ProjectPage() {
 
 function CaseStudy({ project }: { project: Project }) {
   const index = projects.indexOf(project)
+  const next = getNextProject(project.slug)
   return (
     <>
       <article>
@@ -28,7 +29,7 @@ function CaseStudy({ project }: { project: Project }) {
         <ProjectHeader project={project} index={index} total={projects.length} />
         <ProjectCover project={project} index={index} />
         <ProjectContent project={project} index={index} />
-        <ProjectNext project={getNextProject(project.slug)} />
+        <ProjectNext project={next} index={projects.indexOf(next)} />
       </article>
       <SectionContact />
     </>

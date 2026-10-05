@@ -2,6 +2,7 @@ import { ArrowRight } from '@phosphor-icons/react'
 import type { PointerEventHandler } from 'react'
 
 import { TransitionLink } from '@/components/navigation/transition-link'
+import { pad3 } from '@/data/brand'
 import type { Project } from '@/data/types'
 import { cn } from '@/lib/utils'
 import { ProjectPlate } from './project-plate'
@@ -41,10 +42,10 @@ export function ProjectCard({ project, index, active = false, showPlate = false,
       <span
         className={cn(
           'col-span-1 type-label tabular-nums transition-colors duration-base',
-          active ? 'text-accent-ink' : 'text-ink-muted group-hover/row:text-accent-ink',
+          active ? 'text-ink' : 'text-ink-muted group-hover/row:text-ink',
         )}
       >
-        {String(index + 1).padStart(2, '0')}
+        {pad3(index + 1)}
       </span>
 
       <span className="relative col-span-3 overflow-hidden text-right type-label text-ink-muted tabular-nums md:col-span-7 lg:order-last lg:col-span-1">
@@ -53,14 +54,14 @@ export function ProjectCard({ project, index, active = false, showPlate = false,
         </span>
         <span
           aria-hidden
-          className="absolute inset-0 hidden translate-y-full items-center justify-end gap-1 text-accent-ink transition-transform duration-base ease-out-soft lg:flex lg:group-hover/row:translate-y-0 lg:group-focus-visible/row:translate-y-0"
+          className="absolute inset-0 hidden translate-y-full items-center justify-end gap-1 text-ink transition-transform duration-base ease-out-soft lg:flex lg:group-hover/row:translate-y-0 lg:group-focus-visible/row:translate-y-0"
         >
           View <ArrowRight weight="bold" className="size-3" />
         </span>
       </span>
 
       <span className="col-span-4 md:col-span-6 lg:col-span-5 lg:col-start-3">
-        <span className="block font-serif text-display-md transition-transform duration-slow ease-out-soft group-hover/row:translate-x-nudge">
+        <span className="block font-serif text-display-md transition-transform duration-base ease-out-soft group-hover/row:translate-x-nudge">
           {project.title}
         </span>
         <span className="mt-2 block max-w-[34rem] text-small text-ink-muted">{project.summary}</span>

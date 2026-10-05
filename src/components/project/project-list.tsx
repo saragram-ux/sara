@@ -21,24 +21,20 @@ export function ProjectList({ projects }: { projects: Project[] }) {
   const motionOk = useMediaQuery(MOTION_OK)
   const showPreview = finePointer && motionOk
 
-  // Cursor-following preview: quickTo for position, velocity for a little tilt.
+  // Cursor-following preview.
   const { contextSafe } = useGSAP(
     () => {
       if (!showPreview || !previewRef.current) return
       const el = previewRef.current
       // sit just right of the cursor, so the hovered title stays readable
-      gsap.set(el, { xPercent: 12, yPercent: -50, scale: 0.9, autoAlpha: 0 })
-      const xTo = gsap.quickTo(el, 'x', { duration: 0.55, ease: 'power3' })
-      const yTo = gsap.quickTo(el, 'y', { duration: 0.55, ease: 'power3' })
-      const rTo = gsap.quickTo(el, 'rotation', { duration: 0.8, ease: 'power3' })
-      let lastX = 0
+      gsap.set(el, { xPercent: 12, yPercent: -50, scale: 0.96, autoAlpha: 0 })
+      // quick and exact: it follows, it doesn't float
+      const xTo = gsap.quickTo(el, 'x', { duration: 0.28, ease: 'power3' })
+      const yTo = gsap.quickTo(el, 'y', { duration: 0.28, ease: 'power3' })
       const onMove = (e: PointerEvent) => {
         const bounds = listRef.current!.getBoundingClientRect()
-        const x = e.clientX - bounds.left
-        xTo(x)
+        xTo(e.clientX - bounds.left)
         yTo(e.clientY - bounds.top)
-        rTo(gsap.utils.clamp(-6, 6, (e.clientX - lastX) * 0.35))
-        lastX = e.clientX
       }
       const list = listRef.current!
       list.addEventListener('pointermove', onMove)
@@ -49,11 +45,11 @@ export function ProjectList({ projects }: { projects: Project[] }) {
 
   const enter = contextSafe((i: number) => {
     setActive(i)
-    gsap.to('[data-preview]', { autoAlpha: 1, scale: 1, duration: 0.45, ease: 'expo.out' })
+    gsap.to('[data-preview]', { autoAlpha: 1, scale: 1, duration: 0.22, ease: 'power3.out' })
   })
   const leave = contextSafe(() => {
     setActive(null)
-    gsap.to('[data-preview]', { autoAlpha: 0, scale: 0.92, duration: 0.3, ease: 'power2.out' })
+    gsap.to('[data-preview]', { autoAlpha: 0, scale: 0.96, duration: 0.16, ease: 'power2.out' })
   })
 
   return (

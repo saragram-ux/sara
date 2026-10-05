@@ -15,16 +15,16 @@ export function SectionPlayground() {
   const items = visiblePlayground.slice(0, 3)
   return (
     <Section ref={ref} aria-labelledby="playground-title">
-      <SectionLabel index="03" id="playground-title" aside={`(${String(visiblePlayground.length).padStart(2, '0')})`}>
+      <SectionLabel index="03" id="playground-title" aside={`001 — ${visiblePlayground[0]?.id ?? '000'}`}>
         Playground
       </SectionLabel>
 
       <Grid className="mt-12 gap-y-6 md:mt-16">
         <h3 data-reveal className="col-span-4 font-serif text-display-md md:col-span-6 lg:col-span-5 lg:col-start-3">
-          small <em>things.</em>
+          Small things. Big rabbit <em>holes.</em>
         </h3>
         <p data-reveal className="col-span-4 text-lead text-ink-muted md:col-span-5 lg:col-span-4 lg:col-start-3">
-          A lab notebook of what I’m building and learning right now. Unfinished, on purpose.
+          What I’m building and learning right now. Unfinished, on purpose.
         </p>
       </Grid>
 

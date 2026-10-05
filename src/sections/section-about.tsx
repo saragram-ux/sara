@@ -21,8 +21,7 @@ export function SectionAbout() {
       <Grid className="mt-12 gap-y-14 md:mt-16">
         <div className="col-span-4 md:col-span-8 lg:col-span-6 lg:col-start-3">
           <p data-reveal className="font-serif text-display-md">
-            Graphic design taught me to see. Behavioural science taught me to ask why. Frontend development is teaching me to
-            make it real.
+            I started in graphic design. Then interfaces happened. Now I’m learning to build the whole thing.
           </p>
           <div data-reveal className="mt-10 grid gap-5 text-body md:grid-cols-2 md:gap-gutter">
             <p>
@@ -31,7 +30,7 @@ export function SectionAbout() {
             </p>
             <p className="text-ink-muted">{profile.voice.approach}</p>
           </div>
-          <figure data-reveal className="mt-12 border-l-2 border-accent pl-5">
+          <figure data-reveal className="mt-12 border-l-2 border-ink pl-5">
             <blockquote className="font-serif text-display-sm italic">“{profile.voice.motto}”</blockquote>
           </figure>
           <div data-reveal className="mt-10">

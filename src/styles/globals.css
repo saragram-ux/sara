@@ -11,7 +11,7 @@
    ========================================================================== */
 
 :root {
-  /* Colour — paper, ink, one matcha accent (see BRAND.md) */
+  /* Colour — paper, ink, and one acid-green accent used almost by accident (see BRAND.md) */
   --paper: #f3f0e8;
   --paper-raised: #faf8f3;
   --paper-sunken: #e9e5da;
@@ -20,9 +20,9 @@
   --ink-faint: #6f695e; /* quietest text — still ≥ 4.5:1 on paper */
   --rule: #d9d4c8;
   --rule-strong: #b9b2a3;
-  --accent: #8fac48; /* matcha: dots, caret, selection, fills. never text (2.3:1) */
-  --accent-ink: #4c6620; /* matcha for text: 5.7:1 on paper */
-  --accent-soft: #e4e9cf; /* a quiet tint */
+  --accent: #9dc21b; /* acid green: status dots, selection, the grid overlay. never text on paper */
+  --accent-ink: #4a6400; /* the same green, dark enough for text: 5.9:1 on paper */
+  --accent-soft: #eef3d6; /* a quiet tint */
   --live: var(--accent); /* the status dot is the brand dot */
 
   /* Layout — the page frame */
@@ -41,9 +41,9 @@
 
   /* Motion — mirrored in src/lib/motion.ts for GSAP */
   --nudge: 3px; /* how far a title moves when its row is hovered */
-  --dur-fast: 160ms;
-  --dur-base: 280ms;
-  --dur-slow: 600ms;
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 360ms;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
@@ -170,14 +170,16 @@
       opacity: 0;
     }
   }
-  --animate-pulse-dot: pulse-dot 2.4s var(--ease-in-out) infinite;
+  /* A status LED: on, then briefly off. Mechanical, not breathing. */
+  --animate-pulse-dot: pulse-dot 2.4s steps(1) infinite;
   @keyframes pulse-dot {
     0%,
-    100% {
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 45%, transparent);
+    86% {
+      opacity: 1;
     }
-    50% {
-      box-shadow: 0 0 0 4px color-mix(in srgb, var(--live) 0%, transparent);
+    87%,
+    100% {
+      opacity: 0.25;
     }
   }
 }

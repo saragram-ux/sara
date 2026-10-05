@@ -73,7 +73,7 @@ export function DemoEasingLab() {
         {EASES.map((e, i) => (
           <li key={e.name} className="grid grid-cols-[4rem_1fr] items-center gap-4 sm:grid-cols-[4rem_9rem_1fr]">
             <svg viewBox="0 0 64 40" className="h-10 w-16 rounded-xs border border-rule bg-paper" aria-hidden>
-              <path d={paths[i]} fill="none" stroke="var(--accent)" strokeWidth="1.25" />
+              <path d={paths[i]} fill="none" stroke="var(--ink)" strokeWidth="1.25" />
             </svg>
             <div className="hidden sm:block">
               <p className="type-meta">{e.name}</p>

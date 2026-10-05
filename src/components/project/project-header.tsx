@@ -2,6 +2,7 @@ import { ArrowLeft } from '@phosphor-icons/react'
 
 import { PageHeader } from '@/components/layout/page-header'
 import { TransitionLink } from '@/components/navigation/transition-link'
+import { pad3, workIndex } from '@/data/brand'
 import type { Project } from '@/data/types'
 import { ProjectMeta } from './project-meta'
 
@@ -23,7 +24,7 @@ export function ProjectHeader({ project, index, total }: ProjectHeaderProps) {
             Work
           </TransitionLink>
           <span className="tabular-nums">
-            Case {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
+            {workIndex(index)} <span className="text-ink-faint">/ {pad3(total)}</span>
           </span>
         </>
       }

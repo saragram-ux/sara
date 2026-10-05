@@ -11,7 +11,6 @@ export const currently: { updated: string; items: NowItem[] } = {
     { verb: 'building', what: 'small things in react' },
     { verb: 'using', what: 'react + vite' },
     { verb: 'studying', what: 'front end development' },
-    { verb: 'running', what: 'handsdown studio' },
     { verb: 'exploring', what: 'supabase + postgresql' },
     { verb: 'thinking about', what: 'clearer interfaces' },
   ],

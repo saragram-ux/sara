@@ -16,8 +16,8 @@ import { Stack } from './stack'
 const year = new Date().getFullYear()
 
 /**
- * Footer: the sara lou sign-off (like a little menu card), index, elsewhere, colophon;
- * then the first line of the currently board, keyboard hints and back-to-top.
+ * Footer: the label (sara lou / UI / PRODUCT / FRONTEND / Sara Gramstad / Sweden), index,
+ * elsewhere, colophon; then the first line of the currently board, keyboard hints, back to top.
  */
 export function SiteFooter() {
   const toTop = () => {
@@ -31,12 +31,11 @@ export function SiteFooter() {
         <Grid className="gap-y-10">
         <div className="col-span-4 md:col-span-3 lg:col-span-4">
           <Wordmark size="md" />
-          <p className="mt-3 font-serif text-title italic">{brand.descriptor}</p>
-          <p className="mt-3 max-w-xs text-small text-ink-muted">{brand.description}</p>
-          <p className="mt-5 type-label text-ink-muted">
-            {profile.name} · {profile.location}
+          <p className="mt-4 grid gap-1 type-label text-ink-muted">
+            <span>{brand.descriptor}</span>
+            <span className="text-ink">{profile.name}</span>
+            <span>{brand.country}</span>
           </p>
-          <p className="mt-1 type-meta text-ink-muted">{brand.signoff.join(' · ')}</p>
         </div>
 
         <nav aria-label="Footer" className="col-span-2 md:col-span-2 lg:col-span-2">
@@ -44,7 +43,7 @@ export function SiteFooter() {
           <Stack as="ul" gap="xs" className="mt-4 text-small">
             <li>
               <TransitionLink to="/" className="link-underline-draw">
-                home
+                Index
               </TransitionLink>
             </li>
             {navigation.map((item) => (
@@ -62,12 +61,12 @@ export function SiteFooter() {
           <Stack as="ul" gap="xs" className="mt-4 text-small">
             <li>
               <a href={profile.linkedin} target="_blank" rel="noreferrer" className="link-underline-draw">
-                linkedin
+                LinkedIn
               </a>
             </li>
             <li>
               <a href={`mailto:${profile.email}`} className="link-underline-draw">
-                email
+                Email
               </a>
             </li>
           </Stack>
@@ -76,7 +75,7 @@ export function SiteFooter() {
         <div className="col-span-4 md:col-span-8 lg:col-span-4">
           <h2 className="type-label text-ink-muted">Colophon</h2>
           <p className="mt-4 max-w-sm text-small text-ink-muted">
-            sara lou is {profile.name}. Designed and built in the browser. Set in <span className="font-serif text-[1.1em] text-ink italic">Instrument Serif</span>,
+            Designed and built in the browser. Set in <span className="font-serif text-[1.1em] text-ink italic">Instrument Serif</span>,
             Geist and <span className="font-mono text-[0.9em] text-ink">Geist Mono</span>. Made with React, TypeScript, Vite,
             Tailwind and a little GSAP.
           </p>

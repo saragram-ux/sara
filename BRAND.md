@@ -1,124 +1,113 @@
-# sara lou — brand notes
+# sara lou — brand notes (v2)
 
-> sara lou is the wrapper. Sara Gramstad is the person. The work is the proof.
+> A small, very well-made corner of the internet belonging to Sara Gramstad.
+> A little precise. A little strange. Not trying to impress you.
 
-The rule for everything below: **99% restraint, 1% personality.** The brand is a handful of small things repeated consistently, not a logo stamped on every surface.
+**v2 is a correction.** v1 drifted soft: a cute serif wordmark, a pastel dot, slogans ("details, yes · ceremony, no"), a sign-off like a café menu. v2 returns to what was actually distinctive, the intro screen:
+
+```
+sara lou ▪                          UI / PRODUCT / FRONTEND
+
+
+SARA GRAMSTAD                                   000 / 100
+```
+
+Everything else follows from that screen. **Rule of thumb: when unsure, pick the stranger, sharper, more specific option.**
 
 ---
 
 ## Name
 
-**sara lou**: Sara Louise, shortened. Always lowercase, two words.
+**sara lou** is the public name, **Sara Gramstad** the person. The name stands there without explanation. Nothing on the site says what "sara lou" means or why it exists.
 
-| | sara lou | Sara Gramstad |
-| --- | --- | --- |
-| Memorable after hearing it once | yes | needs spelling outside Sweden ("Gram-stad") |
-| Sounds like | a person *and* a small label | a person's CV |
-| Ownable | a name nobody else is using for this | fine, but it's a surname, not a brand |
-| Room to grow | portfolio, shop, side projects, newsletter | portfolio |
-| Search & professional clarity | weak alone | strong |
+The interesting part is the **tension in the lockup**: a personal name next to a technical one. Don't resolve it.
 
-**Decision:** the brand is *sara lou*, and *Sara Gramstad* is always visibly the person behind it. That's in the page title, the hero, the About page, the footer, metadata, structured data and every contact point. The full name supplies the authority; the short name is what people remember.
+```
+sara lou ▪   UI / PRODUCT / FRONTEND
+```
 
-**The period, explored.** Written with a period, "sara lou." reads as a statement, which is nice once but turns cute when repeated, and it collides with punctuation in sentences. A plain "sara lou" is clean but anonymous. **Chosen:** the period becomes a **matcha dot** that sits where a period would. It's also the "available" signal, so it means something.
-
-**No agency name.** There's no studio, labs or co.; it's a person.
+Sara Gramstad is always present as plain metadata: the index strip, About, the footer, page titles and structured data.
 
 ## Domain
 
-| | saralou.co | saragramstad.com |
-| --- | --- | --- |
-| Remember after hearing once | yes | rarely |
-| Say it out loud | "sara lou dot co" (risk: people type .com) | "sara gram-stad dot com" + spelling |
-| Email | hi@saralou.co, which is lovely | sara@saragramstad.com, which is long but clear |
-| Feels like | a small brand | a professional profile |
+**saralou.co** for the site and email, with **saragramstad.com** registered and redirecting to it. (Checked 2026-10: saralou.com is taken, and saralou.co / saragramstad.com don't resolve, so they're probably free; confirm at a registrar.) The domain isn't the brand; the site is.
 
-**Recommendation:** use **saralou.co** as the site and email, and register **saragramstad.com** too and redirect it to the main site. That protects the name, catches anyone who searches for it, and covers the .co/.com slip. (Checked 2026-10: `saralou.com` is already registered by someone, and `saralou.co` and `saragramstad.com` don't resolve, which suggests they're free; confirm at a registrar.) If saralou.co turns out to be taken, use **saragramstad.com** rather than an odd variation.
+## The idea
 
-## Positioning
+**A public notebook belonging to a designer who codes.** Notepad + design system + internet artifact: indexes, numbers, statuses and unfinished things, all extremely polished.
 
-**Sara Gramstad designs interfaces, products and websites, then builds them, so they end up clearer for the people using them and easier for the people making them.**
-
-The thread isn't Figma, Webflow or React. It's *making things clearer*. That idea shapes the voice; it isn't used as a slogan.
-
-## The menu test
-
-If sara lou were on the menu next to the house blend:
-
-> **sara lou**
-> designer who builds.
-> Interfaces, products & websites. Designed carefully, built properly.
->
-> `details, yes · ceremony, no · remote, across europe`
-
-Also considered: "design, frontend and the bits in between", "good design. good code. less fuss.", "a designer who likes making things work", "clear interfaces, carefully built". "Designer who builds" was kept because it was already the site's strongest line, and the menu-card description beneath it does the explaining. "Details, yes. Ceremony, no." comes straight from Sara's own words: *details matter to me, but never more than momentum.*
+Roughly 70% editorial, 20% technical notebook, 10% internet artifact.
 
 ## Personality
 
-clear · warm · dry · precise · unhurried · hands-on · quietly technical
+crisp · dry · precise · slightly odd · independent · technical · understated · a little deadpan
 
-Someone you'd want to work with, not someone trying to convince you they're creative.
+It is not: friendly-designer-next-door, boutique studio, lifestyle brand, developer portfolio, "warm independent creative".
 
 ## Voice
 
-Short sentences. Plain words. A dry joke at most once per page. Confident without explaining why. Never salesy, never self-important, and no LinkedIn-speak ("passionate", "crafting experiences", "leveraging", "impactful solutions").
+Matter-of-fact. Say the thing and stop. A deadpan line is allowed once per page, and it's usually the headline. The facts underneath stay serious. Never explain the brand, never say "passionate", and no slogans.
 
-**Two registers, one rule:**
-- **Brand words are lowercase.** Names and short labels people say out loud: *sara lou*, *work*, *playground*, *say hi*, *small things*, *the long version*.
-- **System words are UPPERCASE MONO.** Metadata, indexes and status: `01 — SELECTED WORK`, `OPEN FOR WORK`, `FIG. 02`.
-- **Sentences stay in sentence case**, so "I" stays "I".
+| Use | Instead of |
+| --- | --- |
+| Designer. Builder. Detail person. | Designer who builds beautiful things |
+| Designer by trade. Builder by increasingly frequent necessity. | Hi, I'm Sara! |
+| I started in graphic design. Then interfaces happened. Now I'm learning to build the whole thing. | Graphic design taught me to see… |
+| Small things. Big rabbit holes. | A lab notebook of my experiments |
+| Inbox open. | Let's make something / say hi |
+| Freelance and contract work. Remote, across Europe. | Always happy to chat! |
+
+## Credibility layer
+
+The personality sits on top of plain facts, stated early: designing interfaces since 2018, five years at Hellofolk, co-founder of Handsdown Studio, design systems, Webflow, BA in Graphic Design, frontend development studies. The brand makes Sara memorable; it must never make her look less experienced.
 
 ## Vocabulary
 
-| Thing | Word |
-| --- | --- |
-| brand / person | sara lou · Sara Gramstad |
-| what she is | designer who builds |
-| navigation | work · playground · about · contact |
-| projects | selected work |
-| playground | small things |
-| status board | currently: learning · building · using · studying · running · thinking about |
-| experience | experience · the long version |
-| contact | say hi |
-| availability | open for work · remote, across europe |
-| sign-off | details, yes · ceremony, no |
-| quality | designed carefully, built properly |
+**System words (UPPERCASE MONO):** INDEX · WORK · PLAYGROUND · ABOUT · CONTACT · CURRENTLY · OPEN FOR WORK · LIVE · BUILDING · IDEA · NEXT · SINCE
 
-Not used, on purpose: "the kitchen" and other café language. The matcha exercise was a way of thinking, not a theme.
+**Numbers:**
+- `000 / 100`: the intro count
+- `INDEX / 000`: the home page
+- `WORK / 001` – `004`: projects, on plates, case headers and the "next" link
+- `PLAYGROUND / 004`: experiments, newest first
+- `01 / 02 / 03`: sections of a page
+- `FIG. 02`: figures
+
+**Notebook words (lowercase, only inside the currently board):** learning · building · using · studying · exploring · thinking about
 
 ## Colour
 
 | Role | Token | Value |
 | --- | --- | --- |
-| Primary (paper) | `--paper` / `--paper-raised` / `--paper-sunken` | #f3f0e8 / #faf8f3 / #e9e5da |
-| Secondary (ink) | `--ink` / `--ink-muted` / `--ink-faint` | #161513 / #5c574e / #6f695e |
-| Accent (matcha) | `--accent` | #8fac48: dots, the caret, selection, fills. Never text (2.3:1) |
-| Accent for text | `--accent-ink` | #4c6620: active nav, links on hover, small labels (5.7:1) |
-| Accent tint | `--accent-soft` | #e4e9cf: rare quiet fills |
+| Paper | `--paper` / `-raised` / `-sunken` | #f3f0e8 / #faf8f3 / #e9e5da |
+| Ink | `--ink` / `-muted` / `-faint` | #161513 / #5c574e / #6f695e |
+| Accent (acid green) | `--accent` | #9dc21b: status LEDs, the wordmark LED, text selection, the grid tool. Never text on paper |
+| Accent for text | `--accent-ink` | #4a6400: the active nav index, link hover. That's it |
 
-Matcha replaces the old red pencil, so there is still exactly one accent. On ink (the page-turn panel and intro) the matcha dot reaches 7:1.
+The green should feel almost accidental: a tiny LED, one active state, one hover underline. Headlines, numbers, arrows and rules are ink.
 
 ## Typography
 
-Unchanged, and part of the recognition:
-- **Display:** Instrument Serif (the wordmark, headlines)
-- **Body:** Geist
-- **Mono:** Geist Mono (metadata, the system voice)
+- **Geist Mono:** the name, the system voice, every number
+- **Instrument Serif:** statements and titles, never the name
+- **Geist:** reading
+
+This keeps the pairing editorial + technical. The serif is for sentences, not for being sweet.
 
 ## Wordmark
 
-`sara lou●`: Instrument Serif, lowercase, slightly tight, with the matcha dot sitting on the baseline where a period would go. The dot pulses gently while Sara is open for work and stays still otherwise.
-
-There's no separate monogram. The favicon is the one place a mark is needed: lowercase **sl** plus the dot, on ink. The old SG stamp is retired so there's one mark, not two.
+`sara lou▪`: Geist Mono, lowercase, with a tiny square acid-green LED after it that blinks (on/off, not breathing) while Sara is open for work. There's no logo and no monogram; the favicon is `sl▪` on ink.
 
 ## Brand devices
 
-1. **The matcha dot.** It's the period of the wordmark, the "open for work" status, the active-page marker and the bullet of the currently board. One dot, one meaning: *live, here, now*.
-2. **The currently board.** Lowercase verbs, plain nouns, a date stamp. It appears on the home page, and its first line repeats in the footer. It's a status board, not a skill matrix.
+1. **The index.** Everything is numbered like an archive: `000`, `WORK / 001`, `PLAYGROUND / 004`, `FIG. 02`. The page turn shows the destination's number before its title.
+2. **The LED.** One tiny square of acid green, in the same shape everywhere: after the name, beside "open for work", on live experiments, on the currently board.
+3. **The lockup.** `sara lou / UI / PRODUCT / FRONTEND` appears in the intro, the header and the footer.
 
-Supporting details that already existed and now carry the brand: numbered everything (`01`, `PLATE 02`, `FIG. 03`), uppercase mono metadata, 1px ink rules, and the ink page turn.
+## Motion
 
-## Where the brand appears, and where it doesn't
+Quick, exact, slightly mechanical. Short durations (120 / 200 / 360 ms), `power4.out` arrivals, small distances (10–12px), and the cursor preview follows rather than floats (no tilt). The status LED blinks in steps. Nothing breathes, bounces or drifts.
 
-- **Appears:** header wordmark, hero, footer sign-off, page titles, favicon, intro, page-turn label, OG image, contact section.
-- **Doesn't:** project pages, case-study text, the playground demos, section labels. There the work speaks.
+## The test
+
+Cover the name. Is it still recognisable? It should be, by the mono lockup, the numbering, the LED, the ink page turn with an index on it, and the deadpan serif headline over hard facts.

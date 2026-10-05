@@ -24,7 +24,7 @@ export function ProjectChapter({ chapter, number, project, projectIndex, figureI
       <div data-reveal className="grid gap-y-6 md:grid-cols-9 md:gap-x-gutter">
         <div className="md:col-span-6">
           <h2 id={`${chapter.id}-label`} className="type-label text-ink-muted">
-            <span className="text-accent-ink tabular-nums">{String(number).padStart(2, '0')}</span> — {chapter.label}
+            <span className="text-ink tabular-nums">{String(number).padStart(2, '0')}</span> — {chapter.label}
             {chapter.draft && <span className="ml-2 text-accent-ink">(draft · dev only)</span>}
           </h2>
           {chapter.title && <p className="mt-5 font-serif text-display-sm">{chapter.title}</p>}

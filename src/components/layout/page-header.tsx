@@ -17,8 +17,8 @@ export function PageHeader({ eyebrow, title, lead, aside }: PageHeaderProps) {
   const ref = useRef<HTMLElement>(null)
   usePageEntrance(ref, (tl) => {
     tl.from('[data-page-header="eyebrow"]', { autoAlpha: 0, y: 8, duration: duration.slow, ease: ease.out })
-      .from('[data-page-header="title"]', { yPercent: 105, duration: 1.05, ease: ease.out }, 0.05)
-      .from('[data-page-header="fade"]', { autoAlpha: 0, y: 16, duration: 0.9, ease: ease.out, stagger: 0.08 }, 0.35)
+      .from('[data-page-header="title"]', { yPercent: 105, duration: 0.62, ease: ease.out }, 0.04)
+      .from('[data-page-header="fade"]', { autoAlpha: 0, y: 10, duration: 0.5, ease: ease.out, stagger: 0.05 }, 0.22)
   })
   return (
     <Container as="header" ref={ref} className="pt-page-top">

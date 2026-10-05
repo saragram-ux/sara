@@ -2,7 +2,6 @@ import { ArrowDown } from '@phosphor-icons/react'
 import { useRef } from 'react'
 
 import { CareerPath } from '@/components/about/career-path'
-import { Wordmark } from '@/components/brand/wordmark'
 import { StatusPanel } from '@/components/about/status-panel'
 import { Cluster } from '@/components/layout/cluster'
 import { Grid } from '@/components/layout/grid'
@@ -11,69 +10,72 @@ import { AnimatedLink } from '@/components/motion/animated-link'
 import { usePageTransition } from '@/components/motion/transition-context'
 import { usePageEntrance } from '@/components/motion/use-reveal'
 import { Button } from '@/components/ui/button'
+import { brand } from '@/data/brand'
 import { profile } from '@/data/profile'
 import { duration, ease } from '@/lib/motion'
+import { cn } from '@/lib/utils'
 
-/** Home, first screen: the brand, the person, what she does, where she's heading, how to say hi. */
+/** Home, first screen. The index page of the notebook: 000. */
 export function SectionHero() {
   const ref = useRef<HTMLElement>(null)
   const { go } = usePageTransition()
 
   usePageEntrance(ref, (tl) => {
-    tl.from('[data-hero="meta"] > *', { autoAlpha: 0, y: 8, duration: duration.slow, ease: ease.out, stagger: 0.05 })
-      .from('[data-hero="line"]', { yPercent: 105, duration: 1.1, ease: ease.out, stagger: 0.09 }, 0.05)
-      .from('[data-hero="fade"]', { autoAlpha: 0, y: 16, duration: 0.9, ease: ease.out, stagger: 0.08 }, 0.45)
-      .from('[data-hero="panel"]', { autoAlpha: 0, y: 24, duration: 1, ease: ease.out }, 0.55)
-      .from('[data-hero="rule"]', { scaleX: 0, transformOrigin: 'left', duration: 1.2, ease: ease.inOut }, 0.6)
-      .from('[data-hero="step"]', { autoAlpha: 0, y: 8, duration: 0.6, ease: ease.out, stagger: 0.07 }, 0.9)
+    tl.from('[data-hero="meta"] > *', { autoAlpha: 0, duration: duration.fast, ease: 'none', stagger: 0.06 })
+      .from('[data-hero="line"]', { yPercent: 105, duration: 0.6, ease: ease.out, stagger: 0.07 }, 0.08)
+      .from('[data-hero="fade"]', { autoAlpha: 0, y: 10, duration: 0.45, ease: ease.out, stagger: 0.05 }, 0.32)
+      .from('[data-hero="panel"]', { autoAlpha: 0, y: 12, duration: 0.5, ease: ease.out }, 0.38)
+      .from('[data-hero="rule"]', { scaleX: 0, transformOrigin: 'left', duration: 0.7, ease: ease.inOut }, 0.4)
+      .from('[data-hero="step"]', { autoAlpha: 0, duration: duration.fast, ease: 'none', stagger: 0.06 }, 0.62)
   })
+
+  // Three plain words for three plain facts. Each line steps in by one column.
+  const lines = [
+    { text: 'Designer.', indent: '' },
+    { text: 'Builder.', indent: 'pl-[0.6em] md:pl-[8.333%]' },
+    { text: 'Detail person.', indent: 'pl-[1.2em] md:pl-[16.666%]' },
+  ]
 
   return (
     <Section ref={ref} spacing="hero" aria-labelledby="hero-title">
-      {/* Metadata strip */}
+      {/* Index strip — the same line the intro ends on */}
       <Grid data-hero="meta" className="gap-y-2 type-label text-ink-muted">
-        <span className="col-span-4 md:col-span-2">
-          {profile.name}
-          <span className="md:hidden"> · {profile.disciplines.join(' / ')}</span>
-        </span>
-        <span className="hidden md:col-span-3 md:block lg:col-span-6 lg:col-start-3">{profile.titles.join(' · ')}</span>
+        <span className="col-span-2 tabular-nums md:col-span-2">Index / 000</span>
+        <span className="col-span-2 text-right md:col-span-3 md:text-left lg:col-span-4 lg:col-start-3">{profile.name}</span>
         <span className="hidden md:col-span-3 md:block md:text-right lg:col-span-4 lg:col-start-9">
-          {profile.location} → Remote EU
+          {profile.location}
         </span>
       </Grid>
 
-      {/* The wordmark, then what she is. Line two's indent is art-directed: two columns at md+. */}
       <h1 id="hero-title" className="mt-10 font-serif text-display-xl md:mt-14">
-        <span className="reveal-line">
-          <span data-hero="line" className="block">
-            <Wordmark size="inherit" />
-          </span>
+        <span className="sr-only">
+          {brand.name} — {profile.name}.{' '}
         </span>
-        <span className="sr-only">, {profile.name} — </span>
-        <span className="reveal-line">
-          <span data-hero="line" className="block pl-[0.9em] text-display-lg md:pl-[16.666%]">
-            designer who <em>builds.</em>
+        {lines.map((line) => (
+          <span key={line.text} className="reveal-line">
+            <span data-hero="line" className={cn('block', line.indent)}>
+              {line.text}
+            </span>
           </span>
-        </span>
+        ))}
       </h1>
 
       <Grid className="mt-12 gap-y-12 md:mt-16">
-        {/* Introduction */}
         <div className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-3">
           <p data-hero="fade" className="text-lead">
-            I’m {profile.name}, a UI and product designer and co-founder of{' '}
-            <span className="whitespace-nowrap">{profile.studio.name}</span>. I design interfaces, products and websites for
-            startups and established brands across Europe, and then I build them.
+            Designing interfaces since 2018. Co-founder of{' '}
+            <span className="whitespace-nowrap">{profile.studio.name}</span>. UI, product design and design systems for
+            startups and established brands across Europe. Designed in Figma, built in Webflow.
           </p>
           <p data-hero="fade" className="mt-4 text-lead text-ink-muted">
-            Now studying frontend development, so the gap between the design and the build keeps getting smaller.
+            Currently learning to build the rest of it in code.
           </p>
           <Cluster data-hero="fade" className="mt-8">
             <Button onClick={() => go('#work')}>
-              Selected work
-              <ArrowDown aria-hidden weight="bold" className="size-3.5 transition-transform group-hover/button:translate-y-0.5" />
+              Work
+              <ArrowDown aria-hidden weight="bold" className="size-3.5 transition-transform duration-fast group-hover/button:translate-y-0.5" />
             </Button>
-            <AnimatedLink href="#contact">Say hi</AnimatedLink>
+            <AnimatedLink href="#contact">Contact</AnimatedLink>
           </Cluster>
         </div>
 

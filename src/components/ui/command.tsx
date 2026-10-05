@@ -72,7 +72,7 @@ function CommandItem({ className, ...props }: React.ComponentProps<typeof Comman
       data-slot="command-item"
       className={cn(
         'flex cursor-pointer items-center gap-3 rounded-md px-2 py-2.5 text-small outline-none select-none',
-        'data-[selected=true]:bg-paper-sunken [&_svg]:size-4 [&_svg]:text-ink-muted data-[selected=true]:[&_svg]:text-accent-ink',
+        'data-[selected=true]:bg-paper-sunken [&_svg]:size-4 [&_svg]:text-ink-muted data-[selected=true]:[&_svg]:text-ink',
         className,
       )}
       {...props}

@@ -9,18 +9,18 @@ interface NavLinkProps {
   active: boolean
 }
 
-/** A main-navigation link: small index number + label with a drawing underline. */
+/** A main-navigation link: index number + uppercase mono label with a drawing underline. The active index is the one green thing in the header. */
 export function NavLink({ href, label, index, active }: NavLinkProps) {
   return (
     <TransitionLink
       to={href}
       aria-current={active ? 'page' : undefined}
-      className="group/nav flex items-baseline gap-1.5 py-2 text-small transition-colors hover:text-accent-ink"
+      className="group/nav flex items-baseline gap-1.5 py-2 font-mono text-meta tracking-[0.04em] uppercase"
     >
       <span
         className={cn(
-          'font-mono text-nano tabular-nums transition-colors',
-          active ? 'text-accent-ink' : 'text-ink-faint group-hover/nav:text-accent-ink',
+          'text-nano tabular-nums transition-colors duration-fast',
+          active ? 'text-accent-ink' : 'text-ink-faint group-hover/nav:text-ink',
         )}
       >
         0{index}

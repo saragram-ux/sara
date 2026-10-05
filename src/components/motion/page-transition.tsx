@@ -3,11 +3,21 @@ import { useLocation } from 'wouter'
 
 import { Wordmark } from '@/components/brand/wordmark'
 import { Container } from '@/components/layout/container'
+import { workIndex } from '@/data/brand'
+import { projects } from '@/data/projects'
 import { duration, ease, gsap, prefersReducedMotion, revealGate, ScrollTrigger } from '@/lib/motion'
 import { preloadRoute } from '@/routes'
 import { TransitionContext } from './transition-context'
 
-const routeLabel = (pathname: string) => (pathname === '/' ? 'home' : pathname.split('/').filter(Boolean).join(' / '))
+/** What the page turn says on its way to a route: an index line and a title, like a numbered page. */
+function routeLabel(pathname: string): { index: string; title: string } {
+  if (pathname === '/') return { index: 'Index / 000', title: 'Index' }
+  const project = pathname.startsWith('/work/') ? projects.findIndex((p) => `/work/${p.slug}` === pathname) : -1
+  if (project >= 0) return { index: workIndex(project), title: projects[project].title }
+  if (pathname === '/playground') return { index: 'Playground', title: 'Small things' }
+  if (pathname === '/about') return { index: 'About', title: 'About' }
+  return { index: 'Error / 404', title: 'Nothing here' }
+}
 
 /** Re-measure scroll animations for the new page without restoring a stale scroll position. */
 const refreshScroll = () => {
@@ -40,6 +50,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
   const [pathname, navigate] = useLocation()
   const panel = useRef<HTMLDivElement>(null)
   const label = useRef<HTMLSpanElement>(null)
+  const labelIndex = useRef<HTMLSpanElement>(null)
   const busy = useRef(false)
   const positions = useRef(new Map<string, number>())
   const popped = useRef(false)
@@ -101,7 +112,9 @@ export function PageTransition({ children }: { children: ReactNode }) {
       }
 
       revealGate.close()
-      if (label.current) label.current.textContent = routeLabel(url.pathname)
+      const route = routeLabel(url.pathname)
+      if (label.current) label.current.textContent = route.title
+      if (labelIndex.current) labelIndex.current.textContent = route.index
       const el = panel.current
 
       // Cover — and fetch the next page at the same time.
@@ -142,8 +155,11 @@ export function PageTransition({ children }: { children: ReactNode }) {
       >
         <Container className="flex w-full items-end justify-between pb-[calc(var(--gutter)*1.25)]">
           <Wordmark className="text-paper-raised" />
-          <span className="reveal-line">
-            <span ref={label} className="block font-serif text-display-sm" />
+          <span className="flex flex-col items-end gap-2">
+            <span ref={labelIndex} className="type-label text-paper-raised/60 tabular-nums" />
+            <span className="reveal-line">
+              <span ref={label} className="block font-serif text-display-sm" />
+            </span>
           </span>
         </Container>
       </div>

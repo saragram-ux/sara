@@ -19,7 +19,7 @@ export function SectionDisciplines() {
         {disciplines.map((d, i) => (
           <li key={d.discipline} data-reveal className="relative col-span-4 md:col-span-8 lg:col-span-4">
             <div className="flex items-baseline justify-between type-label text-ink-muted">
-              <span className="text-accent-ink">{d.gives}</span>
+              <span className="text-ink">{d.gives}</span>
               <span className="tabular-nums">{d.years}</span>
             </div>
             <h3 className="mt-6 font-serif text-display-sm">{d.discipline}</h3>
@@ -39,7 +39,7 @@ export function SectionDisciplines() {
       </Grid>
       <Grid as="figure" data-reveal className="mt-block-gap">
         <blockquote className="col-span-4 font-serif text-display-md md:col-span-7 lg:col-span-8 lg:col-start-3">
-          “Details matter to me, but never more than <em className="text-accent-ink">momentum.</em>”
+          “Details matter to me, but never more than <em>momentum.</em>”
         </blockquote>
       </Grid>
     </Section>

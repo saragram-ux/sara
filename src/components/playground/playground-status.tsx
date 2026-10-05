@@ -8,7 +8,7 @@ const tones: Record<PlaygroundItemStatus, 'live' | 'ink' | 'muted'> = {
   paused: 'muted',
 }
 
-/** live (matcha, pulsing) · building (ink) · idea / paused (empty ring) */
+/** live (green, blinking) · building (ink) · idea / paused (empty square) */
 export function PlaygroundStatus({ status }: { status: PlaygroundItemStatus }) {
   return (
     <span className="inline-flex items-center gap-1.5 type-label">

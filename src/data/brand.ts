@@ -1,22 +1,23 @@
 /**
- * sara lou — the brand around Sara Gramstad. See BRAND.md for the reasoning.
- * Brand words are lowercase; the person's name is always written in full.
+ * sara lou — the public name. Sara Gramstad — the person. See BRAND.md.
+ * The name stands on its own; nothing on the site explains it.
  */
 export const brand = {
   name: 'sara lou',
   person: 'Sara Gramstad',
-  /** the one-line descriptor, under the name */
-  descriptor: 'designer who builds.',
-  /** the menu-card description */
-  description: 'Interfaces, products & websites. Designed carefully, built properly.',
-  /** the small sign-off line, Sara's own "details matter, but never more than momentum" */
-  signoff: ['details, yes', 'ceremony, no', 'remote, across europe'],
-  /** why the name: shown on the About page */
-  nameNote: 'sara lou is short for Sara Louise. It’s what this little corner of the internet is called; Sara Gramstad is who you’ll be working with.',
+  /** the technical half of the lockup: sara lou / UI / PRODUCT / FRONTEND */
+  descriptor: 'UI / Product / Frontend',
+  country: 'Sweden',
 } as const
+
+/** Three-digit index: 1 → '001'. The site is numbered like an archive. */
+export const pad3 = (n: number) => String(n).padStart(3, '0')
+
+/** 'WORK / 001' for the first project (0-based index in). */
+export const workIndex = (i: number) => `Work / ${pad3(i + 1)}`
 
 /** "About" → "About · sara lou — Sara Gramstad". No argument: the home page title. */
 export function pageTitle(page?: string) {
   const site = `${brand.name} — ${brand.person}`
-  return page ? `${page} · ${site}` : `${site} · UI, Product & Frontend`
+  return page ? `${page} · ${site}` : `${site} · ${brand.descriptor}`
 }

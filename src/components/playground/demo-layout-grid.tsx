@@ -22,7 +22,7 @@ export function DemoLayoutGrid() {
               style={{ gridTemplateColumns: `repeat(${l.cols}, 1fr)` }}
             >
               {Array.from({ length: l.cols }, (_, i) => (
-                <span key={i} className="bg-accent/15" />
+                <span key={i} className="bg-ink/10" />
               ))}
             </div>
             <p className="mt-2 type-label text-ink-muted">
@@ -38,7 +38,7 @@ export function DemoLayoutGrid() {
           aria-pressed={grid}
           className={cn(
             'inline-flex h-9 cursor-pointer items-center gap-2 rounded-sm border px-3 type-label transition-colors',
-            grid ? 'border-accent bg-accent text-paper-raised' : 'border-rule-strong hover:border-ink',
+            grid ? 'border-accent bg-accent text-ink' : 'border-rule-strong hover:border-ink',
           )}
         >
           {grid ? 'Hide grid' : 'Show grid'}
