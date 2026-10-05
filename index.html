@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sara Gramstad — Designer who builds</title>
+    <meta
+      name="description"
+      content="Sara Gramstad — UI designer, product designer and frontend developer. Co-founder of Handsdown Studio. Open for freelance and contract work, remote across Europe."
+    />
+    <meta name="theme-color" content="#f3f0e8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sara Gramstad — Designer who builds" />
+    <meta property="og:description" content="UI · Product · Frontend. Co-founder of Handsdown Studio." />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Intro: decide before first paint whether it runs at all -->
+    <script>
+      try {
+        if (sessionStorage.getItem('sg:intro') || matchMedia('(prefers-reduced-motion: reduce)').matches)
+          document.documentElement.classList.add('no-intro')
+      } catch (e) {
+        document.documentElement.classList.add('no-intro')
+      }
+    </script>
+    <style>
+      #intro {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: clamp(1.25rem, 0.6rem + 2.2vw, 2.5rem);
+        background: #161513;
+        color: #faf8f3;
+        font: 450 11px/1.3 ui-monospace, 'SF Mono', Menlo, monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        will-change: transform;
+      }
+      .no-intro #intro {
+        display: none;
+      }
+      #intro .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      #intro .muted {
+        opacity: 0.55;
+      }
+      #intro-bar {
+        height: 1px;
+        background: #faf8f3;
+        transform: scaleX(0);
+        transform-origin: left;
+        margin-bottom: 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="intro" aria-hidden="true">
+      <div class="row">
+        <span>SG — Index</span>
+        <span class="muted">UI / Product / Frontend</span>
+      </div>
+      <div>
+        <div id="intro-bar"></div>
+        <div class="row">
+          <span>Sara Gramstad</span>
+          <span><span id="intro-count">000</span> <span class="muted">/ 100</span></span>
+        </div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

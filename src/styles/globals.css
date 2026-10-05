@@ -1,0 +1,331 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@fontsource-variable/geist/wght.css';
+@import '@fontsource-variable/geist-mono/wght.css';
+@import '@fontsource/instrument-serif/400.css';
+@import '@fontsource/instrument-serif/400-italic.css';
+
+/* ==========================================================================
+   Design tokens
+   Tune the whole site from here. Everything else reads these variables.
+   ========================================================================== */
+
+:root {
+  /* Colour — paper, ink, one red pencil */
+  --paper: #f3f0e8;
+  --paper-raised: #faf8f3;
+  --paper-sunken: #e9e5da;
+  --ink: #161513;
+  --ink-muted: #5c574e; /* ≥ 4.5:1 on paper — safe for small text */
+  --ink-faint: #6f695e; /* quietest text — still ≥ 4.5:1 on paper */
+  --rule: #d9d4c8;
+  --rule-strong: #b9b2a3;
+  --accent: #c2410c;
+  --accent-ink: #a8370a; /* accent used as small text */
+  --accent-soft: #f1dccf;
+  --live: #3f7d4e; /* status dot only */
+
+  /* Layout */
+  --page-max: 90rem;
+  --gutter: clamp(1.25rem, 0.6rem + 2.2vw, 2.5rem);
+  --header-h: 3.5rem;
+  --space-section: clamp(3.5rem, 2rem + 4.5vw, 6.5rem); /* applied top + bottom */
+  --space-block: clamp(3rem, 2rem + 3vw, 5rem);
+
+  /* Motion — mirrored in src/lib/motion.ts for GSAP */
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 600ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* shadcn semantic aliases, so future `shadcn add` components fit in */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper-raised);
+  --card-foreground: var(--ink);
+  --popover: var(--paper-raised);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper-raised);
+  --secondary: var(--paper-sunken);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-sunken);
+  --muted-foreground: var(--ink-muted);
+  --accent-foreground: var(--ink);
+  --destructive: #b42318;
+  --border: var(--rule);
+  --input: var(--rule-strong);
+  --ring: var(--accent);
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  /* Colours → bg-paper, text-ink, border-rule, text-accent … */
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunken: var(--paper-sunken);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-live: var(--live);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Type families: serif for display, sans for reading, mono for metadata */
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale → text-display-xl, text-lead, text-meta … */
+  --text-display-xl: clamp(3.4rem, 1.2rem + 9.2vw, 10rem);
+  --text-display-xl--line-height: 0.88;
+  --text-display-xl--letter-spacing: -0.025em;
+  --text-display-lg: clamp(2.75rem, 1.4rem + 5.6vw, 6.5rem);
+  --text-display-lg--line-height: 0.92;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-md: clamp(2rem, 1.3rem + 2.8vw, 3.75rem);
+  --text-display-md--line-height: 1;
+  --text-display-md--letter-spacing: -0.015em;
+  --text-display-sm: clamp(1.625rem, 1.25rem + 1.4vw, 2.375rem);
+  --text-display-sm--line-height: 1.08;
+  --text-display-sm--letter-spacing: -0.01em;
+  --text-title: 1.25rem;
+  --text-title--line-height: 1.3;
+  --text-title--letter-spacing: -0.012em;
+  --text-lead: clamp(1.125rem, 1rem + 0.45vw, 1.375rem);
+  --text-lead--line-height: 1.45;
+  --text-lead--letter-spacing: -0.012em;
+  --text-body: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  --text-body--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-meta: 0.75rem;
+  --text-meta--line-height: 1.4;
+  --text-meta--letter-spacing: 0.04em;
+  --text-micro: 0.6875rem;
+  --text-micro--line-height: 1.3;
+  --text-micro--letter-spacing: 0.06em;
+
+  /* Radius — mostly crisp, softer only on iOS-style panels */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* Shadows — paper lifting off paper, never glowing */
+  --shadow-paper: 0 1px 0 rgb(22 21 19 / 0.04), 0 1px 2px rgb(22 21 19 / 0.05);
+  --shadow-lift: 0 1px 0 rgb(22 21 19 / 0.04), 0 18px 40px -18px rgb(22 21 19 / 0.28);
+  --shadow-float: 0 1px 0 rgb(22 21 19 / 0.05), 0 30px 60px -24px rgb(22 21 19 / 0.35);
+
+  /* Motion → duration-base, ease-out-soft */
+  --ease-out-soft: var(--ease-out);
+  --ease-in-out-soft: var(--ease-in-out);
+
+  --animate-blink: blink 1.2s steps(1) infinite;
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  --animate-pulse-dot: pulse-dot 2.4s var(--ease-in-out) infinite;
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 45%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--live) 0%, transparent);
+    }
+  }
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--rule);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: calc(var(--header-h) + 1.5rem);
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--paper);
+    /* A whisper of paper grain. One cached tile, no blend modes. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.09 0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--paper-raised);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   Layout primitives — a page container and the 4 / 8 / 12 column grid
+   ========================================================================== */
+
+@utility page {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@utility page-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+@utility section-space {
+  padding-block: var(--space-section);
+}
+
+/* Small monospaced uppercase label — the notebook voice */
+@utility label-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  line-height: var(--text-micro--line-height);
+  letter-spacing: var(--text-micro--letter-spacing);
+  text-transform: uppercase;
+  font-weight: 450;
+}
+
+@utility meta-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  line-height: var(--text-meta--line-height);
+  letter-spacing: 0.01em;
+}
+
+/* Hairline rule that respects the grid */
+@utility hairline {
+  height: 1px;
+  background: var(--rule);
+  border: 0;
+}
+
+/* Editorial body copy */
+@utility prose-editorial {
+  font-size: var(--text-body);
+  line-height: 1.65;
+  color: var(--ink);
+  max-width: 38rem;
+  & p + p {
+    margin-top: 1em;
+  }
+}
+
+/* Masked line used by GSAP text reveals */
+@utility line-mask {
+  display: block;
+  overflow: clip;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+/* Underline that draws itself — used by AnimatedLink */
+@utility link-draw {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--dur-base) var(--ease-out);
+  &:hover,
+  &:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+@utility link-underlined {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: var(--rule-strong);
+  transition: text-decoration-color var(--dur-fast) ease;
+  &:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+/* ==========================================================================
+   Reduced motion: keep function, drop decoration
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
