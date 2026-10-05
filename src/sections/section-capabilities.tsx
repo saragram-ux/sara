@@ -19,7 +19,7 @@ export function SectionCapabilities() {
       </SectionLabel>
       <Grid className="mt-12 gap-y-6 md:mt-16">
         <p data-reveal className="col-span-4 text-lead md:col-span-5 lg:col-span-5 lg:col-start-3">
-          Years of Figma and Webflow. A growing amount of everything underneath.
+          Figma and Webflow, every day for years. Everything underneath, a little more every week.
         </p>
         <SkillLegend data-reveal className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-10" />
       </Grid>

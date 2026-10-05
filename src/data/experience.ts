@@ -9,7 +9,7 @@ export const experience: ExperienceEntry[] = [
     end: 'now',
     location: 'Sweden · Remote',
     description:
-      'Brands, websites and products that are easy to work with. Design and Webflow development, plus freelance and contract work alongside the studio.',
+      'Me and Daniel. Brands, websites and products, 100% remote. I do the design and the Webflow build, and take freelance and contract work alongside.',
     projectSlug: 'handsdown',
   },
   {
@@ -19,7 +19,7 @@ export const experience: ExperienceEntry[] = [
     end: '2025',
     location: 'Östersund · Remote',
     description:
-      'Designing and building for clients across Europe. UI design and Webflow development, often both at once. Startups and established brands, always hands-on.',
+      'Five years designing and building for clients across Europe. UI design and Webflow development, usually both at once. Startups and established brands, always hands-on.',
   },
   {
     company: 'MYO — Make Your Own',
@@ -27,7 +27,7 @@ export const experience: ExperienceEntry[] = [
     start: '2021',
     end: '2024',
     location: 'Åre',
-    description: 'Led UI, brand and Webflow development. Identity refresh, store redesign, community platform, design system.',
+    description: 'From craft kits to a whole platform. UI, brand and Webflow: identity, store, community platform, design system.',
     projectSlug: 'myo',
   },
   {
@@ -36,7 +36,7 @@ export const experience: ExperienceEntry[] = [
     start: '2021',
     end: '2021',
     location: 'Stockholm',
-    description: 'Brand extension, UI components and a Webflow landing page during a product refocus.',
+    description: 'Roommate matching, mid-pivot. Brand extension, UI components and a Webflow landing page.',
     projectSlug: 'coly',
   },
   {
@@ -45,7 +45,7 @@ export const experience: ExperienceEntry[] = [
     start: '2018',
     end: '2020',
     location: 'Östersund',
-    description: 'Built and ran a small creative studio. Where I learned what it actually takes to make things work.',
+    description: 'My first studio. Where I learned what it actually takes to make things work.',
   },
   {
     company: 'Simpliday',
@@ -53,7 +53,7 @@ export const experience: ExperienceEntry[] = [
     start: '2018',
     end: '2018',
     location: 'Malmö',
-    description: 'Wireframes, prototyping and UX/UI for an all-in-one calendar, task and email app.',
+    description: 'Wireframes, prototypes and UX/UI for one app that did calendar, tasks and email.',
     projectSlug: 'simpliday',
   },
   {
@@ -62,7 +62,7 @@ export const experience: ExperienceEntry[] = [
     start: '2011',
     end: '2011',
     location: 'Malmö',
-    description: 'One of Sweden’s leading theatres. Detail-oriented, collaborative work.',
+    description: 'Costumes for one of Sweden’s leading theatres. Lots of detail, lots of people.',
     group: 'earlier',
   },
   {

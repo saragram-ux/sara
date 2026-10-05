@@ -25,13 +25,13 @@ export function SectionAbout() {
           </p>
           <div data-reveal className="mt-10 grid gap-5 text-body md:grid-cols-2 md:gap-gutter">
             <p>
-              We started Handsdown because we kept seeing good teams slowed down by design that was hard to work with. Too much
-              process, too many layers.
+              These days I run Handsdown Studio with Daniel. Just the two of us, on purpose. No layers, no account managers, no
+              babysitting a design team.
             </p>
             <p className="text-ink-muted">{profile.voice.approach}</p>
           </div>
           <div data-reveal className="mt-10">
-            <AnimatedLink href="/about">More about me</AnimatedLink>
+            <AnimatedLink href="/about">The longer story</AnimatedLink>
           </div>
         </div>
 

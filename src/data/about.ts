@@ -8,7 +8,7 @@ export const disciplines = [
     where: 'Malmö University · BA',
     years: '2015—2018',
     gives: 'Finished',
-    text: 'Typography, layout, identity. Three years of it.',
+    text: 'Typography, layout, identity. Three years of it, and it never really left.',
   },
   {
     discipline: 'Behavioural science',
@@ -22,6 +22,6 @@ export const disciplines = [
     where: 'EC Utbildning · YH',
     years: '2026—2028',
     gives: 'In progress',
-    text: 'HTML, CSS, JavaScript, React, TypeScript, databases. Until 2028.',
+    text: 'HTML, CSS, JavaScript, React, TypeScript and databases. Back at school until 2028.',
   },
 ]

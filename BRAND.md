@@ -1,9 +1,11 @@
-# sara lou — brand notes (v3)
+# sara lou — brand notes (v4)
 
 > A small, very well-made corner of the internet belonging to Sara Gramstad.
 > A little precise. A little strange. Not trying to impress you.
 
-**v3:** the serif is gone. Instrument Serif read as "2020 soft creative director", so display type is now **Familjen Grotesk Bold, uppercase** (a free stand-in for Mabry Bold; Archivo was tried first and was too wide), taking its cue from Designlab's CTA blocks without the blue. The contact section is a solid ink block with an acid pill button. And every line on the site went through a bullshit audit (see Voice).
+**v4:** the copy now speaks in the Handsdown tone: warm, direct, talks to you (see Voice). The visual system is unchanged.
+
+**v3:** the serif is gone. Instrument Serif read as "2020 soft creative director", so display type is now **Familjen Grotesk Bold, uppercase** (a free stand-in for Mabry Bold; Archivo was tried first and was too wide), taking its cue from Designlab's CTA blocks without the blue. The contact section is a solid ink block with an acid pill button. And every line on the site went through a bullshit audit.
 
 **v2 was a correction.** v1 drifted soft: a cute serif wordmark, a pastel dot, slogans ("details, yes · ceremony, no"), a sign-off like a café menu. v2 returns to what was actually distinctive, the intro screen:
 
@@ -42,27 +44,34 @@ Roughly 70% editorial, 20% technical notebook, 10% internet artifact.
 
 ## Personality
 
-crisp · dry · precise · slightly odd · independent · technical · understated · a little deadpan
+direct · warm · a little cheeky · plain-spoken · precise underneath · independent
 
-It is not: friendly-designer-next-door, boutique studio, lifestyle brand, developer portfolio, "warm independent creative".
+It is not: corporate, "passionate", boutique-studio polish, LinkedIn.
+
+The look stays strict (mono, caps, numbers, one LED); the words loosen up. That contrast is the point.
 
 ## Voice
 
-Matter-of-fact. Say the thing and stop. A deadpan line is allowed once per page, and it's usually the headline. The facts underneath stay serious. Never explain the brand, never say "passionate", and no slogans.
+**v4: the Handsdown tone.** Sara's studio, Handsdown, talks like a person: "we're basically your in-house designers, but without the stress", "you tell us what's up, and we move", "no layers. No handoffs." The portfolio speaks the same way, as "I", with "we" only when Handsdown is talking.
 
-**The bullshit test.** Read every line as a blunt founder would. If he'd say "that's bullshit", rewrite it as the plain fact or cut it. Usual offenders: anything about "making things clearer", "easy to work alongside", pull quotes of yourself, rhyming labels, and "on purpose".
+- **Talk to "you".** Say what working with Sara means for the reader, not what Sara is.
+- **Asides are allowed.** "So, here's the short version." "Okay, the fun part." "Basically." Once per section, not every line.
+- **Taglines can turn.** "X, without the Y", "from A to B", "that feels human". One per project.
+- **Short, then a fact.** Every casual line sits on something true: dates, clients, tools, what she did.
+- **Never:** "passionate", "solutions", "elevate", made-up metrics, or a joke that hides what she actually did.
+
+**The bullshit test still applies,** but the target changed: casual is fine, vague isn't. If a line could be on anyone's site, rewrite it with a real detail.
 
 | Use | Instead of |
 | --- | --- |
-| I design interfaces. Then I build them. | Designer. Builder. Detail person. |
-| One person for the design and the Webflow build. Fewer handoffs. | I slot into your team and focus on making things clearer… |
-| Brand, UI components and a Webflow site while the product changed direction. | Making the outside of a product match where the inside was heading |
-| Studied it, didn't finish it, still use it. | The why. Interfaces are made of decisions, after all. |
-| Designer by trade. Builder by increasingly frequent necessity. | Hi, I'm Sara! |
-| I started in graphic design. Then interfaces happened. Now I'm learning to build the whole thing. | Graphic design taught me to see… |
-| Small things. Big rabbit holes. What I'm building while I learn. Some of it works. | Unfinished, on purpose. |
-| Inbox open. | Let's make something / say hi |
-| Freelance and contract work. Remote, across Europe. | Always happy to chat! |
+| I design it. I build it. You skip the handoff. | I design interfaces. Then I build them. |
+| The person who designs it is the person who builds it, so nothing gets lost in a handoff. | One person for the design and the Webflow build. Fewer handoffs. |
+| Roommate matching that feels human. Brand, UI components and a Webflow site, mid-pivot. | Brand, UI components and a Webflow site while the product changed direction. |
+| From craft kits to a Webflow platform. | Identity, online store and community platform for a craft brand. |
+| Just the two of us, on purpose. No layers, no account managers. | Too much process, too many layers. |
+| So, here's the short version. | (straight into the CV) |
+| Stuff I build while learning to code. Some of it even works. | What I'm building while I learn. |
+| Say hi. Tell me what's up. | Inbox open. / Let's make something together |
 
 ## Credibility layer
 

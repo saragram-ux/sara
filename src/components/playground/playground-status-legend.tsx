@@ -3,7 +3,7 @@ import { PlaygroundStatus } from './playground-status'
 
 const legend: { status: PlaygroundItemStatus; text: string }[] = [
   { status: 'live', text: 'Works, try it' },
-  { status: 'building', text: 'In progress' },
+  { status: 'building', text: 'Still building' },
   { status: 'idea', text: 'Next up' },
 ]
 

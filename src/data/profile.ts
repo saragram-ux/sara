@@ -17,11 +17,11 @@ export const profile = {
     detail: 'Freelance + contract',
     reach: 'Remote, across Europe',
   },
-  /** The few lines that say how I work. Plain on purpose: if it sounds like LinkedIn, cut it. */
+  /** The few lines that say how I work. Talk to the reader; if it sounds like LinkedIn, cut it. */
   voice: {
     problem: 'Good teams slowed down by design that was hard to work with. Too much process, too many layers.',
-    approach: 'One person for the design and the Webflow build. Fewer handoffs.',
-    tools: 'Figma and Webflow, fully remote.',
+    approach: 'The person who designs it is the person who builds it, so nothing gets lost in a handoff.',
+    tools: 'I work where you already work: Figma, Webflow, Notion, Slack. 100% remote.',
   },
 } as const
 

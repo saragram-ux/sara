@@ -24,7 +24,7 @@ export function SectionPlayground() {
           Small things. Big rabbit holes.
         </h3>
         <p data-reveal className="col-span-4 text-lead text-ink-muted md:col-span-5 lg:col-span-4 lg:col-start-3">
-          What I’m building while I learn. Some of it works.
+          Stuff I build while learning to code. Some of it even works.
         </p>
       </Grid>
 
@@ -37,7 +37,7 @@ export function SectionPlayground() {
       </Grid>
 
       <div data-reveal className="mt-12">
-        <AnimatedLink href="/playground">Open the playground</AnimatedLink>
+        <AnimatedLink href="/playground">See all of it</AnimatedLink>
       </div>
     </Section>
   )

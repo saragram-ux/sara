@@ -44,7 +44,7 @@ export function SectionExperience({ variant = 'summary', index }: SectionExperie
       </div>
       <div data-reveal className="mt-8 flex flex-wrap items-baseline justify-between gap-4">
         <p className="text-small text-ink-muted">
-          + {earlier.length} earlier roles in fashion, craft and theatre — where I learned to make things by hand.
+          + {earlier.length} earlier roles in fashion, craft and theatre. I made things by hand long before I made them on screens.
         </p>
         <AnimatedLink href="/about#experience">The long version</AnimatedLink>
       </div>

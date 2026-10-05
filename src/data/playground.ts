@@ -10,7 +10,7 @@ export const playground: PlaygroundItem[] = [
     id: '004',
     title: 'Easing lab',
     description:
-      'Same distance, same duration, different curve. A small tool for feeling the difference between eases before choosing one.',
+      'Same distance, same duration, different curve. Click around and feel the difference before you pick an ease.',
     stack: ['React', 'TypeScript', 'GSAP'],
     status: 'live',
     date: '2026-10',
@@ -20,7 +20,7 @@ export const playground: PlaygroundItem[] = [
     id: '003',
     title: 'Type specimen',
     description:
-      'The site’s type scale rendered from its own design tokens. Change a token in CSS and the specimen updates — documentation that can’t go out of date.',
+      'The site’s type scale, rendered straight from its own design tokens. Change a token and this updates too. Documentation that can’t go out of date.',
     stack: ['CSS custom properties', 'Tailwind CSS', 'React'],
     status: 'live',
     date: '2026-10',
@@ -30,7 +30,7 @@ export const playground: PlaygroundItem[] = [
     id: '002',
     title: 'Layout grid',
     description:
-      'A 4 / 8 / 12 column grid that every page snaps to. Press G anywhere on the site to see it. Designers have guides in Figma; this is the same thing, in the browser.',
+      'The 4 / 8 / 12 column grid everything here snaps to. Press G anywhere to see it. Basically Figma guides, but in the browser.',
     stack: ['CSS Grid', 'React'],
     status: 'live',
     date: '2026-10',
@@ -40,7 +40,7 @@ export const playground: PlaygroundItem[] = [
     id: '001',
     title: 'This portfolio',
     description:
-      'Built from scratch with React and TypeScript. Typed content, a small token-based design system, a numbered index.',
+      'Built from scratch in React and TypeScript, by someone who could have just used Webflow. Typed content, a small design system, everything numbered.',
     stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GSAP', 'Radix'],
     status: 'building',
     date: '2026-10',

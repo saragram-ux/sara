@@ -7,7 +7,7 @@ import type { SkillGroup, SkillLevel } from './types'
 export const skillLevels: Record<SkillLevel, { label: string; description: string }> = {
   fluent: { label: 'Daily', description: 'Years of client work' },
   building: { label: 'Building', description: 'Using it, getting better' },
-  exploring: { label: 'Exploring', description: 'Early days, curious' },
+  exploring: { label: 'Exploring', description: 'Early days, poking at it' },
 }
 
 export const skills: SkillGroup[] = [

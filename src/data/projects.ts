@@ -19,9 +19,9 @@ export const projects: Project[] = [
     role: 'Product Designer',
     location: 'Åre, Sweden',
     disciplines: ['UI design', 'Brand', 'Webflow', 'Design system'],
-    summary: 'Identity, online store and community platform for a craft brand in Åre.',
+    summary: 'From craft kits to a Webflow platform. Identity, store and community for a craft brand in Åre.',
     description:
-      'Working through Hellofolk, I led UI design, brand work and Webflow development for MYO. A visual identity that holds up across Shopify, Webflow and social, a redesigned store, and a new community platform: built on research, shaped in workshops, held together by a design system.',
+      'Through Hellofolk, I did the UI, the brand work and the Webflow build for MYO. One identity that works on Shopify, Webflow and social, a new store and a community platform. It started with research and workshops, and a design system holds it all together.',
     tools: ['Figma', 'Webflow', 'Shopify'],
     plate: { mark: 'MYO', icon: Needle, tone: 'sand' },
     status: 'shipped',
@@ -29,9 +29,9 @@ export const projects: Project[] = [
       {
         id: 'overview',
         label: 'Overview',
-        title: 'Part shop, part learning space, part community.',
+        title: 'Part shop, part school, part club.',
         body: [
-          'MYO — Make Your Own — sits somewhere between a store, a school and a club. I worked with them from 2021 to 2024 through Hellofolk, leading UI design, brand work and Webflow development.',
+          'MYO (Make Your Own) is basically a store, a school and a club in one. I worked with them from 2021 to 2024 through Hellofolk, on the UI, the brand and the Webflow build.',
         ],
         notes: { label: 'Scope', items: ['Visual identity refresh', 'Store experience', 'Community platform', 'Design system'] },
         figure: { alt: 'MYO overview', caption: 'MYO across store, community and social' },
@@ -39,17 +39,17 @@ export const projects: Project[] = [
       {
         id: 'brief',
         label: 'The brief',
-        title: 'Grow up without losing the handmade feel.',
+        title: 'Grown-up, without losing the handmade feel.',
         body: [
-          'The identity needed to work across Shopify, Webflow and social — without losing the handmade feel that makes MYO what it is.',
+          'The identity had to work on Shopify, Webflow and social, and still feel handmade. That’s the whole point of MYO.',
         ],
       },
       {
         id: 'thinking',
         label: 'Thinking',
-        title: 'Research and workshops first.',
+        title: 'Ask first, design second.',
         body: [
-          'The work started with user research and workshops, so the decisions about the store and the community platform came from the people who would use them.',
+          'It started with user research and workshops, so the store and the community platform were shaped by the people who’d actually use them, not by guesses.',
         ],
         notes: { label: 'Methods', items: ['User research', 'Workshops'] },
       },
@@ -58,16 +58,16 @@ export const projects: Project[] = [
         label: 'Design',
         title: 'A store, a community, one system.',
         body: [
-          'I redesigned the store experience and helped shape a new community platform. Underneath both sits a scalable design system.',
+          'I redesigned the store and helped shape the new community platform. Underneath both: one design system, so it all stays consistent as it grows.',
         ],
         figure: { alt: 'MYO store redesign', caption: 'Store experience' },
       },
       {
         id: 'build',
         label: 'Build',
-        title: 'Designed and built by the same person.',
+        title: 'Same hands, start to finish.',
         body: [
-          'I did the Webflow development alongside the UI — design and build in the same hands.',
+          'I built it in Webflow while I designed it. No handoff, nothing lost in translation.',
         ],
         notes: { label: 'Built with', items: ['Webflow', 'Shopify', 'Figma'] },
         figure: { alt: 'MYO design system components', caption: 'Design system, in use' },
@@ -95,9 +95,9 @@ export const projects: Project[] = [
     role: 'UX/UI Designer',
     location: 'Stockholm, Sweden',
     disciplines: ['UI design', 'Brand', 'UI components', 'Webflow'],
-    summary: 'Brand, UI components and a Webflow site while the product changed direction.',
+    summary: 'Roommate matching that feels human. Brand, UI components and a Webflow site, mid-pivot.',
     description:
-      'Working through Hellofolk, I joined Coly while the product strategy was being narrowed. I handled the visual and UI side: extending the brand, building out UI components, and designing and building the landing page in Webflow.',
+      'Through Hellofolk, I joined Coly while the product was finding its focus. I took the visual and UI side: stretched the brand, built out the UI components, and designed and built the landing page in Webflow.',
     tools: ['Figma', 'Webflow'],
     plate: { mark: 'Coly', icon: Compass, tone: 'paper' },
     status: 'shipped',
@@ -105,9 +105,9 @@ export const projects: Project[] = [
       {
         id: 'overview',
         label: 'Overview',
-        title: 'Joining mid-turn.',
+        title: 'Joining mid-pivot.',
         body: [
-          'I came in during a period of refocus. While the product strategy was being narrowed, someone needed to own the visual and UI side — that was me, for most of 2021.',
+          'Coly does roommate matching. I came in while they were narrowing down what the product actually was, and someone had to own the visual and UI side in the meantime. For most of 2021, that was me.',
         ],
         notes: { label: 'Scope', items: ['Brand extension', 'UI components', 'Landing page'] },
         figure: { alt: 'Coly overview', caption: 'Coly, 2021' },
@@ -115,23 +115,23 @@ export const projects: Project[] = [
       {
         id: 'problem',
         label: 'The problem',
-        title: 'Make the outside match the new product.',
+        title: 'Make the outside catch up.',
         body: [
-          'When a product changes direction, the outside lags behind. The job was to make sure what Coly communicated externally matched where the product was actually heading.',
+          'When a product changes direction, the brand and the website are always the last to know. My job was to make what Coly said on the outside match where the product was actually going.',
         ],
       },
       {
         id: 'design',
         label: 'Design',
         title: 'Extend the brand, then build the parts.',
-        body: ['I extended the existing brand and built out a set of UI components to carry it into the product.'],
+        body: ['I stretched the existing brand and built a set of UI components to carry it into the product.'],
         figure: { alt: 'Coly UI components', caption: 'UI components' },
       },
       {
         id: 'build',
         label: 'Build',
         title: 'Designed it, then built it.',
-        body: ['I designed the landing page and built it in Webflow.'],
+        body: ['I designed the landing page, then built it in Webflow myself.'],
         notes: { label: 'Built with', items: ['Webflow', 'Figma'] },
         figure: { alt: 'Coly landing page', caption: 'Landing page, built in Webflow' },
       },
@@ -151,9 +151,9 @@ export const projects: Project[] = [
     role: 'Co-founder & Product Designer',
     location: 'Sweden · Remote',
     disciplines: ['Product design', 'Brand', 'Websites', 'Webflow'],
-    summary: 'My studio. Brands, websites and products, designed in Figma and built in Webflow.',
+    summary: 'My studio, with Daniel. Brands, websites and products, without the agency thing.',
     description:
-      'We started Handsdown because we kept seeing good teams slowed down by design that was hard to work with. I do the design and the Webflow development.',
+      'Handsdown is me and Daniel. We’re basically your in-house designers, but without the stress. I do the design and the Webflow build.',
     tools: ['Figma', 'Webflow'],
     plate: { mark: 'Hd', icon: Hand, tone: 'ink' },
     status: 'ongoing',
@@ -161,26 +161,29 @@ export const projects: Project[] = [
       {
         id: 'why',
         label: 'Why',
-        title: 'Too much process, too many layers.',
+        title: 'We don’t do the agency thing.',
         body: [
-          'Good teams kept getting slowed down by design that was hard to work with: too much process, too many layers. Handsdown has fewer of both.',
+          'We kept seeing good teams slowed down by design that was hard to work with: too much process, too many layers. So it’s just the two of us. You tell us what’s up, and we move.',
         ],
       },
       {
         id: 'how',
         label: 'How',
-        title: 'Design and build, one person.',
+        title: 'We slot in where your work happens.',
         body: [
-          'We make brands, websites and products. I do the design and the Webflow build, so there is no handoff in between.',
+          'Your work already lives in Notion, Figma and Slack. We join you there, skip the “can we jump on a call?” and send back something that actually helps. I do the design and the Webflow build, so nothing gets lost in between.',
         ],
-        notes: { label: 'Practice', items: ['Figma', 'Webflow', 'Fully remote', 'No ceremony'] },
+        notes: { label: 'Practice', items: ['Figma', 'Webflow', '100% remote', 'Async'] },
         figure: { alt: 'Handsdown Studio', caption: 'Handsdown Studio' },
       },
       {
         id: 'work',
         label: 'Selected studio work',
-        draft: true,
-        body: ['Add Handsdown projects here once they can be shown publicly.'],
+        title: 'Stuff we made.',
+        body: [
+          'Brand and web for Minc, the startup house of Malmö, and for Perfect Event: high-end, without the ego. The rest lives on handsdown.studio.',
+        ],
+        notes: { label: 'Studio work', items: ['Minc — brand + web', 'Perfect Event — brand + web'] },
       },
     ],
     links: [{ label: 'handsdown.studio', href: 'https://handsdown.studio' }],
@@ -193,9 +196,9 @@ export const projects: Project[] = [
     role: 'UX Designer',
     location: 'Malmö, Sweden',
     disciplines: ['UX design', 'Wireframes', 'Prototyping'],
-    summary: 'Early-stage startup building an all-in-one calendar, task and email app.',
+    summary: 'Calendar, tasks and email in one app. My summer of wireframes, 2018.',
     description:
-      'An early-stage startup building an all-in-one calendar, task and email app — 100k+ downloads globally and part of SUP46. I contributed to wireframes, prototyping and UX/UI design.',
+      'An early-stage startup with a big idea: calendar, tasks and email in one app. It reached 100k+ downloads and was part of SUP46. I worked on wireframes, prototypes and UX/UI.',
     tools: ['Wireframes', 'Prototypes'],
     plate: { mark: 'Sd', icon: CalendarDots, tone: 'paper' },
     status: 'archived',
@@ -203,9 +206,9 @@ export const projects: Project[] = [
       {
         id: 'overview',
         label: 'Overview',
-        title: 'Calendar, tasks and email in one place.',
+        title: 'Calendar, tasks and email. One app.',
         body: [
-          'Simpliday was an early-stage startup with an ambitious idea: one app for your calendar, your tasks and your email. It went on to reach 100k+ downloads globally and was part of the SUP46 startup community.',
+          'Simpliday had a big idea for a small team: one app for your calendar, your tasks and your email. It went on to 100k+ downloads worldwide and was part of the SUP46 startup community.',
         ],
         notes: { label: 'Context', items: ['Early stage', '100k+ downloads', 'SUP46'] },
       },
@@ -214,7 +217,7 @@ export const projects: Project[] = [
         label: 'My part',
         title: 'Wireframes, prototypes, UX/UI.',
         body: [
-          'Over the summer of 2018 in Malmö, I contributed to wireframes, prototyping and UX/UI design.',
+          'Summer 2018, Malmö. I worked on wireframes, prototypes and UX/UI design.',
         ],
         figure: { alt: 'Simpliday wireframes', caption: 'Wireframes and prototypes' },
       },

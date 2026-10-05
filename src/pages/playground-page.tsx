@@ -24,8 +24,8 @@ export default function PlaygroundPage() {
         }
         lead={
           <>
-            <p>Experiments, tools and exercises from studying frontend development. Some of it works. Some of it is an idea.</p>
-            <p className="mt-4 text-ink-muted">The live ones run right here on the page — no screenshots.</p>
+            <p>Little tools and experiments from studying frontend development. Some work. Some are still just an idea.</p>
+            <p className="mt-4 text-ink-muted">The live ones run right here on the page. No screenshots, no faking it.</p>
           </>
         }
         aside={<PlaygroundStatusLegend />}

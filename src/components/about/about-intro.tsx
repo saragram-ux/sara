@@ -22,9 +22,9 @@ export function AboutIntro() {
       lead={
         <>
           <p>
-            Designing interfaces since 2018. Five years at Hellofolk designing and building for clients across Europe,
-            co-founder of {profile.studio.name} since 2025, a BA in Graphic Design — and, since 2026, a frontend development
-            student.
+            So, here’s the short version. I’ve designed interfaces since 2018. I spent five years at Hellofolk designing and
+            building for clients across Europe, and in 2025 I started {profile.studio.name} with Daniel. I have a BA in
+            Graphic Design, and since 2026 I’m a frontend development student too.
           </p>
           <p className="mt-4 text-ink-muted">
             {profile.voice.approach} {profile.voice.tools}

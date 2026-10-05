@@ -19,12 +19,12 @@ export function SectionCraft() {
       <Grid className="mt-12 gap-y-10 md:mt-16">
         <div data-reveal className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-3">
           <p className="text-lead">
-            Before screens, I made things with my hands: designing and sewing accessories for a small Malmö store, working in the
-            costume department at Malmö Stadsteater, early days at Remake Sthlm.
+            Before screens, I made actual things. I designed and sewed accessories for a small Malmö store, worked in the costume
+            department at Malmö Stadsteater and had my early days at Remake Sthlm.
           </p>
           <p className="mt-4 text-body text-ink-muted">
-            My first taste of making something from scratch and seeing it reach a customer. Then Kreation Studio, my own small
-            studio — where I learned what it actually takes to make things work.
+            That’s where I first made something from scratch and watched it reach a customer. Then I started Kreation Studio, my
+            own small studio, and learned what it actually takes to make things work.
           </p>
         </div>
         <ul data-reveal className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-10">
