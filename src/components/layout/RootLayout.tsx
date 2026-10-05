@@ -1,8 +1,10 @@
 import { lazy, Suspense, useCallback, useMemo, useState } from 'react'
+import { Router } from 'wouter'
 
 import { PageTransition } from '@/components/motion/PageTransition'
 import { Contact } from '@/components/sections/Contact'
 import { useHotkey } from '@/hooks/useHotkey'
+import { BASE } from '@/lib/base'
 import { SiteContext } from '@/lib/site-context'
 import { AppRoutes } from '@/routes'
 import { GridOverlay } from './GridOverlay'
@@ -42,6 +44,7 @@ export function RootLayout() {
   }
 
   return (
+    <Router base={BASE}>
     <SiteContext.Provider value={site}>
         <PageTransition>
           <button
@@ -67,5 +70,6 @@ export function RootLayout() {
           )}
         </PageTransition>
     </SiteContext.Provider>
+    </Router>
   )
 }

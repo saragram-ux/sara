@@ -12,7 +12,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Sara Gramstad — Designer who builds" />
     <meta property="og:description" content="UI · Product · Frontend. Co-founder of Handsdown Studio." />
-    <meta property="og:image" content="/og.png" />
+    <meta property="og:image" content="%BASE_URL%og.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -43,6 +43,16 @@
       }
       .no-intro #intro {
         display: none;
+      }
+      /* Fail-safe: if the app's JavaScript never arrives, don't trap anyone behind the intro. */
+      #intro {
+        animation: intro-failsafe 0.4s ease 4s forwards;
+      }
+      @keyframes intro-failsafe {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
       #intro .row {
         display: flex;

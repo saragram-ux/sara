@@ -1,6 +1,7 @@
 import { type ComponentProps, forwardRef, type MouseEvent } from 'react'
 
 import { usePageTransition } from '@/components/motion/transition-context'
+import { withBase } from '@/lib/base'
 
 type Props = Omit<ComponentProps<'a'>, 'href'> & { to: string }
 
@@ -16,5 +17,5 @@ export const TransitionLink = forwardRef<HTMLAnchorElement, Props>(function Tran
     e.preventDefault()
     go(to)
   }
-  return <a ref={ref} href={to} onClick={handleClick} {...props} />
+  return <a ref={ref} href={withBase(to)} onClick={handleClick} {...props} />
 })

@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 
 import type { Figure, Project } from '@/data/types'
+import { withBase } from '@/lib/base'
 import { cn } from '@/lib/utils'
 
 const tones = {
@@ -44,7 +45,7 @@ export function Plate({ project, index, figure, figureIndex, className }: PlateP
     return (
       <div className={cn('relative overflow-hidden bg-paper-sunken', className)} style={{ aspectRatio: aspect }}>
         <img
-          src={image.src}
+          src={withBase(image.src)}
           alt={image.alt}
           loading="lazy"
           decoding="async"

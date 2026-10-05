@@ -11,7 +11,12 @@ npm run preview   # serve the build
 npm run lint      # oxlint
 ```
 
-Deploys as a static SPA. `vercel.json` rewrites every route to `index.html`; on another host, add the equivalent SPA fallback.
+### Deploying
+
+- **GitHub Pages** (current): every push to `master` runs `.github/workflows/deploy.yml`, which builds with `BASE_PATH=/sara/` (the repo name) and publishes `dist/`. A copy of `index.html` is saved as `404.html` so deep links like `/sara/about` work. In the repo settings, **Pages → Source** must be **GitHub Actions**.
+- **Vercel / Netlify / a custom domain**: build without `BASE_PATH` (the site lives at `/`). `vercel.json` already rewrites routes to `index.html`.
+
+Internal links go through `withBase()` (`src/lib/base.ts`) and wouter's `<Router base>`, so the same code works at `/` and at `/sara/`.
 
 ---
 

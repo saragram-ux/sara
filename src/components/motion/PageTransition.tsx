@@ -63,7 +63,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (popped.current) {
       popped.current = false
-      const y = positions.current.get(pathname) ?? 0
+      const y = positions.current.get(window.location.pathname) ?? 0
       requestAnimationFrame(() => {
         window.scrollTo(0, y)
         nextFrame().then(refreshScroll)
@@ -80,8 +80,9 @@ export function PageTransition({ children }: { children: ReactNode }) {
 
   const go = useCallback(
     async (to: string) => {
-      const url = new URL(to, window.location.href)
-      if (url.pathname === window.location.pathname) {
+      // `to` is an app path ('/about', '/#work') or a bare '#hash'; the base path is wouter's job.
+      const url = to.startsWith('#') ? new URL(pathname + to, 'http://app') : new URL(to, 'http://app')
+      if (url.pathname === pathname) {
         scrollToTarget(url.hash, true)
         return
       }
@@ -124,7 +125,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
       gsap.set(el, { visibility: 'hidden' })
       busy.current = false
     },
-    [navigate],
+    [navigate, pathname],
   )
 
   const value = useMemo(() => ({ go }), [go])

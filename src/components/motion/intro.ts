@@ -20,6 +20,8 @@ export function runIntro() {
     return
   }
 
+  // JS is here: take over from the CSS fail-safe timer.
+  el.style.animation = 'none'
   revealGate.close()
   try {
     sessionStorage.setItem(SEEN_KEY, '1')
