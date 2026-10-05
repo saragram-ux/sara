@@ -104,7 +104,7 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
         <div className="flex flex-col gap-[2.2cqw]">
           {!figure && (
             <span
-              className="self-start rounded-xs px-2 py-1 type-label"
+              className="self-start px-2 py-1 type-label"
               style={{ backgroundColor: tone.pill, color: tone.pillFg }}
             >
               ( {project.disciplines.slice(0, 3).join(' / ')} )

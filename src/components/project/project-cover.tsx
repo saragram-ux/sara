@@ -32,7 +32,7 @@ export function ProjectCover({ project, index }: { project: Project; index: numb
 
   return (
     <Container ref={ref} className="mt-block-gap">
-      <div className="overflow-hidden rounded-xs">
+      <div className="overflow-hidden">
         <ProjectPlate project={project} index={index} className="aspect-[4/3]! md:aspect-[16/8]!" />
       </div>
       <ProjectTags tags={project.disciplines} density="relaxed" as="p" className="mt-3" />

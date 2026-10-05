@@ -20,7 +20,7 @@ export function GridOverlay() {
         </Grid>
       </Container>
       <Container className="absolute inset-x-0 bottom-4">
-        <span className="inline-block rounded-xs bg-accent px-2 py-1 type-label text-ink">
+        <span className="inline-block bg-accent px-2 py-1 type-label text-ink">
           <span className="md:hidden">4</span>
           <span className="hidden md:inline lg:hidden">8</span>
           <span className="hidden lg:inline">12</span> col · press G to hide

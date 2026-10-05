@@ -19,7 +19,7 @@ export function ProjectChapter({ chapter, number, project, projectIndex, figureI
       id={chapter.id}
       tabIndex={-1}
       aria-labelledby={`${chapter.id}-label`}
-      className={cn('scroll-mt-sticky outline-none', chapter.draft && 'rounded-md border border-dashed border-accent/60 p-5')}
+      className={cn('scroll-mt-sticky outline-none', chapter.draft && 'border border-dashed border-accent/60 p-5')}
     >
       <div data-reveal className="grid gap-y-6 md:grid-cols-9 md:gap-x-gutter">
         <div className="md:col-span-6">
@@ -54,7 +54,7 @@ export function ProjectChapter({ chapter, number, project, projectIndex, figureI
       </div>
       {chapter.figure && (
         <figure data-reveal className="mt-10">
-          <div className="overflow-hidden rounded-xs">
+          <div className="overflow-hidden">
             <ProjectPlate project={project} index={projectIndex} figure={chapter.figure} figureIndex={figureIndex} />
           </div>
           <figcaption className="mt-3 type-label text-ink-muted">

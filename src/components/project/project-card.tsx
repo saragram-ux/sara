@@ -34,7 +34,7 @@ export function ProjectCard({ project, index, active = false, showPlate = false,
       )}
     >
       {showPlate && (
-        <div className="col-span-4 mb-3 overflow-hidden rounded-xs md:col-span-8 lg:hidden">
+        <div className="col-span-4 mb-3 overflow-hidden md:col-span-8 lg:hidden">
           <ProjectPlate project={project} index={index} />
         </div>
       )}

@@ -9,7 +9,7 @@ export function SkipLink() {
     <button
       type="button"
       onClick={skipToContent}
-      className="fixed top-2 left-2 z-[100] -translate-y-20 rounded-sm bg-ink px-3 py-2 type-label text-paper-raised focus:translate-y-0"
+      className="fixed top-2 left-2 z-[100] -translate-y-20 bg-ink px-3 py-2 type-label text-paper-raised focus:translate-y-0"
     >
       Skip to content
     </button>

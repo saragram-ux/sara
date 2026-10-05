@@ -21,7 +21,7 @@ export function ProjectPreview({ ref, projects, active }: ProjectPreviewProps) {
       ref={ref}
       data-preview
       aria-hidden
-      className="pointer-events-none absolute top-0 left-0 z-10 w-[min(26vw,380px)] overflow-hidden rounded-xs shadow-float"
+      className="pointer-events-none absolute top-0 left-0 z-10 w-[min(26vw,380px)] overflow-hidden shadow-float"
     >
       {projects.map((project, i) => (
         <div
