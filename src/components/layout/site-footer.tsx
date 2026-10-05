@@ -76,7 +76,7 @@ export function SiteFooter() {
           <h2 className="type-label text-ink-muted">Colophon</h2>
           <p className="mt-4 max-w-sm text-small text-ink-muted">
             Built with React, TypeScript, Vite, Tailwind and a little GSAP. Set in{' '}
-            <span className="font-display font-extrabold text-ink uppercase">Archivo</span>, Geist and{' '}
+            <span className="font-display font-bold text-ink uppercase">Familjen Grotesk</span>, Geist and{' '}
             <span className="font-mono text-[0.9em] text-ink">Geist Mono</span>.
           </p>
         </div>

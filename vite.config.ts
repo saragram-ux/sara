@@ -36,7 +36,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    preloadCriticalFonts([/archivo-latin-wght-normal/, /geist-latin-wght-normal/]),
+    preloadCriticalFonts([/familjen-grotesk-latin-700-normal/, /geist-latin-wght-normal/]),
   ],
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },

@@ -3,7 +3,7 @@
 > A small, very well-made corner of the internet belonging to Sara Gramstad.
 > A little precise. A little strange. Not trying to impress you.
 
-**v3:** the serif is gone. Instrument Serif read as "2020 soft creative director", so display type is now **Archivo, extra-bold, uppercase**, taking its cue from Designlab's CTA blocks without the blue. The contact section is a solid ink block with an acid pill button. And every line on the site went through a bullshit audit (see Voice).
+**v3:** the serif is gone. Instrument Serif read as "2020 soft creative director", so display type is now **Familjen Grotesk Bold, uppercase** (a free stand-in for Mabry Bold; Archivo was tried first and was too wide), taking its cue from Designlab's CTA blocks without the blue. The contact section is a solid ink block with an acid pill button. And every line on the site went through a bullshit audit (see Voice).
 
 **v2 was a correction.** v1 drifted soft: a cute serif wordmark, a pastel dot, slogans ("details, yes · ceremony, no"), a sign-off like a café menu. v2 returns to what was actually distinctive, the intro screen:
 
@@ -95,7 +95,7 @@ The green should feel almost accidental: a tiny LED, one active state, one hover
 
 ## Typography
 
-- **Archivo, 800, UPPERCASE** (`type-display`): headlines, project titles, buttons. Bold, plain, slightly wide, like a label on a box
+- **Familjen Grotesk, 700, UPPERCASE** (`type-display`): headlines, project titles, buttons. Bold, slightly odd, notched corners. To switch to Mabry Bold with a web licence, change `--font-display` and the font import
 - **Geist Mono:** the name, the system voice, every number
 - **Geist:** reading
 
@@ -123,4 +123,4 @@ Quick, exact, slightly mechanical. Short durations (120 / 200 / 360 ms), `power4
 
 ## The test
 
-Cover the name. Is it still recognisable? It should be, by the mono lockup, the numbering, the LED, the ink page turn with an index on it, and the deadpan serif headline over hard facts.
+Cover the name. Is it still recognisable? It should be, by the mono lockup, the numbering, the LED, the ink page turn with an index on it, and the bold caps headline over hard facts.

@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 const buttonVariants = cva(
   [
     'group/button relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap select-none',
-    'rounded-full font-display font-extrabold uppercase tracking-[-0.005em] [word-spacing:0.12em]',
+    'rounded-full font-display font-bold uppercase tracking-[-0.005em] [word-spacing:0.12em]',
     'transition-[background-color,color,border-color,transform] duration-fast ease-out-soft',
     // a small, mechanical snap on press
     'active:translate-y-px active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50',
