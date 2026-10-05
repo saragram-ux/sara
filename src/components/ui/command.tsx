@@ -4,6 +4,7 @@ import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from './dialog'
+import { Kbd } from './kbd'
 
 function Command({ className, ...props }: React.ComponentProps<typeof CommandPrimitive>) {
   return <CommandPrimitive data-slot="command" className={cn('flex h-full w-full flex-col', className)} {...props} />
@@ -20,7 +21,27 @@ function CommandDialog({
       <DialogContent>
         <DialogTitle className="sr-only">{title}</DialogTitle>
         <DialogDescription className="sr-only">{description}</DialogDescription>
+        {/* ink header bar, like the spec panels */}
+        <div aria-hidden className="flex items-center justify-between bg-ink px-4 py-2.5 type-label text-paper">
+          <span>Jump anywhere</span>
+          <span className="flex items-center gap-1">
+            <Kbd>⌘</Kbd>
+            <Kbd>K</Kbd>
+          </span>
+        </div>
         <Command loop>{children}</Command>
+        <div aria-hidden className="hidden flex-wrap items-center gap-x-5 gap-y-2 border-t border-ink px-4 py-2.5 type-label text-ink-muted sm:flex">
+          <span className="flex items-center gap-1.5">
+            <Kbd>↑</Kbd>
+            <Kbd>↓</Kbd> move
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Kbd>↵</Kbd> open
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Kbd>esc</Kbd> close
+          </span>
+        </div>
       </DialogContent>
     </Dialog>
   )
@@ -28,7 +49,7 @@ function CommandDialog({
 
 function CommandInput({ className, ...props }: React.ComponentProps<typeof CommandPrimitive.Input>) {
   return (
-    <div data-slot="command-input-wrapper" className="flex items-center gap-3 border-b border-rule px-4">
+    <div data-slot="command-input-wrapper" className="flex items-center gap-3 border-b border-ink px-4">
       <MagnifyingGlass aria-hidden className="size-4 text-ink-muted" />
       <CommandPrimitive.Input
         data-slot="command-input"
@@ -71,8 +92,9 @@ function CommandItem({ className, ...props }: React.ComponentProps<typeof Comman
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        'flex cursor-pointer items-center gap-3 rounded-md px-2 py-2.5 text-small outline-none select-none',
-        'data-[selected=true]:bg-paper-sunken [&_svg]:size-4 [&_svg]:text-ink-muted data-[selected=true]:[&_svg]:text-ink',
+        'flex cursor-pointer items-center gap-3 px-2 py-2.5 text-small outline-none select-none',
+        '[&_svg]:size-4 [&_svg]:text-ink-muted',
+        'data-[selected=true]:bg-ink data-[selected=true]:text-paper data-[selected=true]:[&_svg]:text-paper data-[selected=true]:[&_[data-slot=command-shortcut]]:text-paper/60',
         className,
       )}
       {...props}

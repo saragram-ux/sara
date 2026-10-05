@@ -1,6 +1,7 @@
 import { ArrowUpRight, GithubLogo } from '@phosphor-icons/react'
 import type { ComponentType } from 'react'
 
+import { StatusDot } from '@/components/common/status-dot'
 import { Grid } from '@/components/layout/grid'
 import type { PlaygroundItem } from '@/data/types'
 import { cn, formatMonth } from '@/lib/utils'
@@ -65,8 +66,17 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
       {Demo && (
         <Grid data-reveal className="mt-10">
           <div className="col-span-4 md:col-span-8 lg:col-span-10 lg:col-start-3">
-            <div className="rounded-lg border border-rule bg-paper-raised p-inset shadow-paper">
-              <Demo />
+            <div className="border border-ink bg-paper">
+              <div className="flex items-center justify-between bg-ink px-4 py-2.5 type-label text-paper">
+                <span className="tabular-nums">Live demo · Playground / {item.id}</span>
+                <span className="flex items-center gap-2">
+                  <StatusDot />
+                  Try it
+                </span>
+              </div>
+              <div className="p-inset">
+                <Demo />
+              </div>
             </div>
           </div>
         </Grid>

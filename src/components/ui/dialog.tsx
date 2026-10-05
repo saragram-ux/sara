@@ -38,7 +38,7 @@ function DialogContent({ className, children, ...props }: React.ComponentProps<t
         data-slot="dialog-content"
         className={cn(
           'fixed top-[18vh] left-1/2 z-50 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2',
-          'overflow-hidden rounded-lg border border-rule-strong bg-paper-raised shadow-float',
+          'overflow-hidden border border-ink bg-paper shadow-float',
           'data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-[0.98] data-[state=open]:slide-in-from-top-2',
           'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-[0.98]',
           'duration-200 focus:outline-none',

@@ -41,7 +41,7 @@ export function DemoEasingLab() {
   return (
     <Stack ref={ref} gap="md">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <div role="radiogroup" aria-label="Duration" className="inline-flex rounded-md bg-paper-sunken p-0.5">
+        <div role="radiogroup" aria-label="Duration" className="inline-flex border border-ink">
           {DURATIONS.map((d) => (
             <button
               key={d}
@@ -50,8 +50,8 @@ export function DemoEasingLab() {
               aria-checked={dur === d}
               onClick={() => setDur(d)}
               className={cn(
-                'h-8 cursor-pointer rounded-[6px] px-3 type-label tabular-nums transition-[background-color,box-shadow]',
-                dur === d ? 'bg-paper-raised shadow-paper' : 'text-ink-muted hover:text-ink',
+                'h-8 cursor-pointer border-r border-ink px-3 type-label tabular-nums transition-colors last:border-r-0',
+                dur === d ? 'bg-ink text-paper' : 'text-ink-muted hover:bg-paper-sunken hover:text-ink',
               )}
             >
               {d}s
@@ -62,7 +62,7 @@ export function DemoEasingLab() {
           type="button"
           onClick={play}
           disabled={!motionOk}
-          className="inline-flex h-9 cursor-pointer items-center gap-2 rounded-sm bg-ink px-3 type-label text-paper-raised transition-colors hover:bg-ink/85 disabled:cursor-not-allowed disabled:opacity-40"
+          className="inline-flex h-9 cursor-pointer items-center gap-2 border border-ink bg-ink px-3 type-label text-paper transition-colors hover:bg-paper hover:text-ink disabled:cursor-not-allowed disabled:border-rule-strong disabled:bg-transparent disabled:text-ink-muted"
         >
           <Play aria-hidden weight="fill" className="size-3" />
           {motionOk ? 'Play' : 'Reduced motion is on'}
@@ -72,7 +72,7 @@ export function DemoEasingLab() {
       <ul className="grid gap-3">
         {EASES.map((e, i) => (
           <li key={e.name} className="grid grid-cols-[4rem_1fr] items-center gap-4 sm:grid-cols-[4rem_9rem_1fr]">
-            <svg viewBox="0 0 64 40" className="h-10 w-16 rounded-xs border border-rule bg-paper" aria-hidden>
+            <svg viewBox="0 0 64 40" className="h-10 w-16 border border-rule-strong bg-paper" aria-hidden>
               <path d={paths[i]} fill="none" stroke="var(--ink)" strokeWidth="1.25" />
             </svg>
             <div className="hidden sm:block">
@@ -81,7 +81,7 @@ export function DemoEasingLab() {
             </div>
             <div className="relative h-10 border-b border-rule">
               <span className="absolute bottom-0 left-0 block sm:hidden type-meta text-ink-muted">{e.name}</span>
-              <span data-dot={i} className="absolute top-1/2 left-0 block size-3 -translate-y-1/2 rounded-xs bg-ink" />
+              <span data-dot={i} className="absolute top-1/2 left-0 block size-3 -translate-y-1/2 bg-ink" />
             </div>
           </li>
         ))}
