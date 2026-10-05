@@ -16,7 +16,7 @@ sara lou ▪                          UI / PRODUCT / FRONTEND
 SARA GRAMSTAD                                   000 / 100
 ```
 
-Everything else follows from that screen. **Rule of thumb: when unsure, pick the stranger, sharper, more specific option.**
+Everything else follows from that screen. **Rule of thumb: for the visuals, pick the stranger, sharper option. For words, pick the clearer one.**
 
 ---
 
@@ -54,24 +54,24 @@ The look stays strict (mono, caps, numbers, one LED); the words loosen up. That 
 
 **v4: the Handsdown tone.** Sara's studio, Handsdown, talks like a person: "we're basically your in-house designers, but without the stress", "you tell us what's up, and we move", "no layers. No handoffs." The portfolio speaks the same way, as "I", with "we" only when Handsdown is talking.
 
-- **Talk to "you".** Say what working with Sara means for the reader, not what Sara is.
-- **Asides are allowed.** "So, here's the short version." "Okay, the fun part." "Basically." Once per section, not every line.
-- **Taglines can turn.** "X, without the Y", "from A to B", "that feels human". One per project.
-- **Short, then a fact.** Every casual line sits on something true: dates, clients, tools, what she did.
-- **Never:** "passionate", "solutions", "elevate", made-up metrics, or a joke that hides what she actually did.
+- **Talk to "you".** Say what working with Sara is like for the reader.
+- **Never smug, never showing off.** No "I do it all", no "built by me too", no lines that set Sara up as the clever one. Modest and helpful, like "we're basically your in-house designers".
+- **Never so clever it's unclear.** If a stranger would have to stop and decode it ("small things, big rabbit holes", "mid-pivot", "same hands"), say the plain thing instead.
+- **Asides are allowed, sparingly.** "So, here's the short version." Once per page at most.
+- **Every casual line sits on a fact:** dates, clients, tools, what she actually did.
+- **Never:** "passionate", "solutions", "elevate", made-up metrics.
 
-**The bullshit test still applies,** but the target changed: casual is fine, vague isn't. If a line could be on anyone's site, rewrite it with a real detail.
+**The test:** read each line aloud to someone who has never met Sara. Is it clear? Does it sound like her talking to them, rather than about herself? If not, rewrite it.
 
-| Use | Instead of |
-| --- | --- |
-| I design it. I build it. You skip the handoff. | I design interfaces. Then I build them. |
-| The person who designs it is the person who builds it, so nothing gets lost in a handoff. | One person for the design and the Webflow build. Fewer handoffs. |
-| Roommate matching that feels human. Brand, UI components and a Webflow site, mid-pivot. | Brand, UI components and a Webflow site while the product changed direction. |
-| From craft kits to a Webflow platform. | Identity, online store and community platform for a craft brand. |
-| Just the two of us, on purpose. No layers, no account managers. | Too much process, too many layers. |
-| So, here's the short version. | (straight into the CV) |
-| Stuff I build while learning to code. Some of it even works. | What I'm building while I learn. |
-| Say hi. Tell me what's up. | Inbox open. / Let's make something together |
+| Use | Instead of | Why |
+| --- | --- | --- |
+| Hi, I'm Sara. I design websites and products. | I design it. I build it. You skip the handoff. | smug |
+| A few projects I've worked on, mostly through Hellofolk and Handsdown. | Okay, the fun part. …designed by me and usually built by me too. | showing off |
+| Things I build while learning to code. | Small things. Big rabbit holes. | unclear |
+| An app for finding a roommate. | Roommate matching, mid-pivot. | jargon |
+| It's just the two of us, so you always talk to the people doing the work. | No layers, no account managers, no babysitting a design team. | performative |
+| I'm a designer who's learning to code. | Designer by trade. Builder by increasingly frequent necessity. | too clever |
+| Say hi. Tell me what's up. | Inbox open. / Let's make something together | |
 
 ## Credibility layer
 

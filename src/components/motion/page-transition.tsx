@@ -14,7 +14,7 @@ function routeLabel(pathname: string): { index: string; title: string } {
   if (pathname === '/') return { index: 'Index / 000', title: 'Index' }
   const project = pathname.startsWith('/work/') ? projects.findIndex((p) => `/work/${p.slug}` === pathname) : -1
   if (project >= 0) return { index: workIndex(project), title: projects[project].title }
-  if (pathname === '/playground') return { index: 'Playground', title: 'Small things' }
+  if (pathname === '/playground') return { index: 'Playground', title: 'Playground' }
   if (pathname === '/about') return { index: 'About', title: 'About' }
   return { index: 'Error / 404', title: 'Nothing here' }
 }

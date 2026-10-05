@@ -40,7 +40,7 @@ export const playground: PlaygroundItem[] = [
     id: '001',
     title: 'This portfolio',
     description:
-      'Built from scratch in React and TypeScript, by someone who could have just used Webflow. Typed content, a small design system, everything numbered.',
+      'Built from scratch in React and TypeScript, as part of learning to code. Typed content, a small design system, everything numbered.',
     stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GSAP', 'Radix'],
     status: 'building',
     date: '2026-10',

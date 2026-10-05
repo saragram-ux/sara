@@ -16,7 +16,7 @@ export function AboutIntro() {
       }
       title={
         <>
-          Designer by trade. Builder by increasingly frequent necessity.
+          I’m a designer who’s learning to code.
         </>
       }
       lead={

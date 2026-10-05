@@ -19,13 +19,13 @@ export default function PlaygroundPage() {
         }
         title={
           <>
-            Small things. Big rabbit holes.
+            Things I build while learning to code.
           </>
         }
         lead={
           <>
-            <p>Little tools and experiments from studying frontend development. Some work. Some are still just an idea.</p>
-            <p className="mt-4 text-ink-muted">The live ones run right here on the page. No screenshots, no faking it.</p>
+            <p>Small tools and experiments from my frontend studies. Some are finished, some are still just an idea.</p>
+            <p className="mt-4 text-ink-muted">You can try the live ones right here on the page.</p>
           </>
         }
         aside={<PlaygroundStatusLegend />}

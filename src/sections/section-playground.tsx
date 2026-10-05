@@ -21,10 +21,10 @@ export function SectionPlayground() {
 
       <Grid className="mt-12 gap-y-6 md:mt-16">
         <h3 data-reveal className="col-span-4 type-display text-display-md md:col-span-6 lg:col-span-5 lg:col-start-3">
-          Small things. Big rabbit holes.
+          Things I build while learning to code.
         </h3>
         <p data-reveal className="col-span-4 text-lead text-ink-muted md:col-span-5 lg:col-span-4 lg:col-start-3">
-          Stuff I build while learning to code. Some of it even works.
+          Small tools and experiments from my frontend studies. Some are finished, some aren’t yet.
         </p>
       </Grid>
 
@@ -37,7 +37,7 @@ export function SectionPlayground() {
       </Grid>
 
       <div data-reveal className="mt-12">
-        <AnimatedLink href="/playground">See all of it</AnimatedLink>
+        <AnimatedLink href="/playground">See everything</AnimatedLink>
       </div>
     </Section>
   )

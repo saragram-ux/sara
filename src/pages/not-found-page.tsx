@@ -22,7 +22,7 @@ export default function NotFoundPage() {
         }
         lead={
           <>
-            <p className="text-ink-muted">This page doesn’t exist, or it moved while I was redesigning things. Happens a lot around here.</p>
+            <p className="text-ink-muted">This page doesn’t exist, or it has moved.</p>
             <div className="mt-8">
               <AnimatedLink href="/">Back to the start</AnimatedLink>
             </div>

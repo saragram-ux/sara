@@ -6,7 +6,7 @@ const SCALE = [
   { token: 'display-xl', cls: 'type-display text-display-xl', sample: 'Aa' },
   { token: 'display-lg', cls: 'type-display text-display-lg', sample: 'Say hi' },
   { token: 'display-md', cls: 'type-display text-display-md', sample: 'Work / 001' },
-  { token: 'display-sm', cls: 'type-display text-display-sm', sample: 'Small things' },
+  { token: 'display-sm', cls: 'type-display text-display-sm', sample: 'Playground' },
   { token: 'lead', cls: 'text-lead', sample: 'Tell me what’s up.' },
   { token: 'body', cls: 'text-body', sample: 'The bit you actually read.' },
   { token: 'small', cls: 'text-small', sample: 'Captions, roles and notes.' },

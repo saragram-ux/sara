@@ -27,7 +27,7 @@ export const experience: ExperienceEntry[] = [
     start: '2021',
     end: '2024',
     location: 'Åre',
-    description: 'From craft kits to a whole platform. UI, brand and Webflow: identity, store, community platform, design system.',
+    description: 'UI, brand and Webflow for a craft brand: identity, online store, community platform and design system.',
     projectSlug: 'myo',
   },
   {
@@ -36,7 +36,7 @@ export const experience: ExperienceEntry[] = [
     start: '2021',
     end: '2021',
     location: 'Stockholm',
-    description: 'Roommate matching, mid-pivot. Brand extension, UI components and a Webflow landing page.',
+    description: 'A roommate-matching app. Brand extension, UI components and a Webflow landing page.',
     projectSlug: 'coly',
   },
   {

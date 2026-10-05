@@ -19,7 +19,7 @@ export function SectionProjects() {
       </SectionLabel>
       <Grid className="mt-10 mb-6 md:mt-14">
         <p data-reveal className="col-span-4 text-lead text-ink-muted md:col-span-6 lg:col-span-6 lg:col-start-3">
-          Okay, the fun part. Brands, stores and apps, designed by me and usually built by me too.
+          A few projects I’ve worked on, mostly through Hellofolk and Handsdown. Brands, websites, online stores and apps.
         </p>
       </Grid>
       <ProjectList projects={projects} />

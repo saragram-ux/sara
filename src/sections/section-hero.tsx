@@ -29,12 +29,12 @@ export function SectionHero() {
       .from('[data-hero="step"]', { autoAlpha: 0, duration: duration.fast, ease: 'none', stagger: 0.06 }, 0.62)
   })
 
-  // What she does, then what that means for you. The second sentence steps in two columns.
+  // Who she is, then what she does. The second sentence steps in two columns.
   const lines = [
-    { text: 'I design it.', indent: '' },
-    { text: 'I build it.', indent: '' },
-    { text: 'You skip', indent: 'md:pl-[16.666%]' },
-    { text: 'the handoff.', indent: 'md:pl-[16.666%]' },
+    { text: 'Hi, I’m Sara.', indent: '' },
+    { text: 'I design', indent: '' },
+    { text: 'websites and', indent: 'md:pl-[16.666%]' },
+    { text: 'products.', indent: 'md:pl-[16.666%]' },
   ]
 
   return (
@@ -64,11 +64,11 @@ export function SectionHero() {
       <Grid className="mt-12 gap-y-12 md:mt-16">
         <div className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-3">
           <p data-hero="fade" className="text-lead">
-            I’ve designed interfaces since 2018 and built them in Webflow since 2020. Startups and established brands, all
-            over Europe. These days I run <span className="whitespace-nowrap">{profile.studio.name}</span> with Daniel.
+            I’ve designed interfaces since 2018 and built websites in Webflow since 2020, for startups and established brands
+            around Europe. These days I run <span className="whitespace-nowrap">{profile.studio.name}</span> with Daniel.
           </p>
           <p data-hero="fade" className="mt-4 text-lead text-ink-muted">
-            Right now I’m also learning to build the rest of it in code. It’s going well. Mostly.
+            I’m also studying frontend development, so I’m learning to build more of it in code.
           </p>
           <Cluster data-hero="fade" className="mt-8">
             <Button onClick={() => go('#work')}>

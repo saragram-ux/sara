@@ -20,7 +20,7 @@ export const profile = {
   /** The few lines that say how I work. Talk to the reader; if it sounds like LinkedIn, cut it. */
   voice: {
     problem: 'Good teams slowed down by design that was hard to work with. Too much process, too many layers.',
-    approach: 'The person who designs it is the person who builds it, so nothing gets lost in a handoff.',
+    approach: 'I usually do both the design and the Webflow build, which keeps things simple for you.',
     tools: 'I work where you already work: Figma, Webflow, Notion, Slack. 100% remote.',
   },
 } as const

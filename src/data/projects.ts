@@ -19,7 +19,7 @@ export const projects: Project[] = [
     role: 'Product Designer',
     location: 'Åre, Sweden',
     disciplines: ['UI design', 'Brand', 'Webflow', 'Design system'],
-    summary: 'From craft kits to a Webflow platform. Identity, store and community for a craft brand in Åre.',
+    summary: 'A craft brand in Åre. Identity, online store and a community platform, built in Webflow.',
     description:
       'Through Hellofolk, I did the UI, the brand work and the Webflow build for MYO. One identity that works on Shopify, Webflow and social, a new store and a community platform. It started with research and workshops, and a design system holds it all together.',
     tools: ['Figma', 'Webflow', 'Shopify'],
@@ -29,9 +29,9 @@ export const projects: Project[] = [
       {
         id: 'overview',
         label: 'Overview',
-        title: 'Part shop, part school, part club.',
+        title: 'Part shop, part learning space, part community.',
         body: [
-          'MYO (Make Your Own) is basically a store, a school and a club in one. I worked with them from 2021 to 2024 through Hellofolk, on the UI, the brand and the Webflow build.',
+          'MYO (Make Your Own) is a shop, a place to learn and a community, all in one. I worked with them from 2021 to 2024 through Hellofolk, on the UI, the brand and the Webflow build.',
         ],
         notes: { label: 'Scope', items: ['Visual identity refresh', 'Store experience', 'Community platform', 'Design system'] },
         figure: { alt: 'MYO overview', caption: 'MYO across store, community and social' },
@@ -39,9 +39,9 @@ export const projects: Project[] = [
       {
         id: 'brief',
         label: 'The brief',
-        title: 'Grown-up, without losing the handmade feel.',
+        title: 'Growing, without losing the handmade feel.',
         body: [
-          'The identity had to work on Shopify, Webflow and social, and still feel handmade. That’s the whole point of MYO.',
+          'The identity had to work on Shopify, Webflow and social, and still feel handmade, since that’s what MYO is about.',
         ],
       },
       {
@@ -65,9 +65,9 @@ export const projects: Project[] = [
       {
         id: 'build',
         label: 'Build',
-        title: 'Same hands, start to finish.',
+        title: 'Built in Webflow.',
         body: [
-          'I built it in Webflow while I designed it. No handoff, nothing lost in translation.',
+          'I also built it in Webflow, so the design and the build stayed close together.',
         ],
         notes: { label: 'Built with', items: ['Webflow', 'Shopify', 'Figma'] },
         figure: { alt: 'MYO design system components', caption: 'Design system, in use' },
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     role: 'UX/UI Designer',
     location: 'Stockholm, Sweden',
     disciplines: ['UI design', 'Brand', 'UI components', 'Webflow'],
-    summary: 'Roommate matching that feels human. Brand, UI components and a Webflow site, mid-pivot.',
+    summary: 'An app for finding a roommate. Brand, UI components and a Webflow landing page.',
     description:
       'Through Hellofolk, I joined Coly while the product was finding its focus. I took the visual and UI side: stretched the brand, built out the UI components, and designed and built the landing page in Webflow.',
     tools: ['Figma', 'Webflow'],
@@ -105,7 +105,7 @@ export const projects: Project[] = [
       {
         id: 'overview',
         label: 'Overview',
-        title: 'Joining mid-pivot.',
+        title: 'Joining during a change of direction.',
         body: [
           'Coly does roommate matching. I came in while they were narrowing down what the product actually was, and someone had to own the visual and UI side in the meantime. For most of 2021, that was me.',
         ],
@@ -115,9 +115,9 @@ export const projects: Project[] = [
       {
         id: 'problem',
         label: 'The problem',
-        title: 'Make the outside catch up.',
+        title: 'Making the brand match the product.',
         body: [
-          'When a product changes direction, the brand and the website are always the last to know. My job was to make what Coly said on the outside match where the product was actually going.',
+          'When a product changes direction, the brand and the website often lag behind. My job was to make what Coly said on the outside match where the product was actually going.',
         ],
       },
       {
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     role: 'Co-founder & Product Designer',
     location: 'Sweden · Remote',
     disciplines: ['Product design', 'Brand', 'Websites', 'Webflow'],
-    summary: 'My studio, with Daniel. Brands, websites and products, without the agency thing.',
+    summary: 'The studio I run with Daniel. Brands, websites and products, made by the two of us.',
     description:
       'Handsdown is me and Daniel. We’re basically your in-house designers, but without the stress. I do the design and the Webflow build.',
     tools: ['Figma', 'Webflow'],
@@ -181,7 +181,7 @@ export const projects: Project[] = [
         label: 'Selected studio work',
         title: 'Stuff we made.',
         body: [
-          'Brand and web for Minc, the startup house of Malmö, and for Perfect Event: high-end, without the ego. The rest lives on handsdown.studio.',
+          'Brand and website for Minc, the startup house of Malmö, and for Perfect Event. More on handsdown.studio.',
         ],
         notes: { label: 'Studio work', items: ['Minc — brand + web', 'Perfect Event — brand + web'] },
       },
@@ -196,7 +196,7 @@ export const projects: Project[] = [
     role: 'UX Designer',
     location: 'Malmö, Sweden',
     disciplines: ['UX design', 'Wireframes', 'Prototyping'],
-    summary: 'Calendar, tasks and email in one app. My summer of wireframes, 2018.',
+    summary: 'An app for calendar, tasks and email. I worked on wireframes and prototypes.',
     description:
       'An early-stage startup with a big idea: calendar, tasks and email in one app. It reached 100k+ downloads and was part of SUP46. I worked on wireframes, prototypes and UX/UI.',
     tools: ['Wireframes', 'Prototypes'],
