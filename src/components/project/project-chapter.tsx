@@ -27,7 +27,7 @@ export function ProjectChapter({ chapter, number, project, projectIndex, figureI
             <span className="text-ink tabular-nums">{String(number).padStart(2, '0')}</span> — {chapter.label}
             {chapter.draft && <span className="ml-2 text-accent-ink">(draft · dev only)</span>}
           </h2>
-          {chapter.title && <p className="mt-5 font-serif text-display-sm">{chapter.title}</p>}
+          {chapter.title && <p className="mt-5 type-display text-display-sm">{chapter.title}</p>}
           <div className="type-prose mt-5">
             {chapter.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

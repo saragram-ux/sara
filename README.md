@@ -173,7 +173,7 @@ When adding a custom token, also add it to `extendTailwindMerge` in `src/lib/uti
 ## Design tokens
 
 - **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, and one acid-green `accent` for status LEDs and selection, plus `accent-ink` for the rare accent *text*. Never put text in `accent` on paper. All text tokens are ≥ 4.5:1 on paper.
-- **Type:** three families with fixed roles. *Instrument Serif* for display, *Geist* for reading, *Geist Mono* for metadata. A fluid scale: `text-display-xl/lg/md/sm`, `text-title`, `text-lead`, `text-body`, `text-small`, `text-meta`, `text-micro`, `text-nano`.
+- **Type:** three families with fixed roles. *Archivo* (extra-bold caps, via `type-display`) for display, *Geist* for reading, *Geist Mono* for metadata. A fluid scale: `text-display-xl/lg/md/sm`, `text-title`, `text-lead`, `text-body`, `text-small`, `text-meta`, `text-micro`, `text-nano`.
 - **Radius / shadow:** `rounded-xs…xl` (crisp by default; `lg` only on iOS-style panels), `shadow-paper/lift/float`.
 
 shadcn/ui components in use: **Button, Sheet** (mobile menu), **Dialog + Command** (⌘K menu), plus a small `Kbd`. `components.json` is set up, so `npx shadcn@latest add <component>` works.

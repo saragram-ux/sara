@@ -86,12 +86,12 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
               <circle cx="20" cy="20" r="11" />
               <path d="M20 2v36M2 20h36" />
             </svg>
-            <span className="font-serif text-[max(1.25rem,6cqw)] leading-none">{figure.caption}</span>
+            <span className="type-display text-[max(1.25rem,6cqw)] leading-none">{figure.caption}</span>
             <span className="type-label opacity-60">[ image pending ]</span>
           </div>
         ) : (
           <div className="flex items-end gap-[3cqw]">
-            <span className="font-serif text-[22cqw] leading-[0.8] tracking-[-0.03em]">{project.plate.mark}</span>
+            <span className="type-display text-[22cqw] leading-[0.8] tracking-[-0.03em]">{project.plate.mark}</span>
             <Icon aria-hidden weight="light" className="mb-[1.5cqw] size-[9cqw] shrink-0" />
           </div>
         )}

@@ -7,24 +7,26 @@ import { cn } from '@/lib/utils'
 const buttonVariants = cva(
   [
     'group/button relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap select-none',
-    'font-mono text-meta uppercase tracking-[0.04em]',
-    'transition-[background-color,color,border-color,box-shadow,transform] duration-base ease-out-soft',
-    'active:translate-y-px disabled:pointer-events-none disabled:opacity-50',
+    'rounded-full font-display font-extrabold uppercase tracking-[-0.005em] [word-spacing:0.12em]',
+    'transition-[background-color,color,border-color,transform] duration-fast ease-out-soft',
+    // a small, mechanical snap on press
+    'active:translate-y-px active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50',
     '[&_svg]:pointer-events-none [&_svg]:shrink-0',
   ],
   {
     variants: {
       variant: {
-        default: 'bg-ink text-paper-raised hover:bg-[color-mix(in_srgb,var(--ink)_86%,var(--accent))] shadow-paper',
-        outline: 'border border-rule-strong bg-paper-raised/60 text-ink hover:border-ink hover:bg-paper-raised',
+        /** the one loud thing on a page: acid-green pill, ink caps */
+        default: 'bg-accent text-[#161513] hover:bg-[color-mix(in_srgb,var(--accent)_82%,#161513)]',
+        outline: 'border-2 border-ink bg-transparent text-ink hover:bg-ink hover:text-paper',
         ghost: 'text-ink hover:bg-paper-sunken',
-        link: 'text-ink link-underline-draw px-0! h-auto!',
+        link: 'rounded-none font-mono font-normal text-ink link-underline-draw px-0! h-auto!',
       },
       size: {
-        sm: 'h-8 rounded-sm px-3',
-        default: 'h-11 rounded-sm px-4',
-        lg: 'h-12 rounded-sm px-5',
-        icon: 'size-11 rounded-sm',
+        sm: 'h-9 px-4 text-small',
+        default: 'h-12 px-6 text-body',
+        lg: 'h-14 px-8 text-lead',
+        icon: 'size-12',
       },
     },
     defaultVariants: { variant: 'default', size: 'default' },

@@ -29,11 +29,12 @@ export function SectionHero() {
       .from('[data-hero="step"]', { autoAlpha: 0, duration: duration.fast, ease: 'none', stagger: 0.06 }, 0.62)
   })
 
-  // Three plain words for three plain facts. Each line steps in by one column.
+  // What she does, in the order she does it. The second sentence steps in two columns.
   const lines = [
-    { text: 'Designer.', indent: '' },
-    { text: 'Builder.', indent: 'pl-[0.6em] md:pl-[8.333%]' },
-    { text: 'Detail person.', indent: 'pl-[1.2em] md:pl-[16.666%]' },
+    { text: 'I design', indent: '' },
+    { text: 'interfaces.', indent: '' },
+    { text: 'Then I build', indent: 'md:pl-[16.666%]' },
+    { text: 'them.', indent: 'md:pl-[16.666%]' },
   ]
 
   return (
@@ -47,7 +48,7 @@ export function SectionHero() {
         </span>
       </Grid>
 
-      <h1 id="hero-title" className="mt-10 font-serif text-display-xl md:mt-14">
+      <h1 id="hero-title" className="mt-10 type-display text-display-xl md:mt-14">
         <span className="sr-only">
           {brand.name} — {profile.name}.{' '}
         </span>

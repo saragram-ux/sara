@@ -36,7 +36,7 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
         </div>
 
         <div className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-3">
-          <h2 id={`p-${item.id}-title`} className="font-serif text-display-md">
+          <h2 id={`p-${item.id}-title`} className="type-display text-display-md">
             {item.title}
           </h2>
           <p className="mt-4 max-w-xl text-body text-ink-muted">{item.description}</p>

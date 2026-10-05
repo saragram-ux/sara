@@ -1,9 +1,11 @@
-# sara lou — brand notes (v2)
+# sara lou — brand notes (v3)
 
 > A small, very well-made corner of the internet belonging to Sara Gramstad.
 > A little precise. A little strange. Not trying to impress you.
 
-**v2 is a correction.** v1 drifted soft: a cute serif wordmark, a pastel dot, slogans ("details, yes · ceremony, no"), a sign-off like a café menu. v2 returns to what was actually distinctive, the intro screen:
+**v3:** the serif is gone. Instrument Serif read as "2020 soft creative director", so display type is now **Archivo, extra-bold, uppercase**, taking its cue from Designlab's CTA blocks without the blue. The contact section is a solid ink block with an acid pill button. And every line on the site went through a bullshit audit (see Voice).
+
+**v2 was a correction.** v1 drifted soft: a cute serif wordmark, a pastel dot, slogans ("details, yes · ceremony, no"), a sign-off like a café menu. v2 returns to what was actually distinctive, the intro screen:
 
 ```
 sara lou ▪                          UI / PRODUCT / FRONTEND
@@ -48,12 +50,17 @@ It is not: friendly-designer-next-door, boutique studio, lifestyle brand, develo
 
 Matter-of-fact. Say the thing and stop. A deadpan line is allowed once per page, and it's usually the headline. The facts underneath stay serious. Never explain the brand, never say "passionate", and no slogans.
 
+**The bullshit test.** Read every line as a blunt founder would. If he'd say "that's bullshit", rewrite it as the plain fact or cut it. Usual offenders: anything about "making things clearer", "easy to work alongside", pull quotes of yourself, rhyming labels, and "on purpose".
+
 | Use | Instead of |
 | --- | --- |
-| Designer. Builder. Detail person. | Designer who builds beautiful things |
+| I design interfaces. Then I build them. | Designer. Builder. Detail person. |
+| One person for the design and the Webflow build. Fewer handoffs. | I slot into your team and focus on making things clearer… |
+| Brand, UI components and a Webflow site while the product changed direction. | Making the outside of a product match where the inside was heading |
+| Studied it, didn't finish it, still use it. | The why. Interfaces are made of decisions, after all. |
 | Designer by trade. Builder by increasingly frequent necessity. | Hi, I'm Sara! |
 | I started in graphic design. Then interfaces happened. Now I'm learning to build the whole thing. | Graphic design taught me to see… |
-| Small things. Big rabbit holes. | A lab notebook of my experiments |
+| Small things. Big rabbit holes. What I'm building while I learn. Some of it works. | Unfinished, on purpose. |
 | Inbox open. | Let's make something / say hi |
 | Freelance and contract work. Remote, across Europe. | Always happy to chat! |
 
@@ -88,11 +95,17 @@ The green should feel almost accidental: a tiny LED, one active state, one hover
 
 ## Typography
 
+- **Archivo, 800, UPPERCASE** (`type-display`): headlines, project titles, buttons. Bold, plain, slightly wide, like a label on a box
 - **Geist Mono:** the name, the system voice, every number
-- **Instrument Serif:** statements and titles, never the name
 - **Geist:** reading
 
-This keeps the pairing editorial + technical. The serif is for sentences, not for being sweet.
+No serif. No italics in headlines. It's bold + mono, worn in rather than precious.
+
+## Buttons and the contact block
+
+- **Primary button:** a fat acid-green pill with ink caps (`Button` default). It's the one loud thing; use it once per screen.
+- **Secondary:** an outline pill.
+- **Contact block** (`theme-inverse`): ink background, with the tokens flipped so every component inverts by itself. A big caps headline, the email set like a form field (label, address, heavy underline), then the pills.
 
 ## Wordmark
 

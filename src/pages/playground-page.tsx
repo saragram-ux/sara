@@ -19,7 +19,7 @@ export default function PlaygroundPage() {
         }
         title={
           <>
-            Small things. Big rabbit <em>holes.</em>
+            Small things. Big rabbit holes.
           </>
         }
         lead={

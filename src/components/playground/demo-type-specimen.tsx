@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 
 const SCALE = [
-  { token: 'display-xl', cls: 'font-serif text-display-xl', sample: 'Aa' },
-  { token: 'display-lg', cls: 'font-serif text-display-lg', sample: 'Designer' },
-  { token: 'display-md', cls: 'font-serif text-display-md', sample: 'who builds' },
-  { token: 'display-sm', cls: 'font-serif text-display-sm', sample: 'Details matter' },
-  { token: 'lead', cls: 'text-lead', sample: 'But never more than momentum.' },
+  { token: 'display-xl', cls: 'type-display text-display-xl', sample: 'Aa' },
+  { token: 'display-lg', cls: 'type-display text-display-lg', sample: 'Inbox open' },
+  { token: 'display-md', cls: 'type-display text-display-md', sample: 'Work / 001' },
+  { token: 'display-sm', cls: 'type-display text-display-sm', sample: 'Small things' },
+  { token: 'lead', cls: 'text-lead', sample: 'Freelance and contract work.' },
   { token: 'body', cls: 'text-body', sample: 'Readable, calm, unhurried copy.' },
   { token: 'small', cls: 'text-small', sample: 'Captions, roles and notes.' },
   { token: 'meta', cls: 'type-meta', sample: 'Metadata · 2026' },

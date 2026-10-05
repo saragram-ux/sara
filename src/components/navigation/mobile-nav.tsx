@@ -60,7 +60,7 @@ export default function MobileNav({ open, onOpenChange: setOpen }: { open: boole
                     aria-current={active ? 'page' : undefined}
                     className="flex items-baseline justify-between py-4"
                   >
-                    <span className="font-serif text-display-sm">{item.label}</span>
+                    <span className="type-display text-display-sm">{item.label}</span>
                     <span className={cn('type-label tabular-nums', active ? 'text-accent-ink' : 'text-ink-faint')}>0{i + 1}</span>
                   </TransitionLink>
                 </li>

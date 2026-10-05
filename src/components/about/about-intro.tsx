@@ -16,7 +16,7 @@ export function AboutIntro() {
       }
       title={
         <>
-          Designer by trade. Builder by increasingly frequent <em>necessity.</em>
+          Designer by trade. Builder by increasingly frequent necessity.
         </>
       }
       lead={

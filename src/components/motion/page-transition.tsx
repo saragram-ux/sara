@@ -158,7 +158,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
           <span className="flex flex-col items-end gap-2">
             <span ref={labelIndex} className="type-label text-paper-raised/60 tabular-nums" />
             <span className="reveal-line">
-              <span ref={label} className="block font-serif text-display-sm" />
+              <span ref={label} className="block type-display text-display-sm" />
             </span>
           </span>
         </Container>

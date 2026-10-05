@@ -1,8 +1,8 @@
 import { Check, Copy } from '@phosphor-icons/react'
 import { useState } from 'react'
 
+import { Button } from '@/components/ui/button'
 import { profile } from '@/data/profile'
-import { cn } from '@/lib/utils'
 
 /** Copy-to-clipboard with an inline confirmation, announced to screen readers. */
 export function CopyEmailButton({ className }: { className?: string }) {
@@ -17,17 +17,9 @@ export function CopyEmailButton({ className }: { className?: string }) {
     }
   }
   return (
-    <button
-      type="button"
-      onClick={copy}
-      className={cn(
-        'inline-flex h-11 cursor-pointer items-center gap-2 rounded-sm border border-rule-strong px-3 type-label text-ink',
-        'transition-colors duration-base hover:border-ink hover:bg-paper-raised',
-        className,
-      )}
-    >
-      {copied ? <Check aria-hidden weight="bold" className="size-3.5 text-live" /> : <Copy aria-hidden className="size-3.5" />}
+    <Button type="button" variant="outline" onClick={copy} className={className}>
+      {copied ? <Check aria-hidden weight="bold" className="size-4" /> : <Copy aria-hidden weight="bold" className="size-4" />}
       <span aria-live="polite">{copied ? 'Copied' : 'Copy email'}</span>
-    </button>
+    </Button>
   )
 }

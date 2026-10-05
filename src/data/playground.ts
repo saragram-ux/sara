@@ -40,7 +40,7 @@ export const playground: PlaygroundItem[] = [
     id: '001',
     title: 'This portfolio',
     description:
-      'Designed in the browser and built from scratch: typed content, a small token-based design system, and motion that only shows up where it explains something.',
+      'Built from scratch with React and TypeScript. Typed content, a small token-based design system, a numbered index.',
     stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GSAP', 'Radix'],
     status: 'building',
     date: '2026-10',

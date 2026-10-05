@@ -17,7 +17,7 @@ export default function NotFoundPage() {
         }
         title={
           <>
-            Nothing <em>here.</em>
+            Nothing here.
           </>
         }
         lead={

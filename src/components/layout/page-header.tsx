@@ -25,7 +25,7 @@ export function PageHeader({ eyebrow, title, lead, aside }: PageHeaderProps) {
       <div data-page-header="eyebrow" className="flex items-baseline justify-between gap-4 border-t border-ink pt-3 type-label text-ink-muted">
         {eyebrow}
       </div>
-      <h1 className="mt-10 font-serif text-display-lg md:mt-14">
+      <h1 className="mt-10 type-display text-display-lg md:mt-14">
         <span className="reveal-line">
           <span data-page-header="title" className="block">
             {title}

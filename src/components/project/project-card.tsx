@@ -61,7 +61,7 @@ export function ProjectCard({ project, index, active = false, showPlate = false,
       </span>
 
       <span className="col-span-4 md:col-span-6 lg:col-span-5 lg:col-start-3">
-        <span className="block font-serif text-display-md transition-transform duration-base ease-out-soft group-hover/row:translate-x-nudge">
+        <span className="block type-display text-display-md transition-transform duration-base ease-out-soft group-hover/row:translate-x-nudge">
           {project.title}
         </span>
         <span className="mt-2 block max-w-[34rem] text-small text-ink-muted">{project.summary}</span>

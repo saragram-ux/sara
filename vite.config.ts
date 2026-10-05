@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig, type Plugin } from 'vite'
 
 /**
- * Preload the two fonts the first screen needs (display serif + body sans),
+ * Preload the two fonts the first screen needs (display display + body sans),
  * so text doesn't wait for the CSS to be parsed before fonts start downloading.
  */
 function preloadCriticalFonts(patterns: RegExp[]): Plugin {
@@ -36,7 +36,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    preloadCriticalFonts([/instrument-serif-latin-400-normal/, /geist-latin-wght-normal/]),
+    preloadCriticalFonts([/archivo-latin-wght-normal/, /geist-latin-wght-normal/]),
   ],
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },

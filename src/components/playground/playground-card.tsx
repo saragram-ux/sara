@@ -11,7 +11,7 @@ export function PlaygroundCard({ item }: { item: PlaygroundItem }) {
         <span>Playground / {item.id}</span>
         <PlaygroundStatus status={item.status} />
       </div>
-      <h4 className="mt-6 font-serif text-display-sm transition-transform duration-slow ease-out-soft group-hover/entry:translate-x-nudge">
+      <h4 className="mt-6 type-display text-display-sm transition-transform duration-slow ease-out-soft group-hover/entry:translate-x-nudge">
         {item.title}
       </h4>
       <p className="mt-3 max-w-sm text-small text-ink-muted">{item.description}</p>

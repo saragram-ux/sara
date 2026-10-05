@@ -17,14 +17,11 @@ export const profile = {
     detail: 'Freelance + contract',
     reach: 'Remote, across Europe',
   },
-  /** Lines lifted from my own profile text — the voice of the site. */
+  /** The few lines that say how I work. Plain on purpose: if it sounds like LinkedIn, cut it. */
   voice: {
-    motto: 'Details matter to me, but never more than momentum.',
-    problem:
-      'Good teams slowed down by design that was hard to work with. Too much process, too many layers, not enough just… getting it done.',
-    approach:
-      'I slot into your team, get up to speed fast, and focus on making things clearer. For your users, your product, and the people building it.',
-    tools: 'Figma and Webflow, fully remote. No ceremony.',
+    problem: 'Good teams slowed down by design that was hard to work with. Too much process, too many layers.',
+    approach: 'One person for the design and the Webflow build. Fewer handoffs.',
+    tools: 'Figma and Webflow, fully remote.',
   },
 } as const
 

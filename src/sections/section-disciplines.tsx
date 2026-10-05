@@ -6,7 +6,7 @@ import { SectionLabel } from '@/components/layout/section-label'
 import { useScrollReveal } from '@/components/motion/use-reveal'
 import { disciplines } from '@/data/about'
 
-/** About: graphic design + behavioural science + frontend, and the motto. */
+/** About: graphic design + behavioural science + frontend. What was studied, and whether it got finished. */
 export function SectionDisciplines() {
   const ref = useRef<HTMLElement>(null)
   useScrollReveal(ref)
@@ -22,25 +22,20 @@ export function SectionDisciplines() {
               <span className="text-ink">{d.gives}</span>
               <span className="tabular-nums">{d.years}</span>
             </div>
-            <h3 className="mt-6 font-serif text-display-sm">{d.discipline}</h3>
+            <h3 className="mt-6 type-display text-display-sm">{d.discipline}</h3>
             <p className="mt-1 type-label text-ink-muted">{d.where}</p>
             <p className="mt-5 max-w-sm text-body">{d.text}</p>
             {i < disciplines.length - 1 && (
               // the + sits in the middle of the gutter between columns
               <span
                 aria-hidden
-                className="absolute top-14 -right-[calc(var(--gutter)/2)] hidden translate-x-1/2 font-serif text-display-sm text-ink-faint lg:block"
+                className="absolute top-14 -right-[calc(var(--gutter)/2)] hidden translate-x-1/2 type-display text-display-sm text-ink-faint lg:block"
               >
                 +
               </span>
             )}
           </li>
         ))}
-      </Grid>
-      <Grid as="figure" data-reveal className="mt-block-gap">
-        <blockquote className="col-span-4 font-serif text-display-md md:col-span-7 lg:col-span-8 lg:col-start-3">
-          “Details matter to me, but never more than <em>momentum.</em>”
-        </blockquote>
       </Grid>
     </Section>
   )

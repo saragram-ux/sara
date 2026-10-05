@@ -9,32 +9,33 @@ import { SectionLabel } from '@/components/layout/section-label'
 import { useScrollReveal } from '@/components/motion/use-reveal'
 import { profile } from '@/data/profile'
 
-/** The end of every page: how to start a conversation. */
+/** The end of every page: an ink block with one job — get an email sent. */
 export function SectionContact() {
   const ref = useRef<HTMLElement>(null)
   useScrollReveal(ref)
 
   return (
-    <Section ref={ref} id="contact" tabIndex={-1} aria-labelledby="contact-title" className="outline-none">
+    <Section ref={ref} id="contact" tabIndex={-1} aria-labelledby="contact-title" className="theme-inverse outline-none">
       <SectionLabel index="→" id="contact-title">
         Contact
       </SectionLabel>
 
       <Grid className="mt-12 gap-y-14 md:mt-16">
         <div data-reveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-3">
-          <p className="font-serif text-display-lg">
-            Inbox <em>open.</em>
-          </p>
+          <p className="type-display text-display-xl">Inbox open.</p>
           <p className="mt-6 max-w-md text-lead text-ink-muted">Freelance and contract work. Remote, across Europe.</p>
 
-          {/* Art-directed size: large enough to read as the call to action, small enough to fit on one line. */}
-          <a
-            href={`mailto:${profile.email}`}
-            className="group/mail mt-10 inline-block font-serif text-[clamp(1.5rem,1rem+2.6vw,3rem)] leading-tight break-all"
-          >
-            <span className="link-underline decoration-ink/30 group-hover/mail:decoration-accent">{profile.email}</span>
-          </a>
-          <ContactLinks className="mt-6" />
+          {/* Set like a form field: a label, the address, a heavy underline. It's a mailto, not a form. */}
+          <div className="mt-12">
+            <p className="type-label text-ink-muted">Email</p>
+            <a
+              href={`mailto:${profile.email}`}
+              className="mt-3 block border-b-2 border-ink pb-3 font-display text-[clamp(1.35rem,0.95rem+2vw,2.6rem)] leading-tight font-bold break-all transition-colors duration-fast hover:border-accent"
+            >
+              {profile.email}
+            </a>
+          </div>
+          <ContactLinks className="mt-8" />
         </div>
 
         <div data-reveal className="col-span-4 md:col-span-5 lg:col-span-3 lg:self-end">

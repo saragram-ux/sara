@@ -2,8 +2,7 @@
 @import 'tw-animate-css';
 @import '@fontsource-variable/geist/wght.css';
 @import '@fontsource-variable/geist-mono/wght.css';
-@import '@fontsource/instrument-serif/400.css';
-@import '@fontsource/instrument-serif/400-italic.css';
+@import '@fontsource-variable/archivo/wght.css';
 
 /* ==========================================================================
    Design tokens
@@ -112,24 +111,25 @@
   --spacing-inset: var(--space-inset);
   --spacing-nudge: var(--nudge);
 
-  /* Type families: serif for display, sans for reading, mono for metadata */
-  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  /* Type families: a bold grotesk for display, sans for reading, mono for the system voice */
+  --font-display: 'Archivo Variable', 'Arial Black', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
 
   /* Type scale → text-display-xl, text-lead, text-meta … */
-  --text-display-xl: clamp(3.4rem, 1.2rem + 9.2vw, 10rem);
-  --text-display-xl--line-height: 0.88;
-  --text-display-xl--letter-spacing: -0.025em;
-  --text-display-lg: clamp(2.75rem, 1.4rem + 5.6vw, 6.5rem);
+  /* Display sizes are set for bold uppercase grotesk (use with .type-display) */
+  --text-display-xl: clamp(2.6rem, 0.9rem + 6.6vw, 7.25rem);
+  --text-display-xl--line-height: 0.9;
+  --text-display-xl--letter-spacing: -0.03em;
+  --text-display-lg: clamp(2.1rem, 1rem + 4.2vw, 5rem);
   --text-display-lg--line-height: 0.92;
-  --text-display-lg--letter-spacing: -0.02em;
-  --text-display-md: clamp(2rem, 1.3rem + 2.8vw, 3.75rem);
-  --text-display-md--line-height: 1;
-  --text-display-md--letter-spacing: -0.015em;
-  --text-display-sm: clamp(1.625rem, 1.25rem + 1.4vw, 2.375rem);
-  --text-display-sm--line-height: 1.08;
-  --text-display-sm--letter-spacing: -0.01em;
+  --text-display-lg--letter-spacing: -0.025em;
+  --text-display-md: clamp(1.6rem, 1.05rem + 2.1vw, 2.9rem);
+  --text-display-md--line-height: 0.98;
+  --text-display-md--letter-spacing: -0.02em;
+  --text-display-sm: clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
+  --text-display-sm--line-height: 1.05;
+  --text-display-sm--letter-spacing: -0.012em;
   --text-title: 1.25rem;
   --text-title--line-height: 1.3;
   --text-title--letter-spacing: -0.012em;
@@ -246,7 +246,7 @@
 /* ==========================================================================
    Utilities — named Client-First style: what it is, then its role.
    Layout:     container-page, grid-page, section-padding
-   Typography: type-label, type-meta, type-prose, reveal-line
+   Typography: type-display, type-label, type-meta, type-prose, reveal-line
    Links:      link-underline, link-underline-draw
    Motion:     duration-fast / -base / -slow
    The React layout primitives (components/layout) are thin wrappers over these.
@@ -276,6 +276,15 @@
 /* Vertical rhythm of a section */
 @utility section-padding {
   padding-block: var(--space-section);
+}
+
+/* The display voice: bold uppercase grotesk. Pair with a text-display-* size. */
+@utility type-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-kerning: normal;
+  word-spacing: 0.08em; /* bold caps with tight tracking swallow their word spaces */
 }
 
 /* Small monospaced uppercase label — the notebook voice */
@@ -345,6 +354,22 @@
   &:hover {
     text-decoration-color: currentColor;
   }
+}
+
+/* Inverse: flips the colour tokens for everything inside (the ink contact block).
+   Components need no changes; they read the same tokens. */
+@utility theme-inverse {
+  --paper: #161513;
+  --paper-raised: #22211e;
+  --paper-sunken: #0f0e0d;
+  --ink: #f3f0e8;
+  --ink-muted: #aaa498; /* 7.4:1 */
+  --ink-faint: #8f897e; /* 5.3:1 */
+  --rule: rgb(243 240 232 / 0.16);
+  --rule-strong: rgb(243 240 232 / 0.34);
+  --accent-ink: var(--accent); /* acid green is readable on ink (8.8:1) */
+  background-color: var(--paper);
+  color: var(--ink);
 }
 
 /* Motion durations as utilities */

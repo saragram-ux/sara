@@ -19,7 +19,7 @@ export const projects: Project[] = [
     role: 'Product Designer',
     location: 'Åre, Sweden',
     disciplines: ['UI design', 'Brand', 'Webflow', 'Design system'],
-    summary: 'Identity, store and community platform for a maker brand that is part shop, part learning space, part community.',
+    summary: 'Identity, online store and community platform for a craft brand in Åre.',
     description:
       'Working through Hellofolk, I led UI design, brand work and Webflow development for MYO. A visual identity that holds up across Shopify, Webflow and social, a redesigned store, and a new community platform: built on research, shaped in workshops, held together by a design system.',
     tools: ['Figma', 'Webflow', 'Shopify'],
@@ -65,7 +65,7 @@ export const projects: Project[] = [
       {
         id: 'build',
         label: 'Build',
-        title: 'Designed and built in the same hands.',
+        title: 'Designed and built by the same person.',
         body: [
           'I did the Webflow development alongside the UI — design and build in the same hands.',
         ],
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     role: 'UX/UI Designer',
     location: 'Stockholm, Sweden',
     disciplines: ['UI design', 'Brand', 'UI components', 'Webflow'],
-    summary: 'Making the outside of a product match where the inside was heading, during a period of refocus.',
+    summary: 'Brand, UI components and a Webflow site while the product changed direction.',
     description:
       'Working through Hellofolk, I joined Coly while the product strategy was being narrowed. I handled the visual and UI side: extending the brand, building out UI components, and designing and building the landing page in Webflow.',
     tools: ['Figma', 'Webflow'],
@@ -115,7 +115,7 @@ export const projects: Project[] = [
       {
         id: 'problem',
         label: 'The problem',
-        title: 'Say where the product is going, not where it’s been.',
+        title: 'Make the outside match the new product.',
         body: [
           'When a product changes direction, the outside lags behind. The job was to make sure what Coly communicated externally matched where the product was actually heading.',
         ],
@@ -131,7 +131,7 @@ export const projects: Project[] = [
         id: 'build',
         label: 'Build',
         title: 'Designed it, then built it.',
-        body: ['The landing page was designed and built by me in Webflow — one person between the idea and the live page.'],
+        body: ['I designed the landing page and built it in Webflow.'],
         notes: { label: 'Built with', items: ['Webflow', 'Figma'] },
         figure: { alt: 'Coly landing page', caption: 'Landing page, built in Webflow' },
       },
@@ -151,9 +151,9 @@ export const projects: Project[] = [
     role: 'Co-founder & Product Designer',
     location: 'Sweden · Remote',
     disciplines: ['Product design', 'Brand', 'Websites', 'Webflow'],
-    summary: 'A small studio for brands, websites and products that are easy to work with — and easy to work alongside.',
+    summary: 'My studio. Brands, websites and products, designed in Figma and built in Webflow.',
     description:
-      'We started Handsdown because we kept seeing the same thing: good teams slowed down by design that was hard to work with. I handle design and Webflow development, and keep things focused and moving without unnecessary layers.',
+      'We started Handsdown because we kept seeing good teams slowed down by design that was hard to work with. I do the design and the Webflow development.',
     tools: ['Figma', 'Webflow'],
     plate: { mark: 'Hd', icon: Hand, tone: 'ink' },
     status: 'ongoing',
@@ -163,15 +163,15 @@ export const projects: Project[] = [
         label: 'Why',
         title: 'Too much process, too many layers.',
         body: [
-          'Good teams kept getting slowed down by design that was hard to work with. Not enough just… getting it done. Handsdown is the answer to that.',
+          'Good teams kept getting slowed down by design that was hard to work with: too much process, too many layers. Handsdown has fewer of both.',
         ],
       },
       {
         id: 'how',
         label: 'How',
-        title: 'Slot in, get up to speed, make it clearer.',
+        title: 'Design and build, one person.',
         body: [
-          'We build brands, websites and products. I handle design and Webflow development, slot into teams fast, and focus on making things clearer — for users, for the product, and for the people building it.',
+          'We make brands, websites and products. I do the design and the Webflow build, so there is no handoff in between.',
         ],
         notes: { label: 'Practice', items: ['Figma', 'Webflow', 'Fully remote', 'No ceremony'] },
         figure: { alt: 'Handsdown Studio', caption: 'Handsdown Studio' },

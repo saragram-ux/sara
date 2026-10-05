@@ -15,7 +15,7 @@ export function ProjectNext({ project, index }: { project: Project; index: numbe
           <span className="tabular-nums">{project.year}</span>
         </span>
         <span className="mt-8 flex items-end justify-between gap-6 pb-4">
-          <span className="font-serif text-display-lg transition-transform duration-base ease-out-soft group-hover/next:translate-x-1">
+          <span className="type-display text-display-lg transition-transform duration-base ease-out-soft group-hover/next:translate-x-1">
             {project.title}
           </span>
           <ArrowRight

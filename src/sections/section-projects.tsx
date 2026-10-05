@@ -19,8 +19,7 @@ export function SectionProjects() {
       </SectionLabel>
       <Grid className="mt-10 mb-6 md:mt-14">
         <p data-reveal className="col-span-4 text-lead text-ink-muted md:col-span-6 lg:col-span-6 lg:col-start-3">
-          Brands, stores and products — usually designed <em className="font-serif text-[1.15em] text-ink">and</em> built by
-          me.
+          Brands, stores and products. Usually designed and built by me.
         </p>
       </Grid>
       <ProjectList projects={projects} />
