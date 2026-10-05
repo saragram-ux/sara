@@ -25,8 +25,8 @@ export function SectionHero() {
       .from('[data-hero="line"]', { yPercent: 105, duration: 0.6, ease: ease.out, stagger: 0.07 }, 0.08)
       .from('[data-hero="fade"]', { autoAlpha: 0, y: 10, duration: 0.45, ease: ease.out, stagger: 0.05 }, 0.32)
       .from('[data-hero="panel"]', { autoAlpha: 0, y: 12, duration: 0.5, ease: ease.out }, 0.38)
-      .from('[data-hero="rule"]', { scaleX: 0, transformOrigin: 'left', duration: 0.7, ease: ease.inOut }, 0.4)
-      .from('[data-hero="step"]', { autoAlpha: 0, duration: duration.fast, ease: 'none', stagger: 0.06 }, 0.62)
+      .from('[data-hero="pipe"]', { clipPath: 'inset(0 100% 100% 0)', duration: 0.45, ease: ease.inOut, stagger: 0.14 }, 0.42)
+      .from('[data-hero="step"]', { autoAlpha: 0, duration: duration.fast, ease: 'none', stagger: 0.08 }, 0.5)
   })
 
   // Who she is, then what she does. The second sentence steps in two columns.

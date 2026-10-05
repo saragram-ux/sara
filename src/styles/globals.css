@@ -357,6 +357,49 @@
 
 /* Inverse: flips the colour tokens for everything inside (the ink contact block).
    Components need no changes; they read the same tokens. */
+/* Diagonal hatching: the notebook's mark for "not there yet" — empty cells, pending images */
+@utility bg-hatch {
+  background-image: repeating-linear-gradient(-45deg, var(--rule-strong) 0 1px, transparent 1px 8px);
+}
+
+/* A drawn line in a diagram: a thick ink pipe with round ends */
+@utility pipe {
+  background: var(--ink);
+  border-radius: 999px;
+}
+
+/* A pipe that's still running: acid dashes travel along its centre. Horizontal from md, vertical below. */
+@utility pipe-live {
+  position: relative;
+  background: var(--ink);
+  border-radius: 999px;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 3px calc(50% - 1px);
+    background: repeating-linear-gradient(180deg, var(--accent) 0 7px, transparent 7px 13px);
+    animation: pipe-flow-y 0.9s linear infinite;
+  }
+  @media (width >= 48rem) {
+    &::after {
+      inset: calc(50% - 1px) 3px;
+      background: repeating-linear-gradient(90deg, var(--accent) 0 7px, transparent 7px 13px);
+      animation-name: pipe-flow-x;
+    }
+  }
+}
+
+@keyframes pipe-flow-x {
+  to {
+    background-position: 13px 0;
+  }
+}
+@keyframes pipe-flow-y {
+  to {
+    background-position: 0 13px;
+  }
+}
+
 @utility theme-inverse {
   --paper: #161513;
   --paper-raised: #22211e;

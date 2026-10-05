@@ -56,12 +56,17 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
     )
   }
 
+  // Covers get the grid; pending figures are hatched — the notebook's mark for "not there yet".
   const style = {
     aspectRatio: aspect,
     backgroundColor: tone.bg,
     color: tone.fg,
-    backgroundImage: `linear-gradient(to right, ${tone.line} 1px, transparent 1px), linear-gradient(to bottom, ${tone.line} 1px, transparent 1px)`,
-    backgroundSize: 'calc(100% / 8) 100%, 100% calc(100% / 6)',
+    ...(figure
+      ? { backgroundImage: 'repeating-linear-gradient(-45deg, rgb(22 21 19 / 0.13) 0 1px, transparent 1px 9px)' }
+      : {
+          backgroundImage: `linear-gradient(to right, ${tone.line} 1px, transparent 1px), linear-gradient(to bottom, ${tone.line} 1px, transparent 1px)`,
+          backgroundSize: 'calc(100% / 8) 100%, 100% calc(100% / 6)',
+        }),
   } satisfies CSSProperties
 
   return (
@@ -81,7 +86,7 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
         </div>
 
         {figure ? (
-          <div className="flex flex-col items-center gap-[2cqw] text-center">
+          <div className="flex flex-col items-center gap-[2cqw] self-center border border-current/30 bg-[var(--paper-raised)] px-[5cqw] py-[3cqw] text-center">
             <svg aria-hidden viewBox="0 0 40 40" className="w-[7cqw] min-w-6 opacity-60" fill="none" stroke="currentColor" strokeWidth="1">
               <circle cx="20" cy="20" r="11" />
               <path d="M20 2v36M2 20h36" />

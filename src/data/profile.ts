@@ -42,3 +42,6 @@ export const careerPath = [
   { year: '2020', label: 'Webflow development' },
   { year: '2026', label: 'Frontend development', current: true },
 ] as const
+
+/** When the current step ends: the frontend course runs 2026—2028 (see about.ts). */
+export const careerPathEnd = { year: 2028, startYear: 2026 } as const

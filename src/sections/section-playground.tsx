@@ -6,6 +6,7 @@ import { SectionLabel } from '@/components/layout/section-label'
 import { AnimatedLink } from '@/components/motion/animated-link'
 import { useScrollReveal } from '@/components/motion/use-reveal'
 import { PlaygroundCard } from '@/components/playground/playground-card'
+import { pad3 } from '@/data/brand'
 import { visiblePlayground } from '@/data/playground'
 
 /** Home: the three latest playground entries. */
@@ -28,13 +29,19 @@ export function SectionPlayground() {
         </p>
       </Grid>
 
-      <Grid as="ol" className="mt-14 gap-y-10">
+      {/* Boxed cells with shared edges: the grid made visible. The empty cell is hatched: not there yet. */}
+      <ol className="mt-14 grid grid-cols-1 border-t border-l border-ink md:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
-          <li key={item.id} data-reveal className="col-span-4 md:col-span-4 lg:col-span-4">
+          <li key={item.id} data-reveal className="border-r border-b border-ink">
             <PlaygroundCard item={item} />
           </li>
         ))}
-      </Grid>
+        <li data-reveal className="hidden min-h-56 items-end border-r border-b border-ink bg-hatch p-5 md:flex md:p-6">
+          <span className="bg-paper px-2 py-1 type-label text-ink-muted tabular-nums">
+            Playground / {pad3(Number(visiblePlayground[0]?.id ?? 0) + 1)} · not started yet
+          </span>
+        </li>
+      </ol>
 
       <div data-reveal className="mt-12">
         <AnimatedLink href="/playground">See everything</AnimatedLink>
