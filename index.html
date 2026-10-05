@@ -3,18 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Sara Gramstad — Designer who builds</title>
+    <title>sara lou — Sara Gramstad · UI, Product & Frontend</title>
     <meta
       name="description"
-      content="Sara Gramstad — UI designer, product designer and frontend developer. Co-founder of Handsdown Studio. Open for freelance and contract work, remote across Europe."
+      content="sara lou is Sara Gramstad: UI designer, product designer and frontend developer, co-founder of Handsdown Studio. Interfaces, products & websites, designed carefully and built properly. Open for freelance and contract work, remote across Europe."
     />
     <meta name="theme-color" content="#f3f0e8" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sara Gramstad — Designer who builds" />
-    <meta property="og:description" content="UI · Product · Frontend. Co-founder of Handsdown Studio." />
+    <meta property="og:site_name" content="sara lou" />
+    <meta property="og:title" content="sara lou — Sara Gramstad, designer who builds" />
+    <meta property="og:description" content="Interfaces, products & websites. Designed carefully, built properly. UI · Product · Frontend." />
     <meta property="og:image" content="%BASE_URL%og.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Who this is, for search engines: the brand is sara lou, the person is Sara Gramstad -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sara Gramstad",
+        "alternateName": "sara lou",
+        "jobTitle": "UI Designer, Product Designer & Frontend Developer",
+        "description": "Designer who builds. Interfaces, products & websites, designed carefully and built properly.",
+        "email": "mailto:sara.gramstad@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Östersund", "addressCountry": "SE" },
+        "worksFor": { "@type": "Organization", "name": "Handsdown Studio" },
+        "sameAs": ["https://www.linkedin.com/in/sara-gramstad"],
+        "knowsAbout": ["UI design", "Product design", "UX design", "Design systems", "Webflow", "Frontend development"]
+      }
+    </script>
 
     <!-- Intro: decide before first paint whether it runs at all -->
     <script>
@@ -62,9 +79,22 @@
       #intro .muted {
         opacity: 0.55;
       }
+      #intro .brand {
+        text-transform: none;
+        letter-spacing: 0.02em;
+        font-size: 13px;
+      }
+      #intro .dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-left: 2px;
+        border-radius: 50%;
+        background: #8fac48;
+      }
       #intro-bar {
         height: 1px;
-        background: #faf8f3;
+        background: #8fac48;
         transform: scaleX(0);
         transform-origin: left;
         margin-bottom: 0.75rem;
@@ -74,7 +104,7 @@
   <body>
     <div id="intro" aria-hidden="true">
       <div class="row">
-        <span>SG — Index</span>
+        <span class="brand">sara lou<span class="dot"></span></span>
         <span class="muted">UI / Product / Frontend</span>
       </div>
       <div>

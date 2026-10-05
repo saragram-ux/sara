@@ -1,8 +1,8 @@
 export const navigation = [
-  { label: 'Work', href: '/#work' },
-  { label: 'Playground', href: '/playground' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'work', href: '/#work' },
+  { label: 'playground', href: '/playground' },
+  { label: 'about', href: '/about' },
+  { label: 'contact', href: '#contact' },
 ] as const
 
 export const isNavActive = (href: string, pathname: string) => {

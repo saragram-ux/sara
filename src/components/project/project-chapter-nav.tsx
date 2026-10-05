@@ -19,7 +19,7 @@ export function ProjectChapterNav({ chapters, active }: { chapters: CaseSection[
                 active === chapter.id ? 'text-ink' : 'text-ink-faint hover:text-ink-muted',
               )}
             >
-              <span className={cn('tabular-nums', active === chapter.id && 'text-accent')}>{String(i + 1).padStart(2, '0')}</span>
+              <span className={cn('tabular-nums', active === chapter.id && 'text-accent-ink')}>{String(i + 1).padStart(2, '0')}</span>
               {chapter.label}
             </a>
           </li>

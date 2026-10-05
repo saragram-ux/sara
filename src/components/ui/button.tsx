@@ -7,8 +7,7 @@ import { cn } from '@/lib/utils'
 const buttonVariants = cva(
   [
     'group/button relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap select-none',
-    // text-body: the size this button has always rendered at (a merge bug used to drop text-meta)
-    'font-mono text-body uppercase tracking-[0.04em]',
+    'font-mono text-meta uppercase tracking-[0.04em]',
     'transition-[background-color,color,border-color,box-shadow,transform] duration-base ease-out-soft',
     'active:translate-y-px disabled:pointer-events-none disabled:opacity-50',
     '[&_svg]:pointer-events-none [&_svg]:shrink-0',

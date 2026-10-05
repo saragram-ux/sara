@@ -11,7 +11,7 @@
    ========================================================================== */
 
 :root {
-  /* Colour — paper, ink, one red pencil */
+  /* Colour — paper, ink, one matcha accent (see BRAND.md) */
   --paper: #f3f0e8;
   --paper-raised: #faf8f3;
   --paper-sunken: #e9e5da;
@@ -20,10 +20,10 @@
   --ink-faint: #6f695e; /* quietest text — still ≥ 4.5:1 on paper */
   --rule: #d9d4c8;
   --rule-strong: #b9b2a3;
-  --accent: #c2410c;
-  --accent-ink: #a8370a; /* accent used as small text */
-  --accent-soft: #f1dccf;
-  --live: #3f7d4e; /* status dot only */
+  --accent: #8fac48; /* matcha: dots, caret, selection, fills. never text (2.3:1) */
+  --accent-ink: #4c6620; /* matcha for text: 5.7:1 on paper */
+  --accent-soft: #e4e9cf; /* a quiet tint */
+  --live: var(--accent); /* the status dot is the brand dot */
 
   /* Layout — the page frame */
   --page-max: 90rem;
@@ -64,7 +64,7 @@
   --destructive: #b42318;
   --border: var(--rule);
   --input: var(--rule-strong);
-  --ring: var(--accent);
+  --ring: var(--accent-ink);
   --radius: 0.5rem;
 }
 
@@ -214,12 +214,12 @@
   }
 
   ::selection {
-    background: var(--ink);
-    color: var(--paper-raised);
+    background: var(--accent);
+    color: var(--ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--accent-ink);
     outline-offset: 3px;
     border-radius: var(--radius-xs);
   }

@@ -1,4 +1,5 @@
 import { AboutIntro } from '@/components/about/about-intro'
+import { pageTitle } from '@/data/brand'
 import { SectionCapabilities } from '@/sections/section-capabilities'
 import { SectionContact } from '@/sections/section-contact'
 import { SectionCraft } from '@/sections/section-craft'
@@ -10,7 +11,7 @@ import { SectionExperience } from '@/sections/section-experience'
 export default function AboutPage() {
   return (
     <>
-      <title>About — Sara Gramstad</title>
+      <title>{pageTitle('About')}</title>
       <AboutIntro />
       <SectionDisciplines />
       <SectionCraft />

@@ -12,7 +12,7 @@ export function SkillGroup({ group }: { group: SkillGroupData }) {
         {group.items.map((skill) => (
           <li key={skill.name} className="flex items-baseline gap-2.5 text-small">
             {/* glyph size is optical: the marks read as dots, not letters */}
-            <span aria-hidden className={cn('w-3 shrink-0 font-mono text-[0.7rem]', skill.level === 'fluent' ? 'text-ink' : 'text-accent')}>
+            <span aria-hidden className={cn('w-3 shrink-0 font-mono text-[0.7rem]', skill.level === 'fluent' ? 'text-ink' : 'text-accent-ink')}>
               {skillLevelGlyph[skill.level]}
             </span>
             <span className={skill.level === 'exploring' ? 'text-ink-muted' : ''}>{skill.name}</span>

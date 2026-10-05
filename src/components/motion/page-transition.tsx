@@ -1,12 +1,13 @@
 import { type ReactNode, useCallback, useEffect, useMemo, useRef } from 'react'
 import { useLocation } from 'wouter'
 
+import { Wordmark } from '@/components/brand/wordmark'
 import { Container } from '@/components/layout/container'
 import { duration, ease, gsap, prefersReducedMotion, revealGate, ScrollTrigger } from '@/lib/motion'
 import { preloadRoute } from '@/routes'
 import { TransitionContext } from './transition-context'
 
-const routeLabel = (pathname: string) => (pathname === '/' ? 'Index' : pathname.split('/').filter(Boolean).join(' / '))
+const routeLabel = (pathname: string) => (pathname === '/' ? 'home' : pathname.split('/').filter(Boolean).join(' / '))
 
 /** Re-measure scroll animations for the new page without restoring a stale scroll position. */
 const refreshScroll = () => {
@@ -140,9 +141,9 @@ export function PageTransition({ children }: { children: ReactNode }) {
         className="invisible fixed inset-0 z-[90] flex items-end bg-ink text-paper-raised will-change-transform"
       >
         <Container className="flex w-full items-end justify-between pb-[calc(var(--gutter)*1.25)]">
-          <span className="type-label text-paper-raised/60">SG —</span>
+          <Wordmark className="text-paper-raised" />
           <span className="reveal-line">
-            <span ref={label} className="block font-serif text-display-sm capitalize" />
+            <span ref={label} className="block font-serif text-display-sm" />
           </span>
         </Container>
       </div>

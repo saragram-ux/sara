@@ -2,9 +2,9 @@ import { ArrowUpRight, X } from '@phosphor-icons/react'
 import { useRef } from 'react'
 import { useLocation } from 'wouter'
 
+import { Wordmark } from '@/components/brand/wordmark'
 import { StatusDot } from '@/components/common/status-dot'
 import { Container } from '@/components/layout/container'
-import { SiteLogo } from '@/components/layout/site-logo'
 import { usePageTransition } from '@/components/motion/transition-context'
 import { TransitionLink } from '@/components/navigation/transition-link'
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle } from '@/components/ui/sheet'
@@ -32,10 +32,10 @@ export default function MobileNav({ open, onOpenChange: setOpen }: { open: boole
         }}
       >
         <Container className="flex h-header items-center justify-between">
-          <span className="flex items-center gap-3">
-            <SiteLogo />
-            <SheetTitle className="text-small font-medium">{profile.name}</SheetTitle>
-          </span>
+          <SheetTitle>
+            <Wordmark />
+            <span className="sr-only"> — {profile.name}</span>
+          </SheetTitle>
           <SheetClose className="-mr-2 flex h-11 cursor-pointer items-center gap-2 px-2 type-label">
             Close
             <X aria-hidden className="size-4" />
@@ -61,7 +61,7 @@ export default function MobileNav({ open, onOpenChange: setOpen }: { open: boole
                     className="flex items-baseline justify-between py-4"
                   >
                     <span className="font-serif text-display-sm">{item.label}</span>
-                    <span className={cn('type-label tabular-nums', active ? 'text-accent' : 'text-ink-faint')}>0{i + 1}</span>
+                    <span className={cn('type-label tabular-nums', active ? 'text-accent-ink' : 'text-ink-faint')}>0{i + 1}</span>
                   </TransitionLink>
                 </li>
               )

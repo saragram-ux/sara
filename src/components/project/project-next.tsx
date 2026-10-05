@@ -19,7 +19,7 @@ export function ProjectNext({ project }: { project: Project }) {
           </span>
           <ArrowRight
             aria-hidden
-            className="mb-[0.4em] size-[clamp(1.5rem,1rem+2vw,3rem)] shrink-0 text-accent transition-transform duration-slow ease-out-soft group-hover/next:translate-x-2"
+            className="mb-[0.4em] size-[clamp(1.5rem,1rem+2vw,3rem)] shrink-0 text-accent-ink transition-transform duration-slow ease-out-soft group-hover/next:translate-x-2"
           />
         </span>
       </TransitionLink>

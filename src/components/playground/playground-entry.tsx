@@ -32,7 +32,7 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
           <span className="text-ink">Playground / {item.id}</span>
           <time dateTime={item.date}>{formatMonth(item.date)}</time>
           <PlaygroundStatus status={item.status} />
-          {item.draft && <span className="text-accent">Draft · dev only</span>}
+          {item.draft && <span className="text-accent-ink">Draft · dev only</span>}
         </div>
 
         <div className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-3">

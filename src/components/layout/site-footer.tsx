@@ -1,18 +1,24 @@
 import { ArrowUp } from '@phosphor-icons/react'
 
+import { Wordmark } from '@/components/brand/wordmark'
+import { StatusDot } from '@/components/common/status-dot'
 import { TransitionLink } from '@/components/navigation/transition-link'
 import { Kbd } from '@/components/ui/kbd'
+import { brand } from '@/data/brand'
+import { currently } from '@/data/currently'
 import { navigation } from '@/data/navigation'
 import { profile } from '@/data/profile'
 import { prefersReducedMotion } from '@/lib/motion'
 import { Container } from './container'
 import { Grid } from './grid'
-import { SiteLogo } from './site-logo'
 import { Stack } from './stack'
 
 const year = new Date().getFullYear()
 
-/** Footer: name and place, index, elsewhere, colophon; then keyboard hints and back-to-top. */
+/**
+ * Footer: the sara lou sign-off (like a little menu card), index, elsewhere, colophon;
+ * then the first line of the currently board, keyboard hints and back-to-top.
+ */
 export function SiteFooter() {
   const toTop = () => {
     window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
@@ -24,12 +30,13 @@ export function SiteFooter() {
       <Container className="py-14">
         <Grid className="gap-y-10">
         <div className="col-span-4 md:col-span-3 lg:col-span-4">
-          <div className="flex items-center gap-3">
-            <SiteLogo />
-            <span className="text-small font-medium">{profile.name}</span>
-          </div>
-          <p className="mt-4 type-label text-ink-muted">{profile.disciplines.join(' / ')}</p>
-          <p className="mt-1 type-label text-ink-muted">{profile.location}</p>
+          <Wordmark size="md" />
+          <p className="mt-3 font-serif text-title italic">{brand.descriptor}</p>
+          <p className="mt-3 max-w-xs text-small text-ink-muted">{brand.description}</p>
+          <p className="mt-5 type-label text-ink-muted">
+            {profile.name} · {profile.location}
+          </p>
+          <p className="mt-1 type-meta text-ink-muted">{brand.signoff.join(' · ')}</p>
         </div>
 
         <nav aria-label="Footer" className="col-span-2 md:col-span-2 lg:col-span-2">
@@ -37,7 +44,7 @@ export function SiteFooter() {
           <Stack as="ul" gap="xs" className="mt-4 text-small">
             <li>
               <TransitionLink to="/" className="link-underline-draw">
-                Home
+                home
               </TransitionLink>
             </li>
             {navigation.map((item) => (
@@ -55,12 +62,12 @@ export function SiteFooter() {
           <Stack as="ul" gap="xs" className="mt-4 text-small">
             <li>
               <a href={profile.linkedin} target="_blank" rel="noreferrer" className="link-underline-draw">
-                LinkedIn
+                linkedin
               </a>
             </li>
             <li>
               <a href={`mailto:${profile.email}`} className="link-underline-draw">
-                Email
+                email
               </a>
             </li>
           </Stack>
@@ -69,7 +76,7 @@ export function SiteFooter() {
         <div className="col-span-4 md:col-span-8 lg:col-span-4">
           <h2 className="type-label text-ink-muted">Colophon</h2>
           <p className="mt-4 max-w-sm text-small text-ink-muted">
-            Designed and built in the browser. Set in <span className="font-serif text-[1.1em] text-ink italic">Instrument Serif</span>,
+            sara lou is {profile.name}. Designed and built in the browser. Set in <span className="font-serif text-[1.1em] text-ink italic">Instrument Serif</span>,
             Geist and <span className="font-mono text-[0.9em] text-ink">Geist Mono</span>. Made with React, TypeScript, Vite,
             Tailwind and a little GSAP.
           </p>
@@ -82,6 +89,12 @@ export function SiteFooter() {
           © {year} {profile.name}
         </span>
         <span className="hidden items-center gap-2 md:flex">
+          <StatusDot tone="accent" />
+          <span className="normal-case">
+            currently {currently.items[0].verb} {currently.items[0].what}
+          </span>
+        </span>
+        <span className="hidden items-center gap-2 lg:flex">
           <Kbd>G</Kbd> grid
           <span className="mx-1 text-ink-faint">·</span>
           <Kbd>⌘</Kbd>

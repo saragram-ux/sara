@@ -11,7 +11,7 @@ export function SkillLegend({ className, ...props }: ComponentProps<'ul'>) {
     <ul aria-label="Legend" className={cn('grid gap-1.5', className)} {...props}>
       {(Object.keys(skillLevels) as SkillLevel[]).map((level) => (
         <li key={level} className="flex items-baseline gap-3 type-meta">
-          <span aria-hidden className={cn('w-3', level === 'fluent' ? 'text-ink' : 'text-accent')}>
+          <span aria-hidden className={cn('w-3', level === 'fluent' ? 'text-ink' : 'text-accent-ink')}>
             {skillLevelGlyph[level]}
           </span>
           <span>{skillLevels[level].label}</span>

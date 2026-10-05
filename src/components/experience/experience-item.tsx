@@ -28,7 +28,7 @@ export function ExperienceItem({ entry, variant = 'compact' }: ExperienceItemPro
       <span className="hidden items-center justify-end gap-2 type-label text-ink-muted lg:col-span-2 lg:flex">
         {entry.location}
         {entry.projectSlug && (
-          <ArrowRight aria-hidden weight="bold" className="size-3 text-accent transition-transform group-hover/xp:translate-x-1" />
+          <ArrowRight aria-hidden weight="bold" className="size-3 text-accent-ink transition-transform group-hover/xp:translate-x-1" />
         )}
       </span>
     </div>

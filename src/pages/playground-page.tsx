@@ -1,6 +1,7 @@
 import { PageHeader } from '@/components/layout/page-header'
 import { PlaygroundList } from '@/components/playground/playground-list'
 import { PlaygroundStatusLegend } from '@/components/playground/playground-status-legend'
+import { pageTitle } from '@/data/brand'
 import { visiblePlayground } from '@/data/playground'
 import { SectionContact } from '@/sections/section-contact'
 
@@ -8,7 +9,7 @@ import { SectionContact } from '@/sections/section-contact'
 export default function PlaygroundPage() {
   return (
     <>
-      <title>Playground — Sara Gramstad</title>
+      <title>{pageTitle('Playground')}</title>
       <PageHeader
         eyebrow={
           <>
@@ -18,7 +19,7 @@ export default function PlaygroundPage() {
         }
         title={
           <>
-            A lab <em>notebook.</em>
+            small <em>things.</em>
           </>
         }
         lead={

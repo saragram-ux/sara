@@ -1,12 +1,13 @@
 import { PageHeader } from '@/components/layout/page-header'
 import { AnimatedLink } from '@/components/motion/animated-link'
+import { pageTitle } from '@/data/brand'
 import { SectionContact } from '@/sections/section-contact'
 
 /** Any unknown path. */
 export default function NotFoundPage() {
   return (
     <>
-      <title>Not found — Sara Gramstad</title>
+      <title>{pageTitle('Not found')}</title>
       <PageHeader
         eyebrow={
           <>

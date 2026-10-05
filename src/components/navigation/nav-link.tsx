@@ -20,7 +20,7 @@ export function NavLink({ href, label, index, active }: NavLinkProps) {
       <span
         className={cn(
           'font-mono text-nano tabular-nums transition-colors',
-          active ? 'text-accent' : 'text-ink-faint group-hover/nav:text-accent',
+          active ? 'text-accent-ink' : 'text-ink-faint group-hover/nav:text-accent-ink',
         )}
       >
         0{index}

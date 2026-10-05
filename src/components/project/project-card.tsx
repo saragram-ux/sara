@@ -41,7 +41,7 @@ export function ProjectCard({ project, index, active = false, showPlate = false,
       <span
         className={cn(
           'col-span-1 type-label tabular-nums transition-colors duration-base',
-          active ? 'text-accent' : 'text-ink-muted group-hover/row:text-accent',
+          active ? 'text-accent-ink' : 'text-ink-muted group-hover/row:text-accent-ink',
         )}
       >
         {String(index + 1).padStart(2, '0')}

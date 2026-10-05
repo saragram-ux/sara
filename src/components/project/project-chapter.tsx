@@ -24,8 +24,8 @@ export function ProjectChapter({ chapter, number, project, projectIndex, figureI
       <div data-reveal className="grid gap-y-6 md:grid-cols-9 md:gap-x-gutter">
         <div className="md:col-span-6">
           <h2 id={`${chapter.id}-label`} className="type-label text-ink-muted">
-            <span className="text-accent tabular-nums">{String(number).padStart(2, '0')}</span> — {chapter.label}
-            {chapter.draft && <span className="ml-2 text-accent">(draft · dev only)</span>}
+            <span className="text-accent-ink tabular-nums">{String(number).padStart(2, '0')}</span> — {chapter.label}
+            {chapter.draft && <span className="ml-2 text-accent-ink">(draft · dev only)</span>}
           </h2>
           {chapter.title && <p className="mt-5 font-serif text-display-sm">{chapter.title}</p>}
           <div className="type-prose mt-5">
@@ -41,7 +41,7 @@ export function ProjectChapter({ chapter, number, project, projectIndex, figureI
               <ul className="mt-3 grid gap-1 type-meta">
                 {chapter.notes.items.map((note) => (
                   <li key={note} className="flex gap-2">
-                    <span aria-hidden className="text-accent">
+                    <span aria-hidden className="text-accent-ink">
                       ›
                     </span>
                     {note}

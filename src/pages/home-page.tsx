@@ -1,4 +1,4 @@
-import { profile } from '@/data/profile'
+import { pageTitle } from '@/data/brand'
 import { SectionAbout } from '@/sections/section-about'
 import { SectionContact } from '@/sections/section-contact'
 import { SectionExperience } from '@/sections/section-experience'
@@ -10,7 +10,7 @@ import { SectionProjects } from '@/sections/section-projects'
 export default function HomePage() {
   return (
     <>
-      <title>{`${profile.name} — Designer who builds`}</title>
+      <title>{pageTitle()}</title>
       <SectionHero />
       <SectionProjects />
       <SectionAbout />

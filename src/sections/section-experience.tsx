@@ -46,7 +46,7 @@ export function SectionExperience({ variant = 'summary', index }: SectionExperie
         <p className="text-small text-ink-muted">
           + {earlier.length} earlier roles in fashion, craft and theatre — where I learned to make things by hand.
         </p>
-        <AnimatedLink href="/about#experience">Full background</AnimatedLink>
+        <AnimatedLink href="/about#experience">The long version</AnimatedLink>
       </div>
     </Section>
   )

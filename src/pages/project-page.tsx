@@ -4,6 +4,7 @@ import { ProjectContent } from '@/components/project/project-content'
 import { ProjectCover } from '@/components/project/project-cover'
 import { ProjectHeader } from '@/components/project/project-header'
 import { ProjectNext } from '@/components/project/project-next'
+import { pageTitle } from '@/data/brand'
 import { getNextProject, getProject, projects } from '@/data/projects'
 import type { Project } from '@/data/types'
 import { SectionContact } from '@/sections/section-contact'
@@ -23,7 +24,7 @@ function CaseStudy({ project }: { project: Project }) {
   return (
     <>
       <article>
-        <title>{`${project.title} — ${project.role} · Sara Gramstad`}</title>
+        <title>{pageTitle(project.title)}</title>
         <ProjectHeader project={project} index={index} total={projects.length} />
         <ProjectCover project={project} index={index} />
         <ProjectContent project={project} index={index} />

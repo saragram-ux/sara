@@ -1,6 +1,6 @@
-# Sara Gramstad — portfolio
+# sara lou — Sara Gramstad
 
-UI Designer · Product Designer · Frontend Developer.
+UI Designer · Product Designer · Frontend Developer. **sara lou** is the brand, **Sara Gramstad** is the person: see [`BRAND.md`](BRAND.md) for the name, voice, vocabulary, colour and wordmark decisions.
 A small, fast, static site: **Vite + React + TypeScript + Tailwind v4**, shadcn/ui on Radix primitives, Phosphor icons and a little GSAP. No backend, no database, no CMS.
 
 ```bash
@@ -26,6 +26,7 @@ Everything you'd want to update lives in `src/data/`:
 
 | File | What it holds |
 | --- | --- |
+| `brand.ts` | The brand: name, descriptor, menu-card line, sign-off, page-title helper |
 | `profile.ts` | Name, email, LinkedIn, location, availability, career path, languages, the lines of your own voice used around the site |
 | `projects.ts` | Case studies: metadata, sections, notes, figures. Order = order on the site |
 | `currently.ts` | The **Currently** panel. Bump `updated` when you edit it |
@@ -82,6 +83,7 @@ A page reads like its table of contents:
 
 | Looking for… | Go to |
 | --- | --- |
+| The brand (name, voice, wordmark, colour) | `BRAND.md`, `src/data/brand.ts`, `components/brand/wordmark.tsx` |
 | Colours, type scale, spacing, radius, shadows | `src/styles/globals.css` (tokens at the top) |
 | Animation timings and eases | `globals.css` (`--dur-*`, `--ease-*`) and `src/lib/motion.ts` (the GSAP mirror) |
 | Page width, gutters, the grid | `container-page` / `grid-page` in `globals.css`; `Container` / `Grid` in `components/layout/` |
@@ -101,8 +103,9 @@ src/
 ├── data/                      all content, typed (types.ts)
 ├── components/
 │   ├── ui/                    shadcn primitives — never renamed or branded
+│   ├── brand/                 Wordmark (sara lou● — the dot pulses while open for work)
 │   ├── layout/                Container, Section, Grid, Stack, Cluster; SiteLayout, SiteHeader, SiteFooter,
-│   │                          SiteLogo, PageHeader, SectionLabel, GridOverlay
+│   │                          PageHeader, SectionLabel, GridOverlay
 │   ├── navigation/            SiteNav, NavLink, MobileNav, MobileNavTrigger, CommandMenu(+Trigger),
 │   │                          TransitionLink, SkipLink
 │   ├── motion/                PageTransition, AnimatedLink, intro, use-reveal (usePageEntrance, useScrollReveal)
@@ -169,7 +172,7 @@ When adding a custom token, also add it to `extendTailwindMerge` in `src/lib/uti
 
 ## Design tokens
 
-- **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, one `accent` (+ `accent-ink` for small accent text). All text tokens are ≥ 4.5:1 on paper.
+- **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, and one matcha `accent` for dots, fills and selection, plus `accent-ink` for any accent *text*. Never put text in `accent`; it's 2.3:1. All text tokens are ≥ 4.5:1 on paper.
 - **Type:** three families with fixed roles. *Instrument Serif* for display, *Geist* for reading, *Geist Mono* for metadata. A fluid scale: `text-display-xl/lg/md/sm`, `text-title`, `text-lead`, `text-body`, `text-small`, `text-meta`, `text-micro`, `text-nano`.
 - **Radius / shadow:** `rounded-xs…xl` (crisp by default; `lg` only on iOS-style panels), `shadow-paper/lift/float`.
 

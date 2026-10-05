@@ -23,7 +23,7 @@ export function SectionContact() {
       <Grid className="mt-12 gap-y-14 md:mt-16">
         <div data-reveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-3">
           <p className="font-serif text-display-lg">
-            Let’s make <em className="text-accent">something.</em>
+            say <em className="text-accent-ink">hi.</em>
           </p>
           <p className="mt-6 max-w-md text-lead text-ink-muted">
             Open for freelance and contract work. Remote, across Europe. If that sounds like a fit, just reach out — always

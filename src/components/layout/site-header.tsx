@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
 
+import { Wordmark } from '@/components/brand/wordmark'
 import { MobileNavTrigger } from '@/components/navigation/mobile-nav-trigger'
 import { SiteNav } from '@/components/navigation/site-nav'
 import { TransitionLink } from '@/components/navigation/transition-link'
+import { brand } from '@/data/brand'
 import { profile } from '@/data/profile'
 import { cn } from '@/lib/utils'
 import { Container } from './container'
-import { SiteLogo } from './site-logo'
 
-/** The sticky top bar: logo + name, desktop nav, mobile menu button. */
+/** The sticky top bar: wordmark (+ Sara's full name on wide screens), desktop nav, mobile menu button. */
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
 
@@ -27,10 +28,11 @@ export function SiteHeader() {
       )}
     >
       <Container className="flex h-full items-center justify-between gap-6">
-        <TransitionLink to="/" className="group/home -m-1 flex items-center gap-3 p-1">
-          <SiteLogo className="transition-transform duration-base ease-out-soft group-hover/home:-rotate-6" />
-          <span className="text-small font-medium tracking-[-0.01em]">{profile.name}</span>
-          <span className="hidden type-label text-ink-muted xl:inline">{profile.disciplines.join(' / ')}</span>
+        <TransitionLink to="/" className="group/home -m-1 flex items-baseline gap-4 p-1" aria-label={`${brand.name}, ${profile.name} — home`}>
+          <Wordmark className="transition-colors duration-base group-hover/home:text-accent-ink" />
+          <span className="hidden type-label text-ink-muted xl:inline">
+            {profile.name} · {profile.disciplines.join(' / ')}
+          </span>
         </TransitionLink>
 
         <SiteNav />
