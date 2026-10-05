@@ -3,7 +3,7 @@
 > A small, very well-made corner of the internet belonging to Sara Gramstad.
 > A little precise. A little strange. Not trying to impress you.
 
-**v4:** the copy now speaks in the Handsdown tone: warm, direct, talks to you (see Voice). The visual system is unchanged.
+**v4:** the copy now speaks in the Handsdown tone: warm, direct, talks to you (see Voice). Headlines and buttons went lowercase to match; the mono system labels stay uppercase.
 
 **v3:** the serif is gone. Instrument Serif read as "2020 soft creative director", so display type is now **Familjen Grotesk Bold, uppercase** (a free stand-in for Mabry Bold; Archivo was tried first and was too wide), taking its cue from Designlab's CTA blocks without the blue. The contact section is a solid ink block with an acid pill button. And every line on the site went through a bullshit audit.
 
@@ -104,11 +104,11 @@ The green should feel almost accidental: a tiny LED, one active state, one hover
 
 ## Typography
 
-- **Familjen Grotesk, 700, UPPERCASE** (`type-display`): headlines, project titles, buttons. Bold, slightly odd, notched corners. To switch to Mabry Bold with a web licence, change `--font-display` and the font import
+- **Familjen Grotesk, 700, lowercase** (`type-display`): headlines, project titles, buttons, proper nouns included ("the startup house of malmö"). Tight tracking. Bold, slightly odd, notched corners. To switch to Mabry Bold with a web licence, change `--font-display` and the font import
 - **Geist Mono:** the name, the system voice, every number
 - **Geist:** reading
 
-No serif. No italics in headlines. It's bold + mono, worn in rather than precious.
+No serif. No italics in headlines. It's bold lowercase + uppercase mono: loud words, strict labels.
 
 ## Buttons and the contact block
 
