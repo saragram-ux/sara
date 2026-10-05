@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import { RootLayout } from '@/components/layout/RootLayout'
+import { SiteLayout } from '@/components/layout/site-layout'
 import { runIntro } from '@/components/motion/intro'
 import '@/styles/globals.css'
 
@@ -9,6 +9,6 @@ runIntro()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RootLayout />
+    <SiteLayout />
   </StrictMode>,
 )

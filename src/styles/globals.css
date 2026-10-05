@@ -25,14 +25,22 @@
   --accent-soft: #f1dccf;
   --live: #3f7d4e; /* status dot only */
 
-  /* Layout */
+  /* Layout — the page frame */
   --page-max: 90rem;
-  --gutter: clamp(1.25rem, 0.6rem + 2.2vw, 2.5rem);
+  --gutter: clamp(1.25rem, 0.6rem + 2.2vw, 2.5rem); /* page side padding + column gap */
   --header-h: 3.5rem;
-  --space-section: clamp(3.5rem, 2rem + 4.5vw, 6.5rem); /* applied top + bottom */
-  --space-block: clamp(3rem, 2rem + 3vw, 5rem);
+  --sticky-top: calc(var(--header-h) + 2rem); /* where sticky things stop, under the header */
+
+  /* Spacing — the rhythm. Small steps use Tailwind's 4px scale (1 = 4px, 2 = 8px …);
+     these fluid steps carry the editorial whitespace. Use them as mt-block-gap, gap-entry … */
+  --space-section: clamp(3.5rem, 2rem + 4.5vw, 6.5rem); /* section padding, top + bottom */
+  --space-block: clamp(3rem, 2rem + 3vw, 5rem); /* between large blocks inside a section */
+  --space-entry: clamp(4rem, 3rem + 4vw, 7rem); /* between entries: case chapters, lab entries */
+  --space-page-top: clamp(2.5rem, 1rem + 5vw, 5.5rem); /* above the first heading of a page */
+  --space-inset: clamp(1rem, 0.5rem + 2vw, 2rem); /* inside framed panels */
 
   /* Motion — mirrored in src/lib/motion.ts for GSAP */
+  --nudge: 3px; /* how far a title moves when its row is hovered */
   --dur-fast: 160ms;
   --dur-base: 280ms;
   --dur-slow: 600ms;
@@ -93,6 +101,17 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
+  /* Spacing → mt-block-gap, gap-entry, gap-x-gutter, pt-page-top, h-header, top-sticky … */
+  --spacing-gutter: var(--gutter);
+  --spacing-header: var(--header-h);
+  --spacing-sticky: var(--sticky-top);
+  --spacing-section: var(--space-section);
+  --spacing-block-gap: var(--space-block); /* not "block": that would collide with inline-block */
+  --spacing-entry: var(--space-entry);
+  --spacing-page-top: var(--space-page-top);
+  --spacing-inset: var(--space-inset);
+  --spacing-nudge: var(--nudge);
+
   /* Type families: serif for display, sans for reading, mono for metadata */
   --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
   --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
@@ -124,6 +143,7 @@
   --text-meta: 0.75rem;
   --text-meta--line-height: 1.4;
   --text-meta--letter-spacing: 0.04em;
+  --text-nano: 0.625rem; /* keycaps, nav indices */
   --text-micro: 0.6875rem;
   --text-micro--line-height: 1.3;
   --text-micro--letter-spacing: 0.06em;
@@ -222,17 +242,24 @@
 }
 
 /* ==========================================================================
-   Layout primitives — a page container and the 4 / 8 / 12 column grid
+   Utilities — named Client-First style: what it is, then its role.
+   Layout:     container-page, grid-page, section-padding
+   Typography: type-label, type-meta, type-prose, reveal-line
+   Links:      link-underline, link-underline-draw
+   Motion:     duration-fast / -base / -slow
+   The React layout primitives (components/layout) are thin wrappers over these.
    ========================================================================== */
 
-@utility page {
+/* Max width + side padding */
+@utility container-page {
   width: 100%;
   max-width: var(--page-max);
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
 
-@utility page-grid {
+/* The 4 / 8 / 12 column grid */
+@utility grid-page {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: var(--gutter);
@@ -244,12 +271,13 @@
   }
 }
 
-@utility section-space {
+/* Vertical rhythm of a section */
+@utility section-padding {
   padding-block: var(--space-section);
 }
 
 /* Small monospaced uppercase label — the notebook voice */
-@utility label-mono {
+@utility type-label {
   font-family: var(--font-mono);
   font-size: var(--text-micro);
   line-height: var(--text-micro--line-height);
@@ -258,22 +286,23 @@
   font-weight: 450;
 }
 
-@utility meta-mono {
+/* Monospaced metadata in sentence case */
+@utility type-meta {
   font-family: var(--font-mono);
   font-size: var(--text-meta);
   line-height: var(--text-meta--line-height);
   letter-spacing: 0.01em;
 }
 
-/* Hairline rule that respects the grid */
-@utility hairline {
+/* A 1px rule */
+@utility divider {
   height: 1px;
   background: var(--rule);
   border: 0;
 }
 
 /* Editorial body copy */
-@utility prose-editorial {
+@utility type-prose {
   font-size: var(--text-body);
   line-height: 1.65;
   color: var(--ink);
@@ -283,16 +312,16 @@
   }
 }
 
-/* Masked line used by GSAP text reveals */
-@utility line-mask {
+/* A clipped line that text slides up into (GSAP reveals) */
+@utility reveal-line {
   display: block;
   overflow: clip;
   padding-bottom: 0.08em;
   margin-bottom: -0.08em;
 }
 
-/* Underline that draws itself — used by AnimatedLink */
-@utility link-draw {
+/* Underline that draws itself on hover — used by AnimatedLink */
+@utility link-underline-draw {
   background-image: linear-gradient(currentColor, currentColor);
   background-size: 0% 1px;
   background-position: 0 100%;
@@ -304,7 +333,8 @@
   }
 }
 
-@utility link-underlined {
+/* A quiet permanent underline that darkens on hover */
+@utility link-underline {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.22em;
@@ -313,6 +343,17 @@
   &:hover {
     text-decoration-color: currentColor;
   }
+}
+
+/* Motion durations as utilities */
+@utility duration-fast {
+  transition-duration: var(--dur-fast);
+}
+@utility duration-base {
+  transition-duration: var(--dur-base);
+}
+@utility duration-slow {
+  transition-duration: var(--dur-slow);
 }
 
 /* ==========================================================================

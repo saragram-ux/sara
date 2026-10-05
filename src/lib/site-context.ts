@@ -10,6 +10,6 @@ export const SiteContext = createContext<SiteContextValue | null>(null)
 
 export function useSite() {
   const ctx = useContext(SiteContext)
-  if (!ctx) throw new Error('useSite must be used inside <RootLayout>')
+  if (!ctx) throw new Error('useSite must be used inside <SiteLayout>')
   return ctx
 }

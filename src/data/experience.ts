@@ -1,7 +1,7 @@
-import type { EducationItem, ExperienceItem } from './types'
+import type { EducationEntry, ExperienceEntry } from './types'
 
 /** Newest first. Source: LinkedIn profile export (2026). */
-export const experience: ExperienceItem[] = [
+export const experience: ExperienceEntry[] = [
   {
     company: 'Handsdown Studio',
     role: 'Co-founder & Product Designer',
@@ -94,7 +94,7 @@ export const experience: ExperienceItem[] = [
   },
 ]
 
-export const education: EducationItem[] = [
+export const education: EducationEntry[] = [
   {
     school: 'EC Utbildning',
     programme: 'Front End Developer (YH), Full Stack Web Development',

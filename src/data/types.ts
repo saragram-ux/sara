@@ -62,14 +62,14 @@ export interface Project {
   status: ProjectStatus
 }
 
-export type PlaygroundStatus = 'live' | 'building' | 'idea' | 'paused'
+export type PlaygroundItemStatus = 'live' | 'building' | 'idea' | 'paused'
 
 export interface PlaygroundItem {
   id: string
   title: string
   description: string
   stack: string[]
-  status: PlaygroundStatus
+  status: PlaygroundItemStatus
   /** Started, as 'YYYY-MM' */
   date: string
   demoUrl?: string
@@ -81,7 +81,7 @@ export interface PlaygroundItem {
   draft?: boolean
 }
 
-export interface ExperienceItem {
+export interface ExperienceEntry {
   company: string
   role: string
   start: string
@@ -94,7 +94,7 @@ export interface ExperienceItem {
   group?: 'earlier'
 }
 
-export interface EducationItem {
+export interface EducationEntry {
   school: string
   programme: string
   start: string

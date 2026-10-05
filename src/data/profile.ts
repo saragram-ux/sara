@@ -37,3 +37,11 @@ export const languages = [
 ] as const
 
 export const certifications = ['Webflow Certificate — Layouts 1 & 2, CMS 1'] as const
+
+/** The path so far, shown under the hero. Dates from the profile. */
+export const careerPath = [
+  { year: '2015', label: 'Graphic design' },
+  { year: '2018', label: 'UX / UI design' },
+  { year: '2020', label: 'Webflow development' },
+  { year: '2026', label: 'Frontend development', current: true },
+] as const

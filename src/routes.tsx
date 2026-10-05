@@ -1,7 +1,7 @@
 import { type ComponentType, lazy } from 'react'
 import { Route, Switch } from 'wouter'
 
-import Home from '@/pages/Home'
+import HomePage from '@/pages/home-page'
 
 /**
  * A lazily loaded page that renders synchronously once it has been preloaded.
@@ -17,10 +17,10 @@ function lazyPage(loader: () => Promise<{ default: ComponentType }>) {
   return { Page, load }
 }
 
-const project = lazyPage(() => import('@/pages/Project'))
-const playground = lazyPage(() => import('@/pages/Playground'))
-const about = lazyPage(() => import('@/pages/About'))
-const notFound = lazyPage(() => import('@/pages/NotFound'))
+const project = lazyPage(() => import('@/pages/project-page'))
+const playground = lazyPage(() => import('@/pages/playground-page'))
+const about = lazyPage(() => import('@/pages/about-page'))
+const notFound = lazyPage(() => import('@/pages/not-found-page'))
 
 export function preloadRoute(pathname: string): Promise<unknown> {
   if (pathname === '/') return Promise.resolve()
@@ -33,7 +33,7 @@ export function preloadRoute(pathname: string): Promise<unknown> {
 export function AppRoutes() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      <Route path="/" component={HomePage} />
       <Route path="/work/:slug" component={project.Page} />
       <Route path="/playground" component={playground.Page} />
       <Route path="/about" component={about.Page} />
