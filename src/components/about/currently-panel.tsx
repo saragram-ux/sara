@@ -8,27 +8,30 @@ import { formatMonth } from '@/lib/utils'
  */
 export function CurrentlyPanel() {
   return (
-    <section aria-labelledby="currently-title" className="overflow-hidden rounded-lg border border-rule bg-paper-raised shadow-paper">
-      <header className="flex items-center justify-between border-b border-rule px-4 py-3">
+    <section aria-labelledby="currently-title" className="border border-ink bg-paper">
+      {/* ink header bar, like the head of a spec table */}
+      <header className="flex items-center justify-between bg-ink px-4 py-2.5 text-paper">
         <h3 id="currently-title" className="flex items-center gap-2 type-label">
           <StatusDot />
           Currently
         </h3>
-        <span className="type-label text-ink-muted">
+        <span className="type-label text-paper/70">
           <time dateTime={currently.updated}>{formatMonth(currently.updated)}</time>
         </span>
       </header>
-      <ul className="divide-y divide-rule">
+      <dl>
         {currently.items.map((item) => (
-          <li key={item.verb + item.what} className="px-4 py-2.5">
-            <span className="block type-meta text-ink-muted">{item.verb}</span>
-            <span className="block text-body">
-              {item.what}
-              {item.detail && <span className="text-small text-ink-muted"> · {item.detail}</span>}
-            </span>
-          </li>
+          <div key={item.verb + item.what} className="grid grid-cols-[6.5rem_1fr] border-t border-ink first:border-t-0">
+            <dt className="flex items-center border-r border-ink px-4 py-2.5 type-meta text-ink-muted">{item.verb}</dt>
+            <dd className="flex items-center px-4 py-2.5 text-small">
+              <span>
+                {item.what}
+                {item.detail && <span className="text-ink-muted"> · {item.detail}</span>}
+              </span>
+            </dd>
+          </div>
         ))}
-      </ul>
+      </dl>
     </section>
   )
 }
