@@ -1,5 +1,7 @@
 # sara lou — brand notes (v5)
 
+> **The visual design system is locked in [DESIGN.md](DESIGN.md).** This file covers the name, voice and copy.
+
 > A small, very well-made corner of the internet belonging to Sara Gramstad.
 > A little precise. A little strange. Not trying to impress you.
 

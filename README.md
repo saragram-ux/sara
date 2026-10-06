@@ -83,6 +83,7 @@ A page reads like its table of contents:
 
 | Looking for… | Go to |
 | --- | --- |
+| The design system (locked) | `DESIGN.md` — read before any visual change |
 | The brand (name, voice, wordmark, colour) | `BRAND.md`, `src/data/brand.ts`, `components/brand/wordmark.tsx` |
 | Colours, type scale, spacing, radius, shadows | `src/styles/globals.css` (tokens at the top) |
 | Animation timings and eases | `globals.css` (`--dur-*`, `--ease-*`) and `src/lib/motion.ts` (the GSAP mirror) |
