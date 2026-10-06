@@ -76,8 +76,9 @@ export function SiteFooter() {
               <h2 className="border-b border-dotted border-ink/60 pb-2 type-label text-ink-muted">Colophon</h2>
               <p className="mt-4 max-w-sm text-small text-ink-muted">
                 Built by hand with React, TypeScript, Vite, Tailwind and a little GSAP. Set in{' '}
-                <span className="font-display font-bold text-ink lowercase">Familjen Grotesk</span>, Geist and{' '}
-                <span className="font-mono text-[0.9em] text-ink">Geist Mono</span>.
+                <span className="font-display text-ink lowercase">Right Grotesk</span>,{' '}
+                <span className="text-ink">Mori</span> and <span className="font-mono text-[0.9em] text-ink">Supply Mono</span> by Pangram
+                Pangram.
               </p>
             </div>
           </Grid>

@@ -126,7 +126,7 @@ export function SectionHero() {
                   key={step.year}
                   data-hero="step"
                   className={cn(
-                    'grid grid-cols-[4.5rem_1fr_auto] items-center gap-4 border-b border-dotted border-ink/60 py-3 md:grid-cols-[8rem_1fr_auto]',
+                    'grid grid-cols-[3.5rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-dotted border-ink/60 py-3 md:grid-cols-[8rem_minmax(0,1fr)_auto] md:gap-4',
                     current && 'font-medium',
                   )}
                 >

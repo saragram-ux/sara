@@ -109,9 +109,10 @@ Lines do the work: solid ink for module outlines and table heads, dotted ink for
 
 ## Typography
 
-- **Familjen Grotesk 700, lowercase** (`type-display`): page titles and section words ("work", "playground", "myo"). Tight tracking. A free stand-in for Mabry Bold
-- **Geist Mono:** labels and brackets in UPPERCASE (`type-label`), big instrument values (`type-readout`: "16:27 CEST", "2028"), numbers, buttons, tags
-- **Geist:** reading, and the spread caps descriptors under a section word
+- **PP Right Grotesk Compact Black, lowercase** (`type-display`): page titles and section words ("work", "playground", "say hi"). Small titles switch to **PP Mori Semibold**
+- **PP Supply Mono:** labels and brackets in UPPERCASE (`type-label`), big instrument values (`type-readout`: "16:27 CEST", "2028"), numbers, buttons, tags
+- **PP Mori:** reading, and the spread caps descriptors under a section word
+- Licensed (Pangram Pangram); the free fallbacks are Familjen Grotesk, Geist and Geist Mono. See DESIGN.md
 
 ## Components
 
@@ -127,7 +128,7 @@ Lines do the work: solid ink for module outlines and table heads, dotted ink for
 
 ## Wordmark
 
-`sara lou•`: Geist Mono, lowercase, with a tiny round acid-green LED after it that blinks (on/off, not breathing) while Sara is open for work. There's no logo and no monogram; the favicon is `sl•` on ink.
+`sara lou•`: Supply Mono, lowercase, with a tiny round acid-green LED after it that blinks (on/off, not breathing) while Sara is open for work. There's no logo and no monogram; the favicon is `sl•` on ink.
 
 ## Brand devices
 

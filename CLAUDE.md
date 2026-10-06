@@ -14,6 +14,7 @@ Sara Gramstad's portfolio, **sara lou**. Vite + React + TypeScript + Tailwind v4
 
 - **No invented facts.** Clients, numbers, dates and results come from `src/data/` (sourced from Sara's LinkedIn). Use placeholders or ask.
 - **No phone number** on the site.
+- **Never commit font files.** The Pangram Pangram fonts are licensed and live in the private `saragram-ux/fonts` repo; `public/fonts/pp/` is git-ignored. Use `scripts/fonts.sh` to copy them in locally.
 - **Content lives in `src/data/`**, not in components.
 - Accessibility: text ≥ 4.5:1, headings in order, no sideways scroll from 320 px.
 

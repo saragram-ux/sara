@@ -1,0 +1,49 @@
+/*
+ * Licensed type: Pangram Pangram (web licence). The files are NOT in this repo:
+ * the deploy copies them from the private saragram-ux/fonts repo into public/fonts/pp/
+ * (git-ignored; see scripts/fonts.sh and the workflow). If they're missing, every
+ * stack below falls back to the free fonts in globals.css, and the site still works.
+ *
+ *   display  PP Right Grotesk Compact Black   big lowercase words (xl, lg, md)
+ *   title    PP Mori Semibold                 small titles (display-sm)
+ *   text     PP Mori Regular / Italic         reading
+ *   mono     PP Supply Mono Regular / Medium  labels, brackets, readouts, buttons
+ */
+
+@font-face {
+  font-family: 'PP Right Grotesk Compact';
+  src: url('/fonts/pp/PPRightGrotesk-CompactBlack.woff2') format('woff2');
+  font-weight: 700 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/pp/PPMori-Regular.woff2') format('woff2');
+  font-weight: 300 450;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/pp/PPMori-Italic.woff2') format('woff2');
+  font-weight: 300 450;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/pp/PPMori-Semibold.woff2') format('woff2');
+  font-weight: 451 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Supply Mono';
+  src: url('/fonts/pp/PPSupplyMono-Regular.woff2') format('woff2');
+  font-weight: 300 450;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Supply Mono';
+  src: url('/fonts/pp/PPSupplyMono-Medium.woff2') format('woff2');
+  font-weight: 451 800;
+  font-display: swap;
+}

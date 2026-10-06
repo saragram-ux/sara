@@ -16,8 +16,6 @@
         var t = localStorage.getItem('sg:theme')
         if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
         document.documentElement.dataset.theme = t
-        var f = new URLSearchParams(location.search).get('fonts') // MOCK: type comparison
-        if (f) document.documentElement.dataset.fonts = f
       } catch (e) {}
     </script>
     <meta property="og:type" content="website" />

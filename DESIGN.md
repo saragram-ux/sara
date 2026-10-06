@@ -24,8 +24,8 @@ The device gives it calm and structure; the archive gives it numbers, order and 
 2. **Solid ink for structure, dotted ink for rows.** Module outlines and table heads are solid; rows between items are dotted.
 3. **Containers are rounded, details are square.** Modules, inner panels, pills, switches and menus are rounded. Chips, tags, keys and icon tiles stay square.
 4. **Two pastels, with a hierarchy.** Lilac is primary (main buttons, active states, live demos). Peach is secondary (the personal moment: the contact card). Always a fill with black text and a black outline; never text, never white on them, never faded text on them. Acid green is only the live LED.
-5. **Big words are lowercase.** Page titles and section words in Familjen Grotesk Bold, lowercase, tight.
-6. **Small words are mono caps.** Labels, brackets, buttons and numbers in Geist Mono uppercase.
+5. **Big words are lowercase.** Page titles and section words in Right Grotesk Compact Black, lowercase. Small titles switch to Mori Semibold.
+6. **Small words are mono caps.** Labels, brackets, buttons and numbers in Supply Mono uppercase.
 7. **Values are readouts.** A fact worth showing gets a tiny label above a big mono value.
 8. **Everything is numbered.** `INDEX / 000`, `WORK / 001`, `[ 01 · PROJECT(S) ]`, `[ 3 / 4 ]`.
 9. **Only real facts.** Readouts, counts and tags come from `src/data/`. Never invent numbers to fill a module.
@@ -70,17 +70,25 @@ Use `pastelFill` from `src/lib/pastel.ts` (and `Button`: default lilac, `peach` 
 
 ## Type
 
+Three Pangram Pangram families, chosen 2026-10-06 (combo C). Licensed for web use; **the files are never in this public repo** (see below).
+
 | Role | Font | Class | Notes |
 | --- | --- | --- | --- |
-| Page title / section word | Familjen Grotesk 700 | `type-display text-display-xl` | lowercase, line-height 0.9, tracking −0.04em |
-| Sentence titles | Familjen Grotesk 700 | `text-display-lg` / `-md` / `-sm` | same voice, one step down |
-| Readout value | Geist Mono 400 | `type-readout` | "16:27 CEST", "2028"; tabular numbers |
-| Label / bracket | Geist Mono, caps | `type-label` | 11px, tracking 0.06em |
-| Button | Geist Mono 500, caps | `Button` | tracking 0.04em |
-| Descriptors under a section word | Geist 500, caps | in `SectionTitle` | spread across the full width |
-| Reading text | Geist | `text-lead`, `text-body`, `text-small` | sentence case |
+| Big words: page titles, section words, hero | PP Right Grotesk Compact Black | `type-display text-display-xl` / `-lg` / `-md` | lowercase, line-height 0.9, tracking ≈ 0, word-spacing 0.04em |
+| Small titles: project names, card titles | PP Mori Semibold | `type-display text-display-sm` (the split is automatic) | lowercase, tracking −0.015em. The compact poster face gets cramped at this size |
+| Reading text | PP Mori Regular (+ Italic) | `text-lead`, `text-body`, `text-small` | sentence case |
+| Descriptors under a section word | PP Mori, caps | in `SectionTitle` | spread across the full width |
+| Readout value | PP Supply Mono Regular | `type-readout` | "16:27 CEST", "2028"; slashed zero, tabular |
+| Label / bracket | PP Supply Mono, caps | `type-label` | 11px, tracking 0.06em |
+| Button | PP Supply Mono Medium, caps | `Button` | tracking 0.04em |
 
-Familjen Grotesk is a free stand-in for Mabry Bold. Swapping needs a web licence, and the repo is public, so check the licence covers that.
+**Files used (and the only ones published):** `PPRightGrotesk-CompactBlack`, `PPMori-Regular`, `PPMori-Italic`, `PPMori-Semibold`, `PPSupplyMono-Regular`, `PPSupplyMono-Medium` (`.woff2`).
+
+**Where they come from:** the private repo `saragram-ux/fonts`. `scripts/fonts.sh` copies exactly those six into `public/fonts/pp/` (git-ignored). The deploy does this with the `FONTS_TOKEN` secret; locally, run `scripts/fonts.sh ../fonts` after cloning the fonts repo next to this one. Faces are declared in `src/styles/fonts.css`.
+
+**Fallback:** if the files are missing (a fork, no secret), every stack falls back to the free fonts: Familjen Grotesk (display), Geist (text), Geist Mono (mono). The site still builds and works; it just looks like the pre-Pangram version.
+
+To add a weight: add its `.woff2` to the fonts repo, add it to the list in `scripts/fonts.sh`, declare it in `fonts.css`, and update the table above.
 
 ## Shape
 
@@ -143,6 +151,8 @@ So nobody brings these back by accident:
 - **Folder tabs / file drawer:** charming but fussy, and fought the content.
 - **Neo-brutalism (pink/lime/purple, offset shadows):** template-like and shouts over the work.
 - **Char-truth #EAFC88 and Cool Whip #FFFEEC** from the 80s palette: the first vanishes on our paper and clashes with the acid LED; the second is the warm cream we dropped.
+- **Type combos A (Mori display + Supply) and B (Right Grotesk + Neue Montreal + Right Serif Mono):** A was calm but less memorable; B's typewriter serif mono pulled the site in two directions. C kept Right Grotesk's punch with Mori's warmth and Supply's instrument feel.
+- **Familjen Grotesk / Geist / Geist Mono as the main fonts:** now the free fallback only.
 - **Acid-green buttons and filters:** the pastels took those jobs; acid green is only the live LED now.
 - **Laughy Taffy pink #EDB5F7 and a colour per section:** three pastels made it too soft and sweet. Two with a hierarchy (lilac primary, peach secondary) reads sharper. Playground's LIVE status is an outline pill now.
 - **Square LEDs:** round reads as a status light more clearly.

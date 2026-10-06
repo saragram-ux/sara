@@ -24,6 +24,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Licensed fonts live in the private saragram-ux/fonts repo, never in this one.
+      # FONTS_TOKEN: a fine-grained token with read access to that repo's contents.
+      # Without it the build still works and the site uses its free fallback fonts.
+      - name: Fetch licensed fonts
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          if [ -z "$FONTS_TOKEN" ]; then echo "No FONTS_TOKEN: building with the fallback fonts"; exit 0; fi
+          git clone --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/saragram-ux/fonts.git" "$RUNNER_TEMP/fonts"
+          scripts/fonts.sh "$RUNNER_TEMP/fonts"
       - name: Build
         run: npm run build
         env:

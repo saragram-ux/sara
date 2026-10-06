@@ -20,6 +20,14 @@ Internal links go through `withBase()` (`src/lib/base.ts`) and wouter's `<Router
 
 ---
 
+
+### Fonts (licensed, not in this repo)
+
+The site uses Pangram Pangram fonts under Sara's web licence. They live in the private repo `saragram-ux/fonts` and are never committed here (`public/fonts/pp/` is git-ignored).
+
+- **Locally:** clone the fonts repo next to this one, then `scripts/fonts.sh ../fonts`. Without it, the site runs on the free fallback fonts.
+- **On deploy:** the workflow clones the fonts repo with the `FONTS_TOKEN` secret (a fine-grained token with read-only *Contents* access to `saragram-ux/fonts`) and runs the same script. No secret, no problem: the build falls back to the free fonts.
+
 ## Editing content (no JSX needed)
 
 Everything you'd want to update lives in `src/data/`:
@@ -175,7 +183,7 @@ When adding a custom token, also add it to `extendTailwindMerge` in `src/lib/uti
 ## Design tokens
 
 - **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, and one acid-green `accent` for status LEDs and selection, plus `accent-ink` for the rare accent *text*. Never put text in `accent` on paper. All text tokens are ≥ 4.5:1 on paper, raised and sunken. Paper is a cool pale sage (#e8ebe4).
-- **Type:** three families with fixed roles. *Familjen Grotesk* (bold lowercase, via `type-display`; a free stand-in for Mabry Bold) for display, *Geist* for reading, *Geist Mono* for metadata. A fluid scale: `text-display-xl/lg/md/sm`, `text-title`, `text-lead`, `text-body`, `text-small`, `text-meta`, `text-micro`, `text-nano`.
+- **Type:** three licensed Pangram Pangram families with fixed roles: *Right Grotesk Compact Black* for the big lowercase words (`type-display`; small titles switch to *Mori Semibold*), *Mori* for reading, *Supply Mono* for labels and readouts. The font files are not in this repo; see *Fonts* below and DESIGN.md. Free fallbacks: Familjen Grotesk, Geist, Geist Mono. A fluid scale: `text-display-xl/lg/md/sm`, `text-title`, `text-lead`, `text-body`, `text-small`, `text-meta`, `text-micro`, `text-nano`.
 - **Radius / shadow:** containers are rounded like a device: `rounded-card` (modules) and `rounded-cell` (panels inside them), `rounded-full` for pills and switches. Chips, tags and keys stay square. Shadows only on things that float (the command menu, the mobile menu).
 
 shadcn/ui components in use: **Button, Sheet** (mobile menu), **Dialog + Command** (⌘K menu), plus a small `Kbd`. `components.json` is set up, so `npx shadcn@latest add <component>` works.
