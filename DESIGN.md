@@ -1,6 +1,7 @@
 # sara lou — design system
 
 > **Status: locked.** Agreed 2026-10-06 and live on the site. This is *the* design.
+> Pastels and light/dark mode added 2026-10-06.
 > Change it on purpose (see [Changing the design](#changing-the-design)), never by drift.
 >
 > Voice and copy rules live in [BRAND.md](BRAND.md). The tokens live in `src/styles/globals.css`.
@@ -22,28 +23,49 @@ The device gives it calm and structure; the archive gives it numbers, order and 
 1. **Lines do the work.** Outlines and rules, no fills, no shadows on things that don't float.
 2. **Solid ink for structure, dotted ink for rows.** Module outlines and table heads are solid; rows between items are dotted.
 3. **Containers are rounded, details are square.** Modules, inner panels, pills, switches and menus are rounded. Chips, tags, keys and icon tiles stay square.
-4. **One loud colour, used rarely.** Acid green for the status LED, the primary button and the active filter. Never as text on paper.
+4. **Pastels mean something.** Lavender = work, taffy = playground, peach = you / contact. Always a fill with black text and a black outline; never text, never white on them, never faded text on them. Acid green is only the live LED.
 5. **Big words are lowercase.** Page titles and section words in Familjen Grotesk Bold, lowercase, tight.
 6. **Small words are mono caps.** Labels, brackets, buttons and numbers in Geist Mono uppercase.
 7. **Values are readouts.** A fact worth showing gets a tiny label above a big mono value.
 8. **Everything is numbered.** `INDEX / 000`, `WORK / 001`, `[ 01 · PROJECT(S) ]`, `[ 3 / 4 ]`.
 9. **Only real facts.** Readouts, counts and tags come from `src/data/`. Never invent numbers to fill a module.
-10. **One acid button per screen.** Everything else is outline or text.
+10. **One pastel button per screen**, in that section's pastel. Everything else is outline or text. Big areas stay paper; pastels are pills, chips, strips and buttons.
 
 ## Colour
 
-| Token | Value | Use |
-| --- | --- | --- |
-| `--paper` | `#e8ebe4` | page background (cool, pale sage) |
-| `--paper-raised` | `#f2f4ef` | hover on rows and cards, inner tiles |
-| `--paper-sunken` | `#dde1d8` | rare recessed areas |
-| `--ink` | `#161513` | text, outlines, solid rules, filled pills |
-| `--ink-muted` | `#53574f` | secondary text (6.1:1) |
-| `--ink-faint` | `#5d6259` | quietest text (≥ 4.5:1 on every paper) |
-| `--accent` | `#9dc21b` | acid green: LED, primary button, active filter. **Never text on paper** |
-| `--accent-ink` | `#4a6400` | the rare green *text* (5.6:1) |
+Two layers: **paper and lines**, which flip between light and dark, and **pastels and the LED**, which never change.
 
-Dotted rows use `border-dotted border-ink/60`. The contact module and other dark panels use `theme-inverse`, which flips the tokens (all inverse text ≥ 4.9:1).
+### Paper and lines
+
+| Token | Light | Dark | Use |
+| --- | --- | --- | --- |
+| `--paper` | `#e8ebe4` | `#141414` | page background |
+| `--paper-raised` | `#f2f4ef` | `#1e1f1d` | hover on rows and cards, inner tiles |
+| `--paper-sunken` | `#dde1d8` | `#0d0d0d` | rare recessed areas |
+| `--ink` | `#161513` | `#e8ebe4` | text, outlines, solid rules |
+| `--ink-muted` | `#53574f` | `#a3a99d` | secondary text (6.1:1 / 7.7:1) |
+| `--ink-faint` | `#5d6259` | `#8a9085` | quietest text (≥ 4.5:1 / 5.6:1) |
+| `--accent-ink` | `#4a6400` | `#9dc21b` | the rare green *text* |
+
+Dotted rows use `border-dotted border-ink/60`. `theme-inverse` (the contact module) is dark in light mode and light in dark mode.
+
+### Pastels and the LED (same in both modes)
+
+| Token | Value | Means | Where |
+| --- | --- | --- | --- |
+| `--lavender` | `#bdb4ff` | work | "see the work" button, active Work filter + matching tags, Work nav pill, text selection |
+| `--taffy` | `#edb5f7` | playground | LIVE pills, live-demo header strip, Playground nav pill |
+| `--peach` | `#ffb985` | you / contact | "Open for work" pills, "Email me" button, About + Contact nav pills |
+| `--on-pastel` | `#141414` | — | the only text and outline colour on a pastel (9.8–11:1) |
+| `--accent` | `#9dc21b` | live | the square blinking LED only; on a pastel it gets a black ring (`ledOnPastel`) |
+
+Use `pastelFill` from `src/lib/pastel.ts` (and `Button variant="taffy" | "peach"`, default lavender) rather than writing pastel classes by hand. White on a pastel fails (≈1.7:1). A pastel on our light paper is only ~1.5:1, which is why it always has an outline.
+
+### Light / dark mode
+
+- `<html data-theme="light|dark">` is set before first paint by a script in `index.html`: a saved choice (`localStorage` `sg:theme`) wins, else the system setting.
+- `useTheme` (`src/hooks/use-theme.ts`) keeps React in sync; `ThemeToggle` in the header and a ⌘K action switch it.
+- Never hard-code ink or paper hex in components. Use tokens, or `on-pastel` for text on a fixed colour.
 
 ## Type
 
@@ -85,7 +107,9 @@ All in `src/components/`. Use these before inventing anything new.
 | `ProjectIndex` | `project/project-index.tsx` | work list: filter chips, live count, numbered dotted rows |
 | `MetaList` | `common/meta-list.tsx` | label / value schedule rows |
 | `StatusDot` | `common/status-dot.tsx` | the square acid LED |
-| `Button` | `ui/button.tsx` | mono pill; default = acid, `outline`, `ghost`, `link` |
+| `ThemeToggle` | `navigation/theme-toggle.tsx` | light / dark button in the header |
+| `pastelFill`, `ledOnPastel` | `lib/pastel.ts` | the pastel fill classes and the LED ring |
+| `Button` | `ui/button.tsx` | mono pill; default = lavender, `taffy`, `peach`, `outline`, `ghost`, `link` |
 
 ## Page anatomy
 
@@ -101,7 +125,7 @@ Quick and mechanical. Durations 120 / 200 / 360 ms, `power4.out` arrivals, 10–
 
 ## Accessibility (non-negotiable)
 
-- All text ≥ 4.5:1 on its background. Re-check when any colour changes.
+- All text ≥ 4.5:1 on its background **in both modes**. Re-check light and dark when any colour changes.
 - Bracket characters are `aria-hidden`; headings stay in order (h1 → h2 → h3).
 - Real controls for real behaviour: the grid switch is a switch, filters are `aria-pressed` buttons, the count is `aria-live`.
 - No sideways scroll from 320 px up.
@@ -116,6 +140,8 @@ So nobody brings these back by accident:
 - **A single framed sheet with black header bars:** clearer, but heavy.
 - **Folder tabs / file drawer:** charming but fussy, and fought the content.
 - **Neo-brutalism (pink/lime/purple, offset shadows):** template-like and shouts over the work.
+- **Char-truth #EAFC88 and Cool Whip #FFFEEC** from the 80s palette: the first vanishes on our paper and clashes with the acid LED; the second is the warm cream we dropped.
+- **Acid-green buttons and filters:** the pastels took those jobs; acid green is only the live LED now.
 
 ## Changing the design
 

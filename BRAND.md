@@ -101,7 +101,8 @@ The personality sits on top of plain facts, stated early: designing interfaces s
 | --- | --- | --- |
 | Paper (cool, pale sage) | `--paper` / `-raised` / `-sunken` | #e8ebe4 / #f2f4ef / #dde1d8 |
 | Ink | `--ink` / `-muted` / `-faint` | #161513 / #53574f / #5d6259 (all ≥ 4.5:1 on every paper) |
-| Accent (acid green) | `--accent` | #9dc21b: status LEDs, the primary pill button, the active filter chip. Never text on paper |
+| Accent (acid green) | `--accent` | #9dc21b: the live LED only. Never text on paper |
+| Pastels | `--lavender` / `--taffy` / `--peach` | work / playground / you. Fills with black text; see DESIGN.md |
 | Accent for text | `--accent-ink` | #4a6400 |
 
 Lines do the work: solid ink for module outlines and table heads, dotted ink for rows. No fills, no shadows on static things.
