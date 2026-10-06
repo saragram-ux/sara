@@ -154,7 +154,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
         className="invisible fixed inset-0 z-[90] flex items-end bg-lilac text-on-pastel will-change-transform"
       >
         <Container className="flex w-full items-end justify-between pb-[calc(var(--gutter)*1.25)]">
-          <Wordmark onPastel className="text-on-pastel" />
+          <Wordmark className="text-on-pastel" />
           <span className="flex flex-col items-end gap-2">
             <span ref={labelIndex} className="type-label text-on-pastel tabular-nums" />
             <span className="reveal-line">

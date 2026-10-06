@@ -89,19 +89,17 @@
       #intro .muted {
         font-weight: 400;
       }
-      #intro .brand {
-        text-transform: none;
-        letter-spacing: 0.02em;
-        font-size: 13px;
+      /* the wordmark, in the display face (same file the app preloads; system bold if it's absent) */
+      @font-face {
+        font-family: 'PP Right Grotesk Compact';
+        src: url('%BASE_URL%fonts/pp/PPRightGrotesk-CompactBlack.woff2') format('woff2');
+        font-weight: 700 900;
+        font-display: swap;
       }
-      #intro .dot {
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        margin-left: 4px;
-        background: #9dc21b;
-        border-radius: 50%;
-        outline: 1px solid #141414; /* the LED on a pastel gets a black ring */
+      #intro .brand {
+        font: 900 22px/1 'PP Right Grotesk Compact', 'Arial Narrow', Arial, sans-serif;
+        text-transform: lowercase;
+        letter-spacing: 0.005em;
       }
       #intro-bar {
         height: 1px;
@@ -115,7 +113,7 @@
   <body>
     <div id="intro" aria-hidden="true">
       <div class="row">
-        <span class="brand">sara lou<span class="dot"></span></span>
+        <span class="brand">sara lou</span>
         <span class="muted">UI / Product / Frontend</span>
       </div>
       <div>

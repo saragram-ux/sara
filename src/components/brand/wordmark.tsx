@@ -1,17 +1,15 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 
 import { brand } from '@/data/brand'
-import { profile } from '@/data/profile'
-import { ledOnPastel } from '@/lib/pastel'
 import { cn } from '@/lib/utils'
 
-const wordmarkVariants = cva('inline-flex items-baseline font-mono leading-none tracking-[0.01em] whitespace-nowrap', {
+const wordmarkVariants = cva('inline-block font-display font-bold leading-none tracking-[0.005em] whitespace-nowrap lowercase', {
   variants: {
     size: {
       /** header, mobile menu, page turn */
-      sm: 'text-[0.9375rem]',
+      sm: 'text-[1.5rem]',
       /** footer */
-      md: 'text-lead',
+      md: 'text-[2.25rem]',
       /** inherits the surrounding size */
       inherit: '',
     },
@@ -19,28 +17,12 @@ const wordmarkVariants = cva('inline-flex items-baseline font-mono leading-none 
   defaultVariants: { size: 'sm' },
 })
 
-type WordmarkProps = VariantProps<typeof wordmarkVariants> & {
-  /** On a pastel the LED gets a black ring so it still reads. */
-  onPastel?: boolean
-  className?: string
-}
+type WordmarkProps = VariantProps<typeof wordmarkVariants> & { className?: string }
 
 /**
- * sara lou• — set like a product label: lowercase mono, a tiny round acid-green LED after it.
- * The LED blinks while Sara is open for work.
+ * sara lou — the name set in the display face: Right Grotesk Compact Black, lowercase, nothing else.
+ * Same voice as the big words on the page; the open-for-work status lives in the nav, not the logo.
  */
-export function Wordmark({ size, onPastel = false, className }: WordmarkProps) {
-  return (
-    <span className={cn(wordmarkVariants({ size }), className)}>
-      {brand.name}
-      <span
-        aria-hidden
-        className={cn(
-          'ml-[0.3em] inline-block size-[0.36em] shrink-0 translate-y-[-0.02em] rounded-full bg-accent',
-          profile.availability.open && 'animate-pulse-dot',
-          onPastel && ledOnPastel,
-        )}
-      />
-    </span>
-  )
+export function Wordmark({ size, className }: WordmarkProps) {
+  return <span className={cn(wordmarkVariants({ size }), className)}>{brand.name}</span>
 }

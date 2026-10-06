@@ -56,7 +56,7 @@ Dotted rows use `border-dotted border-ink/60`. `theme-inverse` (the contact modu
 | `--lilac` | `#bdb4ff` | **primary** | main buttons ("see the work"), the active nav pill, active filters + matching tags, the live-demo strip, text selection, the loading screen and the page turn |
 | `--peach` | `#ffb985` | **secondary** | the contact module (`theme-peach`); the `peach` button variant exists but is rarely used |
 | `--on-pastel` | `#141414` | — | the only text and outline colour on a pastel (9.8–11:1) |
-| `--accent` | `#9dc21b` | live | the **round** blinking LED only (status, wordmark, favicon); on a pastel it gets a black ring (`ledOnPastel`) |
+| `--accent` | `#9dc21b` | live | the **round** blinking LED only (the open-for-work status, live items, the currently board); on a pastel it gets a black ring (`ledOnPastel`) |
 
 A pastel **module** uses `Module tone="peach"` or the `theme-peach` utility: it sets paper to peach and every ink token to black, so buttons, links, readouts and labels inside turn mono by themselves.
 
@@ -67,6 +67,12 @@ Use `pastelFill` from `src/lib/pastel.ts` (and `Button`: default lilac, `peach` 
 - `<html data-theme="light|dark">` is set before first paint by a script in `index.html`: a saved choice (`localStorage` `sg:theme`) wins, else the system setting.
 - `useTheme` (`src/hooks/use-theme.ts`) keeps React in sync; `ThemeToggle` in the header and a ⌘K action switch it.
 - Never hard-code ink or paper hex in components. Use tokens, or `on-pastel` for text on a fixed colour.
+
+## Wordmark
+
+`sara lou`, set in **PP Right Grotesk Compact Black, lowercase**, with nothing else: no dot, no symbol. Same voice as the big words on the page. Component: `Wordmark` (`components/brand/wordmark.tsx`), `sm` 1.5rem (header, menu, page turn), `md` 2.25rem (footer). The loading screen sets it in the same face from `index.html`.
+
+**Favicon:** `sl` traced from the same face into vector outlines (`public/favicon.svg`), light on an ink rounded square. It contains only those two letter shapes, not the font. If the wordmark face ever changes, regenerate it from the new font.
 
 ## Type
 
@@ -122,7 +128,7 @@ All in `src/components/`. Use these before inventing anything new.
 
 ## Page anatomy
 
-- **Loading screen and page turn** are full-screen lilac with ink type, identical in light and dark: wordmark (LED with its black ring), `UI / PRODUCT / FRONTEND`, `SARA GRAMSTAD`, the `000 / 100` count over an ink bar; the page turn shows the destination's index over its name (`WORK / 002` · **coly**). Nothing faded.
+- **Loading screen and page turn** are full-screen lilac with ink type, identical in light and dark: the wordmark, `UI / PRODUCT / FRONTEND`, `SARA GRAMSTAD`, the `000 / 100` count over an ink bar; the page turn shows the destination's index over its name (`WORK / 002` · **coly**). Nothing faded.
 - **Every page** opens with one device panel: a status row (index left, context right), a huge lowercase title, then the lead and an aside (meta readouts or a legend).
 - **Home:** hero device (status row with the grid switch, headline, readout bar with live local time, Studio and Studying modules, the career schedule) → ticker → `work` index with filters → About module with the Currently table → `playground` modules → Experience module → Contact.
 - **Sections** open with `SectionTitle` on the home page and `SectionLabel` on inner pages.
@@ -156,6 +162,7 @@ So nobody brings these back by accident:
 - **Acid-green buttons and filters:** the pastels took those jobs; acid green is only the live LED now.
 - **Laughy Taffy pink #EDB5F7 and a colour per section:** three pastels made it too soft and sweet. Two with a hierarchy (lilac primary, peach secondary) reads sharper. Playground's LIVE status is an outline pill now.
 - **Square LEDs:** round reads as a status light more clearly.
+- **A mono wordmark with an LED (`sara lou•`):** read as a label, not a name. The wordmark is now the display face, and the LED stays with the status, not the logo.
 - **A peach "Open for work" pill:** it looked clickable and wasn't. Status is an outline pill; the whole module goes peach instead.
 
 ## Changing the design

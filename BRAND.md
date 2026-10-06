@@ -128,12 +128,12 @@ Lines do the work: solid ink for module outlines and table heads, dotted ink for
 
 ## Wordmark
 
-`sara lou•`: Supply Mono, lowercase, with a tiny round acid-green LED after it that blinks (on/off, not breathing) while Sara is open for work. There's no logo and no monogram; the favicon is `sl•` on ink.
+`sara lou`: Right Grotesk Compact Black, lowercase, nothing else. The same voice as the big words on the page, so the name and the headlines feel like one hand. There's no symbol; the favicon is `sl` in the same face, light on ink. The open-for-work LED lives in the nav, not in the logo.
 
 ## Brand devices
 
 1. **The index.** Everything is numbered like an archive: `000`, `WORK / 001`, `PLAYGROUND / 004`, `FIG. 02`. The page turn (a lilac curtain) shows the destination's number before its title.
-2. **The LED.** One tiny round dot of acid green, in the same shape everywhere: after the name, beside "open for work", on live experiments, on the currently board.
+2. **The LED.** One tiny round dot of acid green, in the same shape everywhere: beside "open for work", on live experiments, on the currently board.
 3. **The lockup.** `sara lou / UI / PRODUCT / FRONTEND` appears in the intro, the header and the footer.
 
 ## Motion
