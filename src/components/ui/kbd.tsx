@@ -11,8 +11,8 @@ const kbdVariants = cva('inline-flex items-center justify-center font-mono leadi
     size: {
       /** inline hints: footer, command menu */
       sm: 'h-5 min-w-5 rounded-md border border-ink/40 bg-paper-raised px-1 text-nano text-ink-muted shadow-[0_1px_0_var(--rule-strong)]',
-      /** header controls: matches the theme toggle */
-      lg: cn('size-8 rounded-lg text-[0.75rem]', keycap),
+      /** header controls: optically matched to the 32px round theme toggle (a square reads bigger, so 28px, tighter corners) */
+      lg: cn('size-7 rounded-[5px] text-[0.6875rem]', keycap),
     },
   },
   defaultVariants: { size: 'sm' },
