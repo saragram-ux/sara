@@ -29,7 +29,7 @@ The device gives it calm and structure; the archive gives it numbers, order and 
 7. **Values are readouts.** A fact worth showing gets a tiny label above a big mono value.
 8. **Everything is numbered.** `INDEX / 000`, `WORK / 001`, `[ 01 · PROJECT(S) ]`, `[ 3 / 4 ]`.
 9. **Only real facts.** Readouts, counts and tags come from `src/data/`. Never invent numbers to fill a module.
-10. **Pastel means "you can press this" or "this is the moment".** Pastel buttons, chips and pills are clickable or active. A status that isn't clickable is an outline pill. A whole module may be pastel (the hero readout bar, contact), and then everything inside it is black: mono, nothing faded, its button solid black (`Button variant="ink"`).
+10. **Pastel means "you can press this" or "this is the moment".** Pastel buttons, chips and pills are clickable or active. A status that isn't clickable is an outline pill. A whole module may be pastel (only contact), and then everything inside it is black: mono, nothing faded, its button solid black (`Button variant="ink"`).
 
 ## Colour
 
@@ -55,7 +55,7 @@ Dotted rows use `border-dotted border-ink/60`. `theme-inverse` (the contact modu
 | --- | --- | --- | --- |
 | `--lavender` | `#bdb4ff` | work | "see the work" button, active Work filter + matching tags, Work nav pill, text selection |
 | `--taffy` | `#edb5f7` | playground | LIVE pills, live-demo header strip, Playground nav pill |
-| `--peach` | `#ffb985` | you / contact | the hero readout bar and the contact module (`theme-peach`), About + Contact nav pills |
+| `--peach` | `#ffb985` | you / contact | the contact module (`theme-peach`), About + Contact nav pills |
 | `--on-pastel` | `#141414` | — | the only text and outline colour on a pastel (9.8–11:1) |
 | `--accent` | `#9dc21b` | live | the **round** blinking LED only (status, wordmark, favicon); on a pastel it gets a black ring (`ledOnPastel`) |
 
