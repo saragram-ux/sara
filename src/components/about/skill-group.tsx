@@ -7,10 +7,10 @@ import { skillLevelGlyph } from './skill-level'
 export function SkillGroup({ group }: { group: SkillGroupData }) {
   return (
     <>
-      <h3 className="border-t border-ink pt-3 type-label">{group.label}</h3>
-      <ul className="mt-4 grid gap-1.5">
+      <h3 className="type-label font-medium">{group.label}</h3>
+      <ul className="mt-3 border-t border-ink">
         {group.items.map((skill) => (
-          <li key={skill.name} className="flex items-baseline gap-2.5 text-small">
+          <li key={skill.name} className="flex items-baseline gap-2.5 border-b border-dotted border-ink/60 py-2 text-small last:border-b-0">
             {/* glyph size is optical: the marks read as dots, not letters */}
             <span aria-hidden className={cn('w-3 shrink-0 font-mono text-[0.7rem]', skill.level === 'fluent' ? 'text-ink' : 'text-ink-muted')}>
               {skillLevelGlyph[skill.level]}

@@ -29,7 +29,7 @@ function SheetContent({
           'fixed z-50 flex flex-col bg-paper shadow-float',
           'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:duration-500 data-[state=closed]:duration-300',
           '[animation-timing-function:var(--ease-out)]',
-          side === 'top' && 'inset-x-0 top-0 data-[state=open]:slide-in-from-top data-[state=closed]:slide-out-to-top',
+          side === 'top' && 'inset-x-0 top-0 rounded-b-card border-b border-ink data-[state=open]:slide-in-from-top data-[state=closed]:slide-out-to-top',
           side === 'bottom' && 'inset-x-0 bottom-0 data-[state=open]:slide-in-from-bottom data-[state=closed]:slide-out-to-bottom',
           side === 'right' && 'inset-y-0 right-0 h-full w-4/5 data-[state=open]:slide-in-from-right data-[state=closed]:slide-out-to-right',
           side === 'left' && 'inset-y-0 left-0 h-full w-4/5 data-[state=open]:slide-in-from-left data-[state=closed]:slide-out-to-left',

@@ -59,7 +59,7 @@ Layout primitives  components/layout/           Container · Section · Grid · 
       ↓
 UI primitives      components/ui/               shadcn: Button · Sheet · Dialog · Command · Kbd
       ↓
-Components         components/<domain>/         ProjectCard · ExperienceItem · PlaygroundCard · ContactLinks …
+Components         components/<domain>/         ProjectIndex · ExperienceItem · PlaygroundCard · ContactLinks …
       ↓
 Sections           sections/section-*.tsx       SectionHero · SectionProjects · SectionContact …
       ↓
@@ -109,13 +109,14 @@ src/
 │   ├── navigation/            SiteNav, NavLink, MobileNav, MobileNavTrigger, CommandMenu(+Trigger),
 │   │                          TransitionLink, SkipLink
 │   ├── motion/                PageTransition, AnimatedLink, intro, use-reveal (usePageEntrance, useScrollReveal)
-│   ├── project/               ProjectList, ProjectCard, ProjectPreview, ProjectPlate, ProjectTags,
+│   ├── instrument/            Module, Readout(s), Bracket, Switch, Ticker, SectionTitle — the device + archive kit
+│   ├── project/               ProjectIndex (filters + rows), ProjectPlate, ProjectTags,
 │   │                          ProjectHeader, ProjectMeta, ProjectCover, ProjectContent, ProjectChapter(+Nav), ProjectNext
 │   ├── playground/            PlaygroundList, PlaygroundEntry, PlaygroundCard, PlaygroundStatus(+Legend),
 │   │                          PlaygroundStack, Demo* (the live demos)
 │   ├── experience/            ExperienceList, ExperienceItem
 │   ├── contact/               ContactLinks, CopyEmailButton
-│   ├── about/                 AboutIntro, StatusPanel, CurrentlyPanel, CareerPath, SkillGroup, SkillLegend
+│   ├── about/                 AboutIntro, SkillGroup, SkillLegend
 │   └── common/                small shared bits: MetaList, StatusDot, LocalTime
 ├── sections/                  section-*.tsx — one file per page section
 ├── pages/                     *-page.tsx — one file per route
@@ -126,12 +127,12 @@ src/
 
 ### Naming rules
 
-- **Files are kebab-case**, components are PascalCase: `project-card.tsx` exports `ProjectCard`.
-- **Name what it is, then its role**: `ProjectCard`, `ProjectChapterNav`, `PlaygroundStatusLegend`, never `Showcase`, `WorkThing`, `Wrapper2`.
+- **Files are kebab-case**, components are PascalCase: `project-index.tsx` exports `ProjectIndex`.
+- **Name what it is, then its role**: `ProjectIndex`, `ProjectChapterNav`, `PlaygroundStatusLegend`, never `Showcase`, `WorkThing`, `Wrapper2`.
 - **Sections are `Section<Name>`**, pages are `<Name>Page`, live demos are `Demo<Name>`, hooks are `use<Name>`.
 - **Variants, not copies.** One component with a prop instead of near-duplicates: `<SectionExperience variant="summary" | "full">`, `<ExperienceItem variant="compact" | "detailed">`, `<PlaygroundStack variant="inline" | "chips">`, `<ProjectTags density="compact" | "relaxed">`, `<Section spacing="default" | "flush-top" | "hero">`, `<Button variant>` (cva).
 - **shadcn stays shadcn.** `components/ui/` keeps shadcn's names and APIs; portfolio components compose them.
-- **Content stays in `data/`.** Components receive it as props (`<ProjectList projects={projects} />`).
+- **Content stays in `data/`.** Components receive it as props (`<ProjectIndex projects={projects} />`).
 - **The naming test:** if someone saw the name without opening the file, would they know what it does? If not, rename it.
 
 ### Utility classes
@@ -172,9 +173,9 @@ When adding a custom token, also add it to `extendTailwindMerge` in `src/lib/uti
 
 ## Design tokens
 
-- **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, and one acid-green `accent` for status LEDs and selection, plus `accent-ink` for the rare accent *text*. Never put text in `accent` on paper. All text tokens are ≥ 4.5:1 on paper.
+- **Colour:** `paper`, `paper-raised`, `paper-sunken`, `ink`, `ink-muted`, `ink-faint`, `rule`, `rule-strong`, and one acid-green `accent` for status LEDs and selection, plus `accent-ink` for the rare accent *text*. Never put text in `accent` on paper. All text tokens are ≥ 4.5:1 on paper, raised and sunken. Paper is a cool pale sage (#e8ebe4).
 - **Type:** three families with fixed roles. *Familjen Grotesk* (bold lowercase, via `type-display`; a free stand-in for Mabry Bold) for display, *Geist* for reading, *Geist Mono* for metadata. A fluid scale: `text-display-xl/lg/md/sm`, `text-title`, `text-lead`, `text-body`, `text-small`, `text-meta`, `text-micro`, `text-nano`.
-- **Radius / shadow:** square everywhere; `rounded-full` only on the pill buttons and the career-diagram nodes. Shadows only on things that float: the command menu, the cursor preview and the tooltip.
+- **Radius / shadow:** containers are rounded like a device: `rounded-card` (modules) and `rounded-cell` (panels inside them), `rounded-full` for pills and switches. Chips, tags and keys stay square. Shadows only on things that float (the command menu, the mobile menu).
 
 shadcn/ui components in use: **Button, Sheet** (mobile menu), **Dialog + Command** (⌘K menu), plus a small `Kbd`. `components.json` is set up, so `npx shadcn@latest add <component>` works.
 

@@ -380,53 +380,15 @@
   background-image: repeating-linear-gradient(-45deg, var(--rule-strong) 0 1px, transparent 1px 8px);
 }
 
-/* A drawn line in a diagram: a thick ink pipe with round ends */
-@utility pipe {
-  background: var(--ink);
-  border-radius: 999px;
-}
-
-/* A pipe that's still running: acid dashes travel along its centre. Horizontal from md, vertical below. */
-@utility pipe-live {
-  position: relative;
-  background: var(--ink);
-  border-radius: 999px;
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 3px calc(50% - 1px);
-    background: repeating-linear-gradient(180deg, var(--accent) 0 7px, transparent 7px 13px);
-    animation: pipe-flow-y 0.9s linear infinite;
-  }
-  @media (width >= 48rem) {
-    &::after {
-      inset: calc(50% - 1px) 3px;
-      background: repeating-linear-gradient(90deg, var(--accent) 0 7px, transparent 7px 13px);
-      animation-name: pipe-flow-x;
-    }
-  }
-}
-
-@keyframes pipe-flow-x {
-  to {
-    background-position: 13px 0;
-  }
-}
-@keyframes pipe-flow-y {
-  to {
-    background-position: 0 13px;
-  }
-}
-
 @utility theme-inverse {
   --paper: #161513;
   --paper-raised: #22211e;
   --paper-sunken: #0f0e0d;
-  --ink: #f3f0e8;
-  --ink-muted: #aaa498; /* 7.4:1 */
-  --ink-faint: #8f897e; /* 5.3:1 */
-  --rule: rgb(243 240 232 / 0.16);
-  --rule-strong: rgb(243 240 232 / 0.34);
+  --ink: #e8ebe4;
+  --ink-muted: #a3a99d; /* 7.4:1 */
+  --ink-faint: #8a9085; /* 5.3:1 */
+  --rule: rgb(232 235 228 / 0.16);
+  --rule-strong: rgb(232 235 228 / 0.34);
   --accent-ink: var(--accent); /* acid green is readable on ink (8.8:1) */
   background-color: var(--paper);
   color: var(--ink);

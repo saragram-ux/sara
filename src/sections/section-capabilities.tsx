@@ -17,19 +17,19 @@ export function SectionCapabilities() {
       <SectionLabel index="04" id="stack-title">
         Built with
       </SectionLabel>
-      <Grid className="mt-12 gap-y-6 md:mt-16">
+      <Grid className="mt-8 gap-y-6">
         <p data-reveal className="col-span-4 text-lead md:col-span-5 lg:col-span-5 lg:col-start-3">
           I’ve used Figma and Webflow every day for years. The code side I’m still learning, a bit more every week.
         </p>
         <SkillLegend data-reveal className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-10" />
       </Grid>
-      <Grid className="mt-12 gap-y-10">
+      <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {skills.map((group) => (
-          <div key={group.label} data-reveal className="col-span-2 md:col-span-2 lg:col-span-3">
+          <li key={group.label} data-reveal className="rounded-card border border-ink p-5">
             <SkillGroup group={group} />
-          </div>
+          </li>
         ))}
-      </Grid>
+      </ul>
     </Section>
   )
 }

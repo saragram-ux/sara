@@ -48,7 +48,7 @@ export default function MobileNav({ open, onOpenChange: setOpen }: { open: boole
             {navigation.map((item, i) => {
               const active = isNavActive(item.href, pathname)
               return (
-                <li key={item.href} className="border-b border-rule">
+                <li key={item.href} className="border-b border-dotted border-ink/60">
                   <TransitionLink
                     to={item.href}
                     onClick={(e) => {
@@ -61,7 +61,7 @@ export default function MobileNav({ open, onOpenChange: setOpen }: { open: boole
                     className="flex items-baseline justify-between py-4"
                   >
                     <span className="type-display text-display-sm">{item.label}</span>
-                    <span className={cn('type-label tabular-nums', active ? 'text-accent-ink' : 'text-ink-faint')}>0{i + 1}</span>
+                    <span className={cn('rounded-full px-2.5 py-0.5 type-label tabular-nums', active ? 'bg-ink text-paper' : 'text-ink-faint')}>0{i + 1}</span>
                   </TransitionLink>
                 </li>
               )

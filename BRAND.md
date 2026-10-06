@@ -1,7 +1,9 @@
-# sara lou — brand notes (v4)
+# sara lou — brand notes (v5)
 
 > A small, very well-made corner of the internet belonging to Sara Gramstad.
 > A little precise. A little strange. Not trying to impress you.
+
+**v5: instrument + archive.** The look now comes from two references: a thermostat app (a calm device: pale cool paper, thin ink lines, rounded modules, big mono readouts with tiny labels, ON/OFF switches, a schedule table) and Snask's works index (an archive: a huge lowercase word, caps spread under it, bracket counts, filter chips, numbered rows with dotted rules and tags, a ticker). Together: *a device for browsing an archive.* Square blocks, folders and full-bleed sheets were all tried and dropped.
 
 **v4:** the copy now speaks in the Handsdown tone: warm, direct, talks to you (see Voice). Headlines and buttons went lowercase to match; the mono system labels stay uppercase.
 
@@ -95,26 +97,30 @@ The personality sits on top of plain facts, stated early: designing interfaces s
 
 | Role | Token | Value |
 | --- | --- | --- |
-| Paper | `--paper` / `-raised` / `-sunken` | #f3f0e8 / #faf8f3 / #e9e5da |
-| Ink | `--ink` / `-muted` / `-faint` | #161513 / #5c574e / #6f695e |
-| Accent (acid green) | `--accent` | #9dc21b: status LEDs, the wordmark LED, text selection, the grid tool. Never text on paper |
-| Accent for text | `--accent-ink` | #4a6400: the active nav index, link hover. That's it |
+| Paper (cool, pale sage) | `--paper` / `-raised` / `-sunken` | #e8ebe4 / #f2f4ef / #dde1d8 |
+| Ink | `--ink` / `-muted` / `-faint` | #161513 / #53574f / #5d6259 (all ≥ 4.5:1 on every paper) |
+| Accent (acid green) | `--accent` | #9dc21b: status LEDs, the primary pill button, the active filter chip. Never text on paper |
+| Accent for text | `--accent-ink` | #4a6400 |
 
-The green should feel almost accidental: a tiny LED, one active state, one hover underline. Headlines, numbers, arrows and rules are ink.
+Lines do the work: solid ink for module outlines and table heads, dotted ink for rows. No fills, no shadows on static things.
 
 ## Typography
 
-- **Familjen Grotesk, 700, lowercase** (`type-display`): headlines, project titles, buttons, proper nouns included ("the startup house of malmö"). Tight tracking. Bold, slightly odd, notched corners. To switch to Mabry Bold with a web licence, change `--font-display` and the font import
-- **Geist Mono:** the name, the system voice, every number
-- **Geist:** reading
+- **Familjen Grotesk 700, lowercase** (`type-display`): page titles and section words ("work", "playground", "myo"). Tight tracking. A free stand-in for Mabry Bold
+- **Geist Mono:** labels and brackets in UPPERCASE (`type-label`), big instrument values (`type-readout`: "16:27 CEST", "2028"), numbers, buttons, tags
+- **Geist:** reading, and the spread caps descriptors under a section word
 
-No serif. No italics in headlines. It's bold lowercase + uppercase mono: loud words, strict labels.
+## Components
 
-## Buttons and the contact block
-
-- **Primary button:** a fat acid-green pill with ink caps (`Button` default). It's the one loud thing; use it once per screen.
-- **Secondary:** an outline pill.
-- **Contact block** (`theme-inverse`): ink background, with the tokens flipped so every component inverts by itself. A big caps headline, the email set like a form field (label, address, heavy underline), then the pills.
+- **Module:** a rounded (`rounded-card`), outlined panel. Tiny label + quiet sub-line top left, a bracket or status top right. Every section and page header is one.
+- **Readout:** tiny label above a big mono value. Use real facts only.
+- **Switch:** an ON/OFF pill (the grid overlay). A real control.
+- **Section title:** one huge lowercase word, an arrow, caps descriptors spread across, a `[ 01 · PROJECT(S) ]` row with a count.
+- **Index rows:** `001`, an icon tile, title, dotted square tags, year, ↗. Dotted rules between.
+- **Filters:** square dotted chips; the active one is acid with ☒, and the bracket count updates.
+- **Buttons:** mono uppercase pills with an ink outline. The acid one is the loud one; use it once per screen.
+- **Shape rule:** containers are rounded (modules, cells, pills, the command menu); chips, tags and keys stay square-ish.
+- **Contact:** an ink module with the email set large in mono and a readout card for local time.
 
 ## Wordmark
 
@@ -132,4 +138,4 @@ Quick, exact, slightly mechanical. Short durations (120 / 200 / 360 ms), `power4
 
 ## The test
 
-Cover the name. Is it still recognisable? It should be, by the mono lockup, the numbering, the LED, the ink page turn with an index on it, and the bold caps headline over hard facts.
+Cover the name. Is it still recognisable? It should be, by the mono lockup, the numbering and brackets, the LED, the rounded outlined modules with mono readouts, and the big lowercase words over hard facts.

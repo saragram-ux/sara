@@ -16,9 +16,9 @@ export function SectionEducation() {
       <SectionLabel index="05" id="edu-title">
         Education
       </SectionLabel>
-      <ol className="mt-12 border-t border-rule md:mt-16">
+      <ol className="mt-8 border-t border-ink">
         {education.map((e) => (
-          <Grid as="li" key={e.programme} data-reveal className="items-baseline gap-y-1 border-b border-rule py-4 md:py-5">
+          <Grid as="li" key={e.programme} data-reveal className="items-baseline gap-y-1 border-b border-dotted border-ink/60 py-4 md:py-5">
             <span className="col-span-4 type-label text-ink-muted tabular-nums md:col-span-2">{formatRange(e.start, e.end)}</span>
             <span className="col-span-4 text-body font-medium md:col-span-3 lg:col-span-4">{e.programme}</span>
             <span className="col-span-4 text-small text-ink-muted md:col-span-3 lg:col-span-4">{e.school}</span>

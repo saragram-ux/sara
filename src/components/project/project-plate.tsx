@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 const tones = {
   paper: { bg: 'var(--paper-raised)', fg: 'var(--ink)', line: 'rgb(22 21 19 / 0.055)', pill: 'var(--ink)', pillFg: 'var(--paper-raised)' },
-  sand: { bg: '#e6ddcb', fg: 'var(--ink)', line: 'rgb(22 21 19 / 0.07)', pill: 'var(--ink)', pillFg: '#e6ddcb' },
+  sand: { bg: '#d4dccb', fg: 'var(--ink)', line: 'rgb(22 21 19 / 0.07)', pill: 'var(--ink)', pillFg: '#d4dccb' },
   ink: { bg: '#1d1c19', fg: '#efebe2', line: 'rgb(239 235 226 / 0.07)', pill: '#efebe2', pillFg: '#1d1c19' },
 } as const
 
@@ -43,7 +43,7 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
 
   if (image?.src) {
     return (
-      <div className={cn('relative overflow-hidden bg-paper-sunken', className)} style={{ aspectRatio: aspect }}>
+      <div className={cn('relative overflow-hidden rounded-cell bg-paper-sunken', className)} style={{ aspectRatio: aspect }}>
         <img
           src={withBase(image.src)}
           alt={image.alt}
@@ -73,7 +73,7 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
     <div
       role="img"
       aria-label={figure ? `${figure.alt} (image placeholder)` : `${project.title} — ${project.disciplines.join(', ')}`}
-      className={cn('@container relative overflow-hidden select-none', className)}
+      className={cn('@container relative overflow-hidden rounded-cell border border-ink select-none', className)}
       style={style}
     >
       <CropMarks />

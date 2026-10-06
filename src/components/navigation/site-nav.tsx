@@ -11,7 +11,7 @@ export function SiteNav() {
   const [pathname] = useLocation()
   return (
     <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
-      <ul className="flex items-center gap-6">
+      <ul className="flex items-center gap-1">
         {navigation.map((item, i) => (
           <li key={item.href}>
             <NavLink href={item.href} label={item.label} index={i + 1} active={isNavActive(item.href, pathname)} />

@@ -22,5 +22,11 @@ export function Readouts({ className, children }: { className?: string; children
 
 /** "[ 4 / 4 ]" — counts and section labels in brackets, archive-style. */
 export function Bracket({ children, className }: { children: ReactNode; className?: string }) {
-  return <span className={cn('type-label whitespace-nowrap tabular-nums', className)}>[ {children} ]</span>
+  return (
+    <span className={cn('type-label whitespace-nowrap tabular-nums', className)}>
+      <span aria-hidden>[ </span>
+      {children}
+      <span aria-hidden> ]</span>
+    </span>
+  )
 }

@@ -26,24 +26,29 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
       id={`p-${item.id}`}
       tabIndex={-1}
       aria-labelledby={`p-${item.id}-title`}
-      className={cn('scroll-mt-sticky outline-none', item.draft && 'opacity-70')}
+      className={cn('scroll-mt-sticky rounded-card border border-ink p-5 outline-none md:p-8', item.draft && 'border-dotted opacity-70')}
     >
-      <Grid data-reveal className="gap-y-6 border-t border-ink pt-3">
-        <div className="col-span-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 type-label text-ink-muted md:col-span-8 lg:col-span-2 lg:flex-col lg:justify-start lg:gap-2">
-          <span className="text-ink">Playground / {item.id}</span>
-          <time dateTime={item.date}>{formatMonth(item.date)}</time>
-          <PlaygroundStatus status={item.status} />
+      {/* status row */}
+      <div data-reveal className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-b border-dotted border-ink/60 pb-3 type-label">
+        <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <span className="tabular-nums">Playground / {item.id}</span>
+          <time dateTime={item.date} className="text-ink-muted">
+            {formatMonth(item.date)}
+          </time>
           {item.draft && <span className="text-accent-ink">Draft · dev only</span>}
-        </div>
+        </span>
+        <PlaygroundStatus status={item.status} />
+      </div>
 
-        <div className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-3">
+      <Grid data-reveal className="mt-8 gap-y-6">
+        <div className="col-span-4 md:col-span-5 lg:col-span-8">
           <h2 id={`p-${item.id}-title`} className="type-display text-display-md">
             {item.title}
           </h2>
           <p className="mt-4 max-w-xl text-body text-ink-muted">{item.description}</p>
         </div>
 
-        <div className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-10">
+        <div className="col-span-4 md:col-span-3 lg:col-span-4">
           <p className="type-label text-ink-muted">Stack</p>
           <PlaygroundStack stack={item.stack} variant="chips" className="mt-2" />
           {(item.demoUrl || item.repoUrl) && (
@@ -64,22 +69,18 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
       </Grid>
 
       {Demo && (
-        <Grid data-reveal className="mt-10">
-          <div className="col-span-4 md:col-span-8 lg:col-span-10 lg:col-start-3">
-            <div className="border border-ink bg-paper">
-              <div className="flex items-center justify-between bg-ink px-4 py-2.5 type-label text-paper">
-                <span className="tabular-nums">Live demo · Playground / {item.id}</span>
-                <span className="flex items-center gap-2">
-                  <StatusDot />
-                  Try it
-                </span>
-              </div>
-              <div className="p-inset">
-                <Demo />
-              </div>
-            </div>
+        <div data-reveal className="mt-8 rounded-cell border border-ink">
+          <div className="flex items-center justify-between border-b border-dotted border-ink/60 px-4 py-3 type-label">
+            <span className="font-medium">Live demo</span>
+            <span className="flex items-center gap-2 text-ink-muted">
+              <StatusDot />
+              Try it
+            </span>
           </div>
-        </Grid>
+          <div className="p-inset">
+            <Demo />
+          </div>
+        </div>
       )}
     </article>
   )

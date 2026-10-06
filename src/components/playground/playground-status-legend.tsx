@@ -10,9 +10,9 @@ const legend: { status: PlaygroundItemStatus; text: string }[] = [
 /** What the status dots on playground entries mean. */
 export function PlaygroundStatusLegend() {
   return (
-    <ul className="grid gap-2 border-t border-rule pt-3">
+    <ul className="border-t border-ink">
       {legend.map((l) => (
-        <li key={l.status} className="flex items-center justify-between">
+        <li key={l.status} className="flex items-center justify-between border-b border-dotted border-ink/60 py-2.5">
           <PlaygroundStatus status={l.status} />
           <span className="text-small text-ink-muted">{l.text}</span>
         </li>

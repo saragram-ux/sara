@@ -18,7 +18,7 @@ export function DemoLayoutGrid() {
           <div key={l.cols}>
             <div
               aria-hidden
-              className="grid h-16 gap-[3px] border border-rule-strong bg-paper p-1.5"
+              className="grid h-16 gap-[3px] rounded-md border border-ink/40 bg-paper-raised p-1.5"
               style={{ gridTemplateColumns: `repeat(${l.cols}, 1fr)` }}
             >
               {Array.from({ length: l.cols }, (_, i) => (
@@ -37,7 +37,7 @@ export function DemoLayoutGrid() {
           onClick={toggleGrid}
           aria-pressed={grid}
           className={cn(
-            'inline-flex h-9 cursor-pointer items-center gap-2 border px-3 type-label transition-colors',
+            'inline-flex h-9 cursor-pointer items-center gap-2 rounded-full border px-4 type-label transition-colors',
             grid ? 'border-ink bg-accent text-ink' : 'border-ink hover:bg-ink hover:text-paper',
           )}
         >

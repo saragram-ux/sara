@@ -15,17 +15,20 @@ export function NavLink({ href, label, index, active }: NavLinkProps) {
     <TransitionLink
       to={href}
       aria-current={active ? 'page' : undefined}
-      className="group/nav flex items-baseline gap-1.5 py-2 font-mono text-meta tracking-[0.04em] uppercase"
+      className={cn(
+        'group/nav flex items-baseline gap-1.5 rounded-full border px-3 py-1.5 font-mono text-meta tracking-[0.04em] uppercase transition-colors duration-fast',
+        active ? 'border-ink bg-ink text-paper' : 'border-transparent hover:border-ink/40',
+      )}
     >
       <span
         className={cn(
           'text-nano tabular-nums transition-colors duration-fast',
-          active ? 'text-accent-ink' : 'text-ink-faint group-hover/nav:text-ink',
+          active ? 'text-accent' : 'text-ink-faint group-hover/nav:text-ink',
         )}
       >
         0{index}
       </span>
-      <span className={cn('link-underline-draw', active && 'bg-size-[100%_1px]')}>{label}</span>
+      <span>{label}</span>
     </TransitionLink>
   )
 }

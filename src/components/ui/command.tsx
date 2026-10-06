@@ -22,7 +22,7 @@ function CommandDialog({
         <DialogTitle className="sr-only">{title}</DialogTitle>
         <DialogDescription className="sr-only">{description}</DialogDescription>
         {/* ink header bar, like the spec panels */}
-        <div aria-hidden className="flex items-center justify-between bg-ink px-4 py-2.5 type-label text-paper">
+        <div aria-hidden className="flex items-center justify-between border-b border-dotted border-ink/60 px-5 py-3 type-label">
           <span>Jump anywhere</span>
           <span className="flex items-center gap-1">
             <Kbd>⌘</Kbd>
@@ -30,7 +30,7 @@ function CommandDialog({
           </span>
         </div>
         <Command loop>{children}</Command>
-        <div aria-hidden className="hidden flex-wrap items-center gap-x-5 gap-y-2 border-t border-ink px-4 py-2.5 type-label text-ink-muted sm:flex">
+        <div aria-hidden className="hidden flex-wrap items-center gap-x-5 gap-y-2 border-t border-dotted border-ink/60 px-5 py-3 type-label text-ink-muted sm:flex">
           <span className="flex items-center gap-1.5">
             <Kbd>↑</Kbd>
             <Kbd>↓</Kbd> move
@@ -49,7 +49,7 @@ function CommandDialog({
 
 function CommandInput({ className, ...props }: React.ComponentProps<typeof CommandPrimitive.Input>) {
   return (
-    <div data-slot="command-input-wrapper" className="flex items-center gap-3 border-b border-ink px-4">
+    <div data-slot="command-input-wrapper" className="flex items-center gap-3 border-b border-ink px-5">
       <MagnifyingGlass aria-hidden className="size-4 text-ink-muted" />
       <CommandPrimitive.Input
         data-slot="command-input"
@@ -92,7 +92,7 @@ function CommandItem({ className, ...props }: React.ComponentProps<typeof Comman
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        'flex cursor-pointer items-center gap-3 px-2 py-2.5 text-small outline-none select-none',
+        'flex cursor-pointer items-center gap-3 rounded-full px-3 py-2.5 text-small outline-none select-none',
         '[&_svg]:size-4 [&_svg]:text-ink-muted',
         'data-[selected=true]:bg-ink data-[selected=true]:text-paper data-[selected=true]:[&_svg]:text-paper data-[selected=true]:[&_[data-slot=command-shortcut]]:text-paper/60',
         className,

@@ -9,6 +9,7 @@ export default function NotFoundPage() {
     <>
       <title>{pageTitle('Not found')}</title>
       <PageHeader
+        titleSize="xl"
         eyebrow={
           <>
             <span>Error</span>

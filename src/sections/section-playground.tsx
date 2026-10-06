@@ -20,7 +20,7 @@ export function SectionPlayground() {
       <SectionTitle
         id="playground-title"
         descriptors={['Tools', 'Experiments', 'Exercises']}
-        meta={<Bracket>03 · Things I build while learning to code</Bracket>}
+        meta={<Bracket className="whitespace-normal">03 · Things I build while learning to code</Bracket>}
         metaAside={
           <Bracket>
             {live} / {visiblePlayground.length} live

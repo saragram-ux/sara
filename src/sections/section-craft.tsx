@@ -16,7 +16,7 @@ export function SectionCraft() {
       <SectionLabel index="02" id="hand-title">
         Made by hand, first
       </SectionLabel>
-      <Grid className="mt-12 gap-y-10 md:mt-16">
+      <Grid className="mt-8 gap-y-10">
         <div data-reveal className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-3">
           <p className="text-lead">
             Before screens, I made actual things. I designed and sewed accessories for a small Malmö store, worked in the costume
@@ -27,9 +27,9 @@ export function SectionCraft() {
             own small studio, and learned what it actually takes to make things work.
           </p>
         </div>
-        <ul data-reveal className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-10">
+        <ul data-reveal className="col-span-4 self-start border-t border-ink md:col-span-3 lg:col-span-3 lg:col-start-10">
           {earlier.map((x) => (
-            <li key={x.company} className="flex items-baseline justify-between gap-4 border-t border-rule py-2.5">
+            <li key={x.company} className="flex items-baseline justify-between gap-4 border-b border-dotted border-ink/60 py-2.5">
               <span className="text-small">{x.company}</span>
               <span className="type-label text-ink-muted tabular-nums">{x.start}</span>
             </li>

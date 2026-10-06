@@ -29,8 +29,8 @@ export function SectionExperience({ variant = 'summary', index }: SectionExperie
         <SectionLabel index={index} id="xp-title" aside="2018—now">
           Experience
         </SectionLabel>
-        <div className="mt-12 md:mt-16">
-          <ExperienceList entries={roles} variant="detailed" />
+        <div className="mt-8">
+          <ExperienceList entries={roles} variant="detailed" dotted />
         </div>
       </Section>
     )

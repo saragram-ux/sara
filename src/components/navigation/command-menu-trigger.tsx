@@ -11,7 +11,7 @@ export function CommandMenuTrigger() {
       type="button"
       onClick={openCommand}
       aria-keyshortcuts="Meta+K Control+K"
-      className="group/cmd relative flex h-8 cursor-pointer items-center gap-1 px-1.5 text-ink-muted transition-colors hover:bg-paper-sunken hover:text-ink"
+      className="group/cmd relative flex h-8 cursor-pointer items-center gap-1 rounded-full border border-transparent px-2 text-ink-muted transition-colors hover:border-ink/40 hover:text-ink"
     >
       <Kbd>
         <Command aria-hidden className="size-2.5" />
@@ -20,7 +20,7 @@ export function CommandMenuTrigger() {
       <span className="sr-only">Open command menu</span>
       <span
         aria-hidden
-        className="pointer-events-none absolute top-full right-0 mt-2 bg-ink px-2 py-1.5 whitespace-nowrap type-label text-paper-raised opacity-0 shadow-lift transition-[opacity,translate] duration-fast -translate-y-1 group-hover/cmd:translate-y-0 group-hover/cmd:opacity-100 group-hover/cmd:delay-300"
+        className="pointer-events-none absolute top-full right-0 mt-2 rounded-full bg-ink px-3 py-1.5 whitespace-nowrap type-label text-paper-raised opacity-0 shadow-lift transition-[opacity,translate] duration-fast -translate-y-1 group-hover/cmd:translate-y-0 group-hover/cmd:opacity-100 group-hover/cmd:delay-300"
       >
         Jump anywhere
       </span>

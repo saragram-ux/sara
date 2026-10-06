@@ -19,7 +19,7 @@ export function ProjectHeader({ project, index, total }: ProjectHeaderProps) {
     <PageHeader
       eyebrow={
         <>
-          <TransitionLink to="/#work" className="group/back -my-2 flex items-center gap-1.5 py-2 hover:text-ink">
+          <TransitionLink to="/#work" className="group/back -my-1 flex items-center gap-1.5 rounded-full border border-ink/40 px-3 py-1 text-ink transition-colors hover:border-ink">
             <ArrowLeft aria-hidden className="size-3 transition-transform group-hover/back:-translate-x-0.5" />
             Work
           </TransitionLink>
@@ -29,6 +29,7 @@ export function ProjectHeader({ project, index, total }: ProjectHeaderProps) {
         </>
       }
       title={project.title}
+      titleSize="xl"
       lead={<p>{project.description}</p>}
       aside={<ProjectMeta project={project} />}
     />

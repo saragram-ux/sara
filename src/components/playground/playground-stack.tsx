@@ -15,7 +15,7 @@ export function PlaygroundStack({ stack, variant = 'inline', className }: Playgr
   return (
     <ul className={cn('flex flex-wrap gap-1.5', className)}>
       {stack.map((tech) => (
-        <li key={tech} className="border border-rule bg-paper-raised px-1.5 py-0.5 type-meta">
+        <li key={tech} className="border border-dotted border-ink/60 px-1.5 py-0.5 type-meta">
           {tech}
         </li>
       ))}
