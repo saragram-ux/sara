@@ -1,7 +1,7 @@
 # sara lou — design system
 
 > **Status: locked.** Agreed 2026-10-06 and live on the site. This is *the* design.
-> Pastels and light/dark mode added 2026-10-06.
+> Pastels and light/dark mode added 2026-10-06: lilac primary, peach secondary.
 > Change it on purpose (see [Changing the design](#changing-the-design)), never by drift.
 >
 > Voice and copy rules live in [BRAND.md](BRAND.md). The tokens live in `src/styles/globals.css`.
@@ -23,7 +23,7 @@ The device gives it calm and structure; the archive gives it numbers, order and 
 1. **Lines do the work.** Outlines and rules, no fills, no shadows on things that don't float.
 2. **Solid ink for structure, dotted ink for rows.** Module outlines and table heads are solid; rows between items are dotted.
 3. **Containers are rounded, details are square.** Modules, inner panels, pills, switches and menus are rounded. Chips, tags, keys and icon tiles stay square.
-4. **Pastels mean something.** Lavender = work, taffy = playground, peach = you / contact. Always a fill with black text and a black outline; never text, never white on them, never faded text on them. Acid green is only the live LED.
+4. **Two pastels, with a hierarchy.** Lilac is primary (main buttons, active states, live demos). Peach is secondary (the personal moment: the contact card). Always a fill with black text and a black outline; never text, never white on them, never faded text on them. Acid green is only the live LED.
 5. **Big words are lowercase.** Page titles and section words in Familjen Grotesk Bold, lowercase, tight.
 6. **Small words are mono caps.** Labels, brackets, buttons and numbers in Geist Mono uppercase.
 7. **Values are readouts.** A fact worth showing gets a tiny label above a big mono value.
@@ -53,15 +53,14 @@ Dotted rows use `border-dotted border-ink/60`. `theme-inverse` (the contact modu
 
 | Token | Value | Means | Where |
 | --- | --- | --- | --- |
-| `--lavender` | `#bdb4ff` | work | "see the work" button, active Work filter + matching tags, Work nav pill, text selection |
-| `--taffy` | `#edb5f7` | playground | LIVE pills, live-demo header strip, Playground nav pill |
-| `--peach` | `#ffb985` | you / contact | the contact module (`theme-peach`), About + Contact nav pills |
+| `--lilac` | `#bdb4ff` | **primary** | main buttons ("see the work"), the active nav pill, active filters + matching tags, the live-demo strip, text selection |
+| `--peach` | `#ffb985` | **secondary** | the contact module (`theme-peach`); the `peach` button variant exists but is rarely used |
 | `--on-pastel` | `#141414` | — | the only text and outline colour on a pastel (9.8–11:1) |
 | `--accent` | `#9dc21b` | live | the **round** blinking LED only (status, wordmark, favicon); on a pastel it gets a black ring (`ledOnPastel`) |
 
 A pastel **module** uses `Module tone="peach"` or the `theme-peach` utility: it sets paper to peach and every ink token to black, so buttons, links, readouts and labels inside turn mono by themselves.
 
-Use `pastelFill` from `src/lib/pastel.ts` (and `Button variant="taffy" | "peach"`, default lavender) rather than writing pastel classes by hand. White on a pastel fails (≈1.7:1). A pastel on our light paper is only ~1.5:1, which is why it always has an outline.
+Use `pastelFill` from `src/lib/pastel.ts` (and `Button`: default lilac, `peach` for the rare secondary) rather than writing pastel classes by hand. White on a pastel fails (≈1.7:1). A pastel on our light paper is only ~1.5:1, which is why it always has an outline.
 
 ### Light / dark mode
 
@@ -111,7 +110,7 @@ All in `src/components/`. Use these before inventing anything new.
 | `StatusDot` | `common/status-dot.tsx` | the round acid LED |
 | `ThemeToggle` | `navigation/theme-toggle.tsx` | light / dark button in the header |
 | `pastelFill`, `ledOnPastel` | `lib/pastel.ts` | the pastel fill classes and the LED ring |
-| `Button` | `ui/button.tsx` | mono pill; default = lavender, `taffy`, `peach`, `ink` (inside a pastel module), `outline`, `ghost`, `link` |
+| `Button` | `ui/button.tsx` | mono pill; default = lilac, `peach`, `ink` (inside a pastel module), `outline`, `ghost`, `link` |
 
 ## Page anatomy
 
@@ -144,6 +143,7 @@ So nobody brings these back by accident:
 - **Neo-brutalism (pink/lime/purple, offset shadows):** template-like and shouts over the work.
 - **Char-truth #EAFC88 and Cool Whip #FFFEEC** from the 80s palette: the first vanishes on our paper and clashes with the acid LED; the second is the warm cream we dropped.
 - **Acid-green buttons and filters:** the pastels took those jobs; acid green is only the live LED now.
+- **Laughy Taffy pink #EDB5F7 and a colour per section:** three pastels made it too soft and sweet. Two with a hierarchy (lilac primary, peach secondary) reads sharper. Playground's LIVE status is an outline pill now.
 - **Square LEDs:** round reads as a status light more clearly.
 - **A peach "Open for work" pill:** it looked clickable and wasn't. Status is an outline pill; the whole module goes peach instead.
 

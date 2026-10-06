@@ -24,11 +24,10 @@
   --accent-soft: #e3ecc4; /* a quiet tint */
   --live: var(--accent); /* the status dot is the brand dot */
 
-  /* Pastels — 80s highlights with a meaning each. Identical in light and dark mode.
+  /* Two pastels, identical in light and dark mode. Lilac is primary, peach is secondary.
      Always a fill, always with --on-pastel text and an outline. Never text, never white on them. */
-  --lavender: #bdb4ff; /* work */
-  --taffy: #edb5f7; /* playground */
-  --peach: #ffb985; /* you / contact */
+  --lilac: #bdb4ff; /* primary: main buttons, active states, live demos, selection */
+  --peach: #ffb985; /* secondary: the personal moment (the contact card) */
   --on-pastel: #141414; /* black on any pastel: 9.8–11:1 */
 
   /* Layout — the page frame */
@@ -116,8 +115,7 @@
   --color-rule: var(--rule);
   --color-rule-strong: var(--rule-strong);
   --color-accent: var(--accent);
-  --color-lavender: var(--lavender);
-  --color-taffy: var(--taffy);
+  --color-lilac: var(--lilac);
   --color-peach: var(--peach);
   --color-on-pastel: var(--on-pastel);
   --color-accent-ink: var(--accent-ink);
@@ -267,7 +265,7 @@
   }
 
   ::selection {
-    background: var(--lavender);
+    background: var(--lilac);
     color: var(--on-pastel);
   }
 

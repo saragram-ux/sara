@@ -39,7 +39,7 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
                   onClick={() => setFilter(f)}
                   className={cn(
                     'flex cursor-pointer items-center gap-1.5 border px-2 py-1 type-label transition-colors duration-fast',
-                    on ? pastelFill.lavender : 'border-dotted border-ink/60 hover:border-solid hover:border-ink',
+                    on ? pastelFill.lilac : 'border-dotted border-ink/60 hover:border-solid hover:border-ink',
                   )}
                 >
                   {f ?? 'All'}
@@ -78,7 +78,7 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
                 </span>
                 <span className="hidden flex-wrap justify-end gap-1.5 md:flex">
                   {project.disciplines.slice(0, 2).map((d) => (
-                    <span key={d} className={cn('border border-dotted border-ink/60 px-1.5 py-0.5 type-label', d === filter && cn('border-solid', pastelFill.lavender))}>
+                    <span key={d} className={cn('border border-dotted border-ink/60 px-1.5 py-0.5 type-label', d === filter && cn('border-solid', pastelFill.lilac))}>
                       {d}
                     </span>
                   ))}

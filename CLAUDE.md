@@ -4,7 +4,7 @@ Sara Gramstad's portfolio, **sara lou**. Vite + React + TypeScript + Tailwind v4
 
 ## Before any visual or UI change
 
-**Read [DESIGN.md](DESIGN.md) first.** The design is locked: instrument + archive, cool sage paper (dark mode too), rounded outlined modules, mono readouts, dotted rows, lowercase display type, three meaningful pastels and one acid LED. Build with the existing components in `src/components/instrument/` and the tokens in `src/styles/globals.css`. Don't introduce new colours, fonts, radii or shadows without Sara asking for a design change.
+**Read [DESIGN.md](DESIGN.md) first.** The design is locked: instrument + archive, cool sage paper (dark mode too), rounded outlined modules, mono readouts, dotted rows, lowercase display type, two pastels (lilac primary, peach secondary) and one acid LED. Build with the existing components in `src/components/instrument/` and the tokens in `src/styles/globals.css`. Don't introduce new colours, fonts, radii or shadows without Sara asking for a design change.
 
 ## Before any copy change
 

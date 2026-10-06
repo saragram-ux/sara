@@ -16,9 +16,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        /** the loud one, in the section's pastel: lavender (work, the default), taffy (playground), peach (contact) */
-        default: 'border-on-pastel bg-lavender text-on-pastel hover:bg-[color-mix(in_srgb,var(--lavender)_80%,#141414)]',
-        taffy: 'border-on-pastel bg-taffy text-on-pastel hover:bg-[color-mix(in_srgb,var(--taffy)_80%,#141414)]',
+        /** the loud one: lilac, the primary pastel */
+        default: 'border-on-pastel bg-lilac text-on-pastel hover:bg-[color-mix(in_srgb,var(--lilac)_80%,#141414)]',
+        /** secondary pastel, rarely */
         peach: 'border-on-pastel bg-peach text-on-pastel hover:bg-[color-mix(in_srgb,var(--peach)_80%,#141414)]',
         /** solid ink: the loud button inside a pastel module */
         ink: 'border-ink bg-ink text-paper hover:bg-[color-mix(in_srgb,var(--ink)_82%,var(--paper))]',

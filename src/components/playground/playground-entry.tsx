@@ -71,7 +71,7 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
 
       {Demo && (
         <div data-reveal className="mt-8 rounded-cell border border-ink">
-          <div className="flex items-center justify-between rounded-t-[calc(var(--radius-cell)-1px)] border-b border-ink bg-taffy px-4 py-3 type-label text-on-pastel">
+          <div className="flex items-center justify-between rounded-t-[calc(var(--radius-cell)-1px)] border-b border-ink bg-lilac px-4 py-3 type-label text-on-pastel">
             <span className="font-medium">Live demo</span>
             <span className="flex items-center gap-2">
               <StatusDot className={ledOnPastel} />

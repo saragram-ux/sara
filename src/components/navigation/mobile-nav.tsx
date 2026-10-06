@@ -62,7 +62,7 @@ export default function MobileNav({ open, onOpenChange: setOpen }: { open: boole
                     className="flex items-baseline justify-between py-4"
                   >
                     <span className="type-display text-display-sm">{item.label}</span>
-                    <span className={cn('rounded-full border px-2.5 py-0.5 type-label tabular-nums', active ? pastelFill[item.tone] : 'border-transparent text-ink-faint')}>0{i + 1}</span>
+                    <span className={cn('rounded-full border px-2.5 py-0.5 type-label tabular-nums', active ? pastelFill.lilac : 'border-transparent text-ink-faint')}>0{i + 1}</span>
                   </TransitionLink>
                 </li>
               )
