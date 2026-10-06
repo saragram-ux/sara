@@ -15,7 +15,7 @@ export const ticker = ['sara lou', 'ui / product / frontend', 'open for work', '
 
 /** The footer's credit line. Honest about how the site was made: Sara designed and directed it, Claude Code wrote the code. */
 export const colophon = {
-  credit: { before: 'Designed by me. Built by me, bossing around', tool: 'Claude Code', after: '.' },
+  credit: { before: 'Built by me and', tool: 'Claude Code', after: ', mostly me telling it what to do.' },
   stack: 'React, TypeScript, Vite, Tailwind and a little GSAP.',
 }
 
