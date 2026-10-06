@@ -1,5 +1,6 @@
 import { Moon, Sun } from '@phosphor-icons/react'
 
+import { keycap } from '@/components/ui/kbd'
 import { useSite } from '@/lib/site-context'
 import { cn } from '@/lib/utils'
 
@@ -15,7 +16,8 @@ export function ThemeToggle({ className }: { className?: string }) {
       aria-label="Dark mode"
       title={dark ? 'Switch to light' : 'Switch to dark'}
       className={cn(
-        'grid size-8 shrink-0 cursor-pointer place-items-center rounded-full border border-ink/40 text-ink transition-colors duration-fast hover:border-ink hover:bg-ink hover:text-paper',
+        'grid size-8 shrink-0 cursor-pointer place-items-center rounded-full transition-[border-color,translate,box-shadow] duration-fast hover:border-ink active:translate-y-px active:shadow-[0_1px_0_var(--rule-strong)]',
+        keycap,
         className,
       )}
     >

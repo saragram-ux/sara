@@ -11,12 +11,12 @@ export function CommandMenuTrigger() {
       type="button"
       onClick={openCommand}
       aria-keyshortcuts="Meta+K Control+K"
-      className="group/cmd relative flex h-8 cursor-pointer items-center gap-1 rounded-full border border-transparent px-2 text-ink-muted transition-colors hover:border-ink/40 hover:text-ink"
+      className="group/cmd relative flex cursor-pointer items-center gap-1.5 [&_kbd]:transition-[border-color,translate,box-shadow] [&_kbd]:duration-fast hover:[&_kbd]:border-ink active:[&_kbd]:translate-y-px active:[&_kbd]:shadow-[0_1px_0_var(--rule-strong)]"
     >
-      <Kbd>
-        <Command aria-hidden className="size-2.5" />
+      <Kbd size="lg">
+        <Command aria-hidden weight="bold" className="size-3.5" />
       </Kbd>
-      <Kbd>K</Kbd>
+      <Kbd size="lg">K</Kbd>
       <span className="sr-only">Open command menu</span>
       <span
         aria-hidden
