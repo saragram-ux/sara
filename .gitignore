@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Licensed Pangram Pangram fonts: pulled from the private saragram-ux/fonts repo at build time, never committed
+public/fonts/pp/

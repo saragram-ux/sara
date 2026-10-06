@@ -24,6 +24,11 @@
   --accent-soft: #e3ecc4; /* a quiet tint */
   --live: var(--accent); /* the status dot is the brand dot */
 
+  /* Font stacks. The free fonts are the fallback; licensed fonts (fonts-pp.css) override these when present. */
+  --ff-display: 'Familjen Grotesk', 'Helvetica Neue', Arial, ui-sans-serif, sans-serif;
+  --ff-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --ff-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
   /* Two pastels, identical in light and dark mode. Lilac is primary, peach is secondary.
      Always a fill, always with --on-pastel text and an outline. Never text, never white on them. */
   --lilac: #bdb4ff; /* primary: main buttons, active states, live demos, selection */
@@ -152,9 +157,9 @@
   --spacing-nudge: var(--nudge);
 
   /* Type families: a bold grotesk for display, sans for reading, mono for the system voice */
-  --font-display: 'Familjen Grotesk', 'Helvetica Neue', Arial, ui-sans-serif, sans-serif; /* free stand-in for Mabry Bold */
-  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-display: var(--ff-display);
+  --font-sans: var(--ff-sans);
+  --font-mono: var(--ff-mono);
 
   /* Type scale → text-display-xl, text-lead, text-meta … */
   /* Display sizes are set for bold uppercase grotesk (use with .type-display) */
