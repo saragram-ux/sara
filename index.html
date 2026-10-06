@@ -60,8 +60,8 @@
         flex-direction: column;
         justify-content: space-between;
         padding: clamp(1.25rem, 0.6rem + 2.2vw, 2.5rem);
-        background: #161513;
-        color: #f2f4ef;
+        background: #bdb4ff; /* lilac, the primary pastel: same in light and dark */
+        color: #141414;
         font: 450 11px/1.3 ui-monospace, 'SF Mono', Menlo, monospace;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -85,8 +85,9 @@
         justify-content: space-between;
         gap: 1rem;
       }
+      /* never faded text on a pastel: secondary bits are just lighter weight */
       #intro .muted {
-        opacity: 0.55;
+        font-weight: 400;
       }
       #intro .brand {
         text-transform: none;
@@ -100,10 +101,11 @@
         margin-left: 4px;
         background: #9dc21b;
         border-radius: 50%;
+        outline: 1px solid #141414; /* the LED on a pastel gets a black ring */
       }
       #intro-bar {
         height: 1px;
-        background: #9dc21b;
+        background: #141414;
         transform: scaleX(0);
         transform-origin: left;
         margin-bottom: 0.75rem;
