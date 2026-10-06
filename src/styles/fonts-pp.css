@@ -23,14 +23,16 @@
 @font-face { font-family: 'sl RS Mono'; src: url('/fonts/pp/PPRightSerifMono-Regular.woff2') format('woff2'); font-weight: 300 550; font-display: swap; }
 @font-face { font-family: 'sl RS Mono'; src: url('/fonts/pp/PPRightSerifMono-Bold.woff2') format('woff2'); font-weight: 551 800; font-display: swap; }
 
-/* Combos (switch with ?fonts=a | a-black | b | mono-rg | mono-rs) */
+/* Combos (switch with ?fonts=a | a-black | b | c | mono-rg | mono-rs) */
 :root[data-fonts='a'] { --ff-display: 'sl Display A', 'Familjen Grotesk', sans-serif; --ff-sans: 'sl Mori', 'Geist Variable', sans-serif; --ff-mono: 'sl Supply', 'Geist Mono Variable', monospace; }
 :root[data-fonts='a-black'] { --ff-display: 'sl Display A Black', 'Familjen Grotesk', sans-serif; --ff-sans: 'sl Mori', 'Geist Variable', sans-serif; --ff-mono: 'sl Supply', 'Geist Mono Variable', monospace; }
 :root[data-fonts='b'] { --ff-display: 'sl Display B', 'Familjen Grotesk', sans-serif; --ff-sans: 'sl Montreal', 'Geist Variable', sans-serif; --ff-mono: 'sl RS Mono', 'Geist Mono Variable', monospace; }
+:root[data-fonts='c'] { --ff-display: 'sl Display B', 'Familjen Grotesk', sans-serif; --ff-sans: 'sl Mori', 'Geist Variable', sans-serif; --ff-mono: 'sl Supply', 'Geist Mono Variable', monospace; }
 :root[data-fonts='mono-rg'] { --ff-display: 'sl Display A', 'Familjen Grotesk', sans-serif; --ff-sans: 'sl Mori', 'Geist Variable', sans-serif; --ff-mono: 'sl RG Mono', 'Geist Mono Variable', monospace; }
 :root[data-fonts='mono-rs'] { --ff-display: 'sl Display A', 'Familjen Grotesk', sans-serif; --ff-sans: 'sl Mori', 'Geist Variable', sans-serif; --ff-mono: 'sl RS Mono', 'Geist Mono Variable', monospace; }
 
 /* Per-font optical spacing for the big lowercase words (the default is tuned for Familjen) */
 :root[data-fonts^='a'] .type-display,
 :root[data-fonts^='mono'] .type-display { letter-spacing: -0.025em !important; }
-:root[data-fonts='b'] .type-display { letter-spacing: 0 !important; word-spacing: 0.04em; }
+:root[data-fonts='b'] .type-display,
+:root[data-fonts='c'] .type-display { letter-spacing: 0 !important; word-spacing: 0.04em; }
