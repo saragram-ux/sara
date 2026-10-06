@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button'
 import { brand } from '@/data/brand'
 import { currently } from '@/data/currently'
 import { careerPath, careerPathEnd, profile } from '@/data/profile'
+import { ledOnPastel, pastelFill } from '@/lib/pastel'
 import { useSite } from '@/lib/site-context'
 import { cn } from '@/lib/utils'
 
@@ -72,8 +73,8 @@ export function SectionHero() {
           <p className="max-w-md text-small md:flex-1">
             {profile.location}. Open for freelance and contract work, remote across Europe.
           </p>
-          <span className="flex items-center gap-2 self-start rounded-full border border-ink px-4 py-2.5 type-label md:self-auto">
-            <StatusDot />
+          <span className={cn('flex items-center gap-2 self-start rounded-full border px-4 py-2.5 type-label md:self-auto', pastelFill.peach)}>
+            <StatusDot className={ledOnPastel} />
             {profile.availability.label}
           </span>
         </div>

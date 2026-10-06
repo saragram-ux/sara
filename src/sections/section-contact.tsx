@@ -9,6 +9,8 @@ import { Grid } from '@/components/layout/grid'
 import { Section } from '@/components/layout/section'
 import { useScrollReveal } from '@/components/motion/use-reveal'
 import { profile } from '@/data/profile'
+import { ledOnPastel, pastelFill } from '@/lib/pastel'
+import { cn } from '@/lib/utils'
 
 /** The end of every page: an ink block with one job — get an email sent. */
 export function SectionContact() {
@@ -25,8 +27,8 @@ export function SectionContact() {
           </span>
         }
         aside={
-          <span className="flex items-center gap-2 text-ink">
-            <StatusDot />
+          <span className={cn('flex items-center gap-2 rounded-full border px-3 py-1', pastelFill.peach)}>
+            <StatusDot className={ledOnPastel} />
             {profile.availability.label}
           </span>
         }

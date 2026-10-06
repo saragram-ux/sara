@@ -38,7 +38,7 @@ export function DemoLayoutGrid() {
           aria-pressed={grid}
           className={cn(
             'inline-flex h-9 cursor-pointer items-center gap-2 rounded-full border px-4 type-label transition-colors',
-            grid ? 'border-ink bg-accent text-ink' : 'border-ink hover:bg-ink hover:text-paper',
+            grid ? 'border-ink bg-accent text-on-pastel' : 'border-ink hover:bg-ink hover:text-paper',
           )}
         >
           {grid ? 'Hide grid' : 'Show grid'}

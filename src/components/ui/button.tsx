@@ -16,8 +16,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        /** the one loud thing on a page: an acid-green pill with an ink outline */
-        default: 'border-[#161513] bg-accent text-[#161513] hover:bg-[color-mix(in_srgb,var(--accent)_82%,#161513)]',
+        /** the loud one, in the section's pastel: lavender (work, the default), taffy (playground), peach (contact) */
+        default: 'border-on-pastel bg-lavender text-on-pastel hover:bg-[color-mix(in_srgb,var(--lavender)_80%,#141414)]',
+        taffy: 'border-on-pastel bg-taffy text-on-pastel hover:bg-[color-mix(in_srgb,var(--taffy)_80%,#141414)]',
+        peach: 'border-on-pastel bg-peach text-on-pastel hover:bg-[color-mix(in_srgb,var(--peach)_80%,#141414)]',
         outline: 'bg-transparent text-ink hover:bg-ink hover:text-paper',
         ghost: 'border-transparent text-ink hover:bg-paper-sunken',
         link: 'rounded-none border-0 font-normal normal-case tracking-normal text-ink link-underline-draw px-0! h-auto!',

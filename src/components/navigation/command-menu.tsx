@@ -1,4 +1,4 @@
-import { ArrowRight, Copy, EnvelopeSimple, Flask, GridFour, House, LinkedinLogo, User } from '@phosphor-icons/react'
+import { ArrowRight, Copy, EnvelopeSimple, Flask, GridFour, House, LinkedinLogo, Moon, Sun, User } from '@phosphor-icons/react'
 
 import { usePageTransition } from '@/components/motion/transition-context'
 import {
@@ -17,7 +17,7 @@ import { useSite } from '@/lib/site-context'
 /** ⌘K. Lazy-loaded the first time it's opened. */
 export default function CommandMenu({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) {
   const { go } = usePageTransition()
-  const { toggleGrid } = useSite()
+  const { toggleGrid, theme, toggleTheme } = useSite()
 
   const run = (fn: () => void) => () => {
     onOpenChange(false)
@@ -62,6 +62,9 @@ export default function CommandMenu({ open, onOpenChange }: { open: boolean; onO
           <CommandItem onSelect={run(toggleGrid)}>
             <GridFour /> Toggle the layout grid
             <CommandShortcut>G</CommandShortcut>
+          </CommandItem>
+          <CommandItem onSelect={run(toggleTheme)}>
+            {theme === 'dark' ? <Sun /> : <Moon />} {theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           </CommandItem>
         </CommandGroup>
       </CommandList>

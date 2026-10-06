@@ -4,6 +4,7 @@ import type { ComponentType } from 'react'
 import { StatusDot } from '@/components/common/status-dot'
 import { Grid } from '@/components/layout/grid'
 import type { PlaygroundItem } from '@/data/types'
+import { ledOnPastel } from '@/lib/pastel'
 import { cn, formatMonth } from '@/lib/utils'
 import { DemoEasingLab } from './demo-easing-lab'
 import { DemoLayoutGrid } from './demo-layout-grid'
@@ -70,10 +71,10 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
 
       {Demo && (
         <div data-reveal className="mt-8 rounded-cell border border-ink">
-          <div className="flex items-center justify-between border-b border-dotted border-ink/60 px-4 py-3 type-label">
+          <div className="flex items-center justify-between rounded-t-[calc(var(--radius-cell)-1px)] border-b border-ink bg-taffy px-4 py-3 type-label text-on-pastel">
             <span className="font-medium">Live demo</span>
-            <span className="flex items-center gap-2 text-ink-muted">
-              <StatusDot />
+            <span className="flex items-center gap-2">
+              <StatusDot className={ledOnPastel} />
               Try it
             </span>
           </div>

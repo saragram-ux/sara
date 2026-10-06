@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Wordmark } from '@/components/brand/wordmark'
 import { MobileNavTrigger } from '@/components/navigation/mobile-nav-trigger'
 import { SiteNav } from '@/components/navigation/site-nav'
+import { ThemeToggle } from '@/components/navigation/theme-toggle'
 import { TransitionLink } from '@/components/navigation/transition-link'
 import { brand } from '@/data/brand'
 import { profile } from '@/data/profile'
@@ -34,8 +35,11 @@ export function SiteHeader() {
           <span className="hidden type-label text-ink-muted lg:inline">{brand.descriptor}</span>
         </TransitionLink>
 
-        <SiteNav />
-        <MobileNavTrigger />
+        <div className="flex items-center gap-4">
+          <SiteNav />
+          <ThemeToggle />
+          <MobileNavTrigger />
+        </div>
       </Container>
     </header>
   )

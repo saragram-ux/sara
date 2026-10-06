@@ -1,9 +1,13 @@
 import { createContext, useContext } from 'react'
 
+import type { Theme } from '@/hooks/use-theme'
+
 export interface SiteContextValue {
   grid: boolean
   toggleGrid: () => void
   openCommand: () => void
+  theme: Theme
+  toggleTheme: () => void
 }
 
 export const SiteContext = createContext<SiteContextValue | null>(null)

@@ -6,8 +6,8 @@ import { withBase } from '@/lib/base'
 import { cn } from '@/lib/utils'
 
 const tones = {
-  paper: { bg: 'var(--paper-raised)', fg: 'var(--ink)', line: 'rgb(22 21 19 / 0.055)', pill: 'var(--ink)', pillFg: 'var(--paper-raised)' },
-  sand: { bg: '#d4dccb', fg: 'var(--ink)', line: 'rgb(22 21 19 / 0.07)', pill: 'var(--ink)', pillFg: '#d4dccb' },
+  paper: { bg: 'var(--paper-raised)', fg: 'var(--ink)', line: 'var(--rule)', pill: 'var(--ink)', pillFg: 'var(--paper-raised)' },
+  sand: { bg: '#d4dccb', fg: '#161513', line: 'rgb(22 21 19 / 0.07)', pill: '#161513', pillFg: '#d4dccb' },
   ink: { bg: '#1d1c19', fg: '#efebe2', line: 'rgb(239 235 226 / 0.07)', pill: '#efebe2', pillFg: '#1d1c19' },
 } as const
 
@@ -62,7 +62,7 @@ export function ProjectPlate({ project, index, figure, figureIndex, className }:
     backgroundColor: tone.bg,
     color: tone.fg,
     ...(figure
-      ? { backgroundImage: 'repeating-linear-gradient(-45deg, rgb(22 21 19 / 0.13) 0 1px, transparent 1px 9px)' }
+      ? { backgroundImage: 'repeating-linear-gradient(-45deg, var(--rule-strong) 0 1px, transparent 1px 9px)' }
       : {
           backgroundImage: `linear-gradient(to right, ${tone.line} 1px, transparent 1px), linear-gradient(to bottom, ${tone.line} 1px, transparent 1px)`,
           backgroundSize: 'calc(100% / 8) 100%, 100% calc(100% / 6)',

@@ -10,6 +10,7 @@ import { TransitionLink } from '@/components/navigation/transition-link'
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle } from '@/components/ui/sheet'
 import { isNavActive, navigation } from '@/data/navigation'
 import { profile } from '@/data/profile'
+import { pastelFill } from '@/lib/pastel'
 import { cn } from '@/lib/utils'
 
 /** The mobile menu sheet. Lazy-loaded on first tap (see MobileNavTrigger). */
@@ -61,7 +62,7 @@ export default function MobileNav({ open, onOpenChange: setOpen }: { open: boole
                     className="flex items-baseline justify-between py-4"
                   >
                     <span className="type-display text-display-sm">{item.label}</span>
-                    <span className={cn('rounded-full px-2.5 py-0.5 type-label tabular-nums', active ? 'bg-ink text-paper' : 'text-ink-faint')}>0{i + 1}</span>
+                    <span className={cn('rounded-full border px-2.5 py-0.5 type-label tabular-nums', active ? pastelFill[item.tone] : 'border-transparent text-ink-faint')}>0{i + 1}</span>
                   </TransitionLink>
                 </li>
               )

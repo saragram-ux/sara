@@ -10,7 +10,7 @@ import { CopyEmailButton } from './copy-email-button'
 export function ContactLinks({ className }: { className?: string }) {
   return (
     <Cluster className={className}>
-      <Button asChild>
+      <Button asChild variant="peach">
         <a href={`mailto:${profile.email}`}>
           Email me
           <ArrowUpRight

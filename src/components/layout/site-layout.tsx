@@ -4,6 +4,7 @@ import { Router } from 'wouter'
 import { PageTransition } from '@/components/motion/page-transition'
 import { SkipLink } from '@/components/navigation/skip-link'
 import { useHotkey } from '@/hooks/use-hotkey'
+import { useTheme } from '@/hooks/use-theme'
 import { BASE } from '@/lib/base'
 import { SiteContext } from '@/lib/site-context'
 import { AppRoutes } from '@/routes'
@@ -22,6 +23,7 @@ export function SiteLayout() {
   const [commandOpen, setCommandOpen] = useState(false)
   const [commandLoaded, setCommandLoaded] = useState(false)
 
+  const { theme, toggleTheme } = useTheme()
   const toggleGrid = useCallback(() => setGrid((g) => !g), [])
   const openCommand = useCallback(() => {
     setCommandLoaded(true)
@@ -39,7 +41,10 @@ export function SiteLayout() {
     { mod: true },
   )
 
-  const site = useMemo(() => ({ grid, toggleGrid, openCommand }), [grid, toggleGrid, openCommand])
+  const site = useMemo(
+    () => ({ grid, toggleGrid, openCommand, theme, toggleTheme }),
+    [grid, toggleGrid, openCommand, theme, toggleTheme],
+  )
 
   return (
     <Router base={BASE}>

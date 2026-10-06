@@ -8,7 +8,16 @@
       name="description"
       content="sara lou — Sara Gramstad. UI designer, product designer and frontend developer. Co-founder of Handsdown Studio, designing interfaces since 2018. Freelance and contract work, remote across Europe."
     />
-    <meta name="theme-color" content="#e8ebe4" />
+    <meta name="theme-color" content="#e8ebe4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)" />
+    <!-- Light or dark before first paint: a saved choice wins, else the system setting -->
+    <script>
+      try {
+        var t = localStorage.getItem('sg:theme')
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="sara lou" />
     <meta property="og:title" content="sara lou — UI / Product / Frontend" />

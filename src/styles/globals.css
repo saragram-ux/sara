@@ -24,6 +24,13 @@
   --accent-soft: #e3ecc4; /* a quiet tint */
   --live: var(--accent); /* the status dot is the brand dot */
 
+  /* Pastels — 80s highlights with a meaning each. Identical in light and dark mode.
+     Always a fill, always with --on-pastel text and an outline. Never text, never white on them. */
+  --lavender: #bdb4ff; /* work */
+  --taffy: #edb5f7; /* playground */
+  --peach: #ffb985; /* you / contact */
+  --on-pastel: #141414; /* black on any pastel: 9.8–11:1 */
+
   /* Layout — the page frame */
   --page-max: 90rem;
   --gutter: clamp(1.25rem, 0.6rem + 2.2vw, 2.5rem); /* page side padding + column gap */
@@ -67,6 +74,37 @@
   --radius: 0.5rem;
 }
 
+/* Dark mode: the paper and the lines flip; the pastels and the acid LED stay exactly the same.
+   Set by the pre-paint script in index.html (saved choice, else the system setting). */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #141414;
+  --paper-raised: #1e1f1d;
+  --paper-sunken: #0d0d0d;
+  --ink: #e8ebe4;
+  --ink-muted: #a3a99d; /* 7.7:1 on #141414 */
+  --ink-faint: #8a9085; /* 5.6:1 */
+  --rule: rgb(232 235 228 / 0.16);
+  --rule-strong: rgb(232 235 228 / 0.34);
+  --accent-ink: var(--accent); /* acid green reads as text on dark (8.9:1) */
+  --accent-soft: #2a3310;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --paper: #141414;
+    --paper-raised: #1e1f1d;
+    --paper-sunken: #0d0d0d;
+    --ink: #e8ebe4;
+    --ink-muted: #a3a99d; /* 7.7:1 on #141414 */
+    --ink-faint: #8a9085; /* 5.6:1 */
+    --rule: rgb(232 235 228 / 0.16);
+    --rule-strong: rgb(232 235 228 / 0.34);
+    --accent-ink: var(--accent); /* acid green reads as text on dark (8.9:1) */
+    --accent-soft: #2a3310;
+  }
+}
+
 @theme inline {
   /* Colours → bg-paper, text-ink, border-rule, text-accent … */
   --color-paper: var(--paper);
@@ -78,6 +116,10 @@
   --color-rule: var(--rule);
   --color-rule-strong: var(--rule-strong);
   --color-accent: var(--accent);
+  --color-lavender: var(--lavender);
+  --color-taffy: var(--taffy);
+  --color-peach: var(--peach);
+  --color-on-pastel: var(--on-pastel);
   --color-accent-ink: var(--accent-ink);
   --color-accent-soft: var(--accent-soft);
   --color-live: var(--live);
@@ -225,8 +267,8 @@
   }
 
   ::selection {
-    background: var(--accent);
-    color: var(--ink);
+    background: var(--lavender);
+    color: var(--on-pastel);
   }
 
   :focus-visible {
@@ -392,6 +434,19 @@
   --accent-ink: var(--accent); /* acid green is readable on ink (8.8:1) */
   background-color: var(--paper);
   color: var(--ink);
+}
+
+/* In dark mode the inverse block is the light one */
+:root[data-theme='dark'] .theme-inverse {
+  --paper: #e8ebe4;
+  --paper-raised: #f2f4ef;
+  --paper-sunken: #dde1d8;
+  --ink: #161513;
+  --ink-muted: #53574f;
+  --ink-faint: #5d6259;
+  --rule: #cdd2c7;
+  --rule-strong: #a7ada1;
+  --accent-ink: #4a6400;
 }
 
 /* Motion durations as utilities */
