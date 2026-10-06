@@ -10,7 +10,8 @@ type ModuleProps<T extends ElementType> = {
   aside?: ReactNode
   /** Quiet line under the label, like "Edit" or "Active" on the thermostat. */
   sub?: ReactNode
-  tone?: 'paper' | 'ink'
+  /** paper: outlined. ink: inverted. peach: the one pastel module per page view (black on peach). */
+  tone?: 'paper' | 'ink' | 'peach'
 } & Omit<ComponentPropsWithRef<T>, 'as'>
 
 /** A rounded, outlined panel — one instrument on the device. No fill, no shadow: a line and a radius. */
@@ -18,7 +19,7 @@ export function Module<T extends ElementType = 'div'>({ as, label, aside, sub, t
   const Component: ElementType = as ?? 'div'
   return (
     <Component
-      className={cn('rounded-card border border-ink p-5 md:p-6', tone === 'ink' && 'theme-inverse border-transparent', className)}
+      className={cn('rounded-card border border-ink p-5 md:p-6', tone === 'ink' && 'theme-inverse border-transparent', tone === 'peach' && 'theme-peach border-on-pastel', className)}
       {...props}
     >
       {(label || aside) && (

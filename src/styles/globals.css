@@ -436,6 +436,22 @@
   color: var(--ink);
 }
 
+/* A whole pastel module: everything inside is black on peach, in both modes. Mono, never faded. */
+@utility theme-peach {
+  --paper: var(--peach);
+  --paper-raised: color-mix(in srgb, var(--peach) 78%, #ffffff);
+  --paper-sunken: color-mix(in srgb, var(--peach) 88%, #141414);
+  --ink: var(--on-pastel);
+  --ink-muted: var(--on-pastel);
+  --ink-faint: var(--on-pastel);
+  --rule: rgb(20 20 20 / 0.25);
+  --rule-strong: rgb(20 20 20 / 0.5);
+  --accent-ink: var(--on-pastel);
+  color-scheme: light;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
 /* In dark mode the inverse block is the light one */
 :root[data-theme='dark'] .theme-inverse {
   --paper: #e8ebe4;

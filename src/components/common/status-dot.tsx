@@ -10,7 +10,7 @@ export function StatusDot({ tone = 'live', className }: { tone?: 'live' | 'accen
     <span
       aria-hidden
       className={cn(
-        'inline-block size-[6px] shrink-0',
+        'inline-block size-[7px] shrink-0 rounded-full',
         tone === 'live' && 'animate-pulse-dot bg-live',
         tone === 'accent' && 'bg-accent',
         tone === 'ink' && 'bg-ink',

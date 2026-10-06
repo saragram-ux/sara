@@ -9,8 +9,7 @@ import { Grid } from '@/components/layout/grid'
 import { Section } from '@/components/layout/section'
 import { useScrollReveal } from '@/components/motion/use-reveal'
 import { profile } from '@/data/profile'
-import { ledOnPastel, pastelFill } from '@/lib/pastel'
-import { cn } from '@/lib/utils'
+import { ledOnPastel } from '@/lib/pastel'
 
 /** The end of every page: an ink block with one job — get an email sent. */
 export function SectionContact() {
@@ -20,14 +19,14 @@ export function SectionContact() {
   return (
     <Section ref={ref} id="contact" tabIndex={-1} aria-labelledby="contact-title" className="outline-none">
       <Module
-        tone="ink"
+        tone="peach"
         label={
           <span id="contact-title" role="heading" aria-level={2}>
             → Contact
           </span>
         }
         aside={
-          <span className={cn('flex items-center gap-2 rounded-full border px-3 py-1', pastelFill.peach)}>
+          <span className="flex items-center gap-2 rounded-full border border-ink px-3 py-1 text-ink">
             <StatusDot className={ledOnPastel} />
             {profile.availability.label}
           </span>
@@ -46,12 +45,12 @@ export function SectionContact() {
               <p className="type-label text-ink-muted">Email</p>
               <a
                 href={`mailto:${profile.email}`}
-                className="mt-2 block border-b border-ink pb-3 font-mono text-[clamp(1.2rem,0.9rem+1.6vw,2.25rem)] tracking-[-0.03em] break-all transition-colors duration-fast hover:border-accent"
+                className="mt-2 block border-b border-ink pb-3 font-mono text-[clamp(1.2rem,0.9rem+1.6vw,2.25rem)] tracking-[-0.03em] break-all transition-colors duration-fast hover:border-b-2"
               >
                 {profile.email}
               </a>
             </div>
-            <ContactLinks className="mt-8" />
+            <ContactLinks className="mt-8" primary="ink" />
           </div>
 
           <div data-reveal className="col-span-4 self-end rounded-cell border border-ink p-4 md:col-span-5 lg:col-span-4 lg:col-start-9">

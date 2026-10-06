@@ -7,10 +7,10 @@ import { profile } from '@/data/profile'
 import { CopyEmailButton } from './copy-email-button'
 
 /** Email me (the loud one), copy email, LinkedIn. */
-export function ContactLinks({ className }: { className?: string }) {
+export function ContactLinks({ className, primary = 'peach' }: { className?: string; primary?: 'peach' | 'ink' }) {
   return (
     <Cluster className={className}>
-      <Button asChild variant="peach">
+      <Button asChild variant={primary}>
         <a href={`mailto:${profile.email}`}>
           Email me
           <ArrowUpRight

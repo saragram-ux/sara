@@ -16,7 +16,7 @@ import { Button } from '@/components/ui/button'
 import { brand } from '@/data/brand'
 import { currently } from '@/data/currently'
 import { careerPath, careerPathEnd, profile } from '@/data/profile'
-import { ledOnPastel, pastelFill } from '@/lib/pastel'
+import { ledOnPastel } from '@/lib/pastel'
 import { useSite } from '@/lib/site-context'
 import { cn } from '@/lib/utils'
 
@@ -65,7 +65,7 @@ export function SectionHero() {
         {/* the readout bar: −  19.0°C  +  ·  heating up to desired temperature… */}
         <div
           data-hero="panel"
-          className="mt-10 flex flex-col gap-4 rounded-cell border border-ink p-4 md:mt-14 md:flex-row md:items-center md:gap-8 md:rounded-full md:py-3 md:pr-3 md:pl-7"
+          className="theme-peach mt-10 flex flex-col gap-4 rounded-cell border border-on-pastel p-4 md:mt-14 md:flex-row md:items-center md:gap-8 md:rounded-full md:py-3 md:pr-3 md:pl-7"
         >
           <span className="type-readout text-[clamp(2rem,1.5rem+2vw,3.25rem)]">
             <LocalTime mutedZone />
@@ -73,7 +73,7 @@ export function SectionHero() {
           <p className="max-w-md text-small md:flex-1">
             {profile.location}. Open for freelance and contract work, remote across Europe.
           </p>
-          <span className={cn('flex items-center gap-2 self-start rounded-full border px-4 py-2.5 type-label md:self-auto', pastelFill.peach)}>
+          <span className="flex items-center gap-2 self-start rounded-full border border-ink px-4 py-2.5 type-label md:self-auto">
             <StatusDot className={ledOnPastel} />
             {profile.availability.label}
           </span>

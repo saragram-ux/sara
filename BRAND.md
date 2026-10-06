@@ -127,12 +127,12 @@ Lines do the work: solid ink for module outlines and table heads, dotted ink for
 
 ## Wordmark
 
-`sara lou▪`: Geist Mono, lowercase, with a tiny square acid-green LED after it that blinks (on/off, not breathing) while Sara is open for work. There's no logo and no monogram; the favicon is `sl▪` on ink.
+`sara lou•`: Geist Mono, lowercase, with a tiny round acid-green LED after it that blinks (on/off, not breathing) while Sara is open for work. There's no logo and no monogram; the favicon is `sl•` on ink.
 
 ## Brand devices
 
 1. **The index.** Everything is numbered like an archive: `000`, `WORK / 001`, `PLAYGROUND / 004`, `FIG. 02`. The page turn shows the destination's number before its title.
-2. **The LED.** One tiny square of acid green, in the same shape everywhere: after the name, beside "open for work", on live experiments, on the currently board.
+2. **The LED.** One tiny round dot of acid green, in the same shape everywhere: after the name, beside "open for work", on live experiments, on the currently board.
 3. **The lockup.** `sara lou / UI / PRODUCT / FRONTEND` appears in the intro, the header and the footer.
 
 ## Motion

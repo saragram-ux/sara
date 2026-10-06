@@ -20,6 +20,8 @@ const buttonVariants = cva(
         default: 'border-on-pastel bg-lavender text-on-pastel hover:bg-[color-mix(in_srgb,var(--lavender)_80%,#141414)]',
         taffy: 'border-on-pastel bg-taffy text-on-pastel hover:bg-[color-mix(in_srgb,var(--taffy)_80%,#141414)]',
         peach: 'border-on-pastel bg-peach text-on-pastel hover:bg-[color-mix(in_srgb,var(--peach)_80%,#141414)]',
+        /** solid ink: the loud button inside a pastel module */
+        ink: 'border-ink bg-ink text-paper hover:bg-[color-mix(in_srgb,var(--ink)_82%,var(--paper))]',
         outline: 'bg-transparent text-ink hover:bg-ink hover:text-paper',
         ghost: 'border-transparent text-ink hover:bg-paper-sunken',
         link: 'rounded-none border-0 font-normal normal-case tracking-normal text-ink link-underline-draw px-0! h-auto!',

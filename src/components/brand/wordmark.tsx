@@ -31,7 +31,7 @@ export function Wordmark({ size, className }: WordmarkProps) {
       <span
         aria-hidden
         className={cn(
-          'ml-[0.3em] inline-block size-[0.36em] shrink-0 translate-y-[-0.02em] bg-accent',
+          'ml-[0.3em] inline-block size-[0.36em] shrink-0 translate-y-[-0.02em] rounded-full bg-accent',
           profile.availability.open && 'animate-pulse-dot',
         )}
       />

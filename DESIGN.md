@@ -29,7 +29,7 @@ The device gives it calm and structure; the archive gives it numbers, order and 
 7. **Values are readouts.** A fact worth showing gets a tiny label above a big mono value.
 8. **Everything is numbered.** `INDEX / 000`, `WORK / 001`, `[ 01 · PROJECT(S) ]`, `[ 3 / 4 ]`.
 9. **Only real facts.** Readouts, counts and tags come from `src/data/`. Never invent numbers to fill a module.
-10. **One pastel button per screen**, in that section's pastel. Everything else is outline or text. Big areas stay paper; pastels are pills, chips, strips and buttons.
+10. **Pastel means "you can press this" or "this is the moment".** Pastel buttons, chips and pills are clickable or active. A status that isn't clickable is an outline pill. A whole module may be pastel (the hero readout bar, contact), and then everything inside it is black: mono, nothing faded, its button solid black (`Button variant="ink"`).
 
 ## Colour
 
@@ -55,9 +55,11 @@ Dotted rows use `border-dotted border-ink/60`. `theme-inverse` (the contact modu
 | --- | --- | --- | --- |
 | `--lavender` | `#bdb4ff` | work | "see the work" button, active Work filter + matching tags, Work nav pill, text selection |
 | `--taffy` | `#edb5f7` | playground | LIVE pills, live-demo header strip, Playground nav pill |
-| `--peach` | `#ffb985` | you / contact | "Open for work" pills, "Email me" button, About + Contact nav pills |
+| `--peach` | `#ffb985` | you / contact | the hero readout bar and the contact module (`theme-peach`), About + Contact nav pills |
 | `--on-pastel` | `#141414` | — | the only text and outline colour on a pastel (9.8–11:1) |
-| `--accent` | `#9dc21b` | live | the square blinking LED only; on a pastel it gets a black ring (`ledOnPastel`) |
+| `--accent` | `#9dc21b` | live | the **round** blinking LED only (status, wordmark, favicon); on a pastel it gets a black ring (`ledOnPastel`) |
+
+A pastel **module** uses `Module tone="peach"` or the `theme-peach` utility: it sets paper to peach and every ink token to black, so buttons, links, readouts and labels inside turn mono by themselves.
 
 Use `pastelFill` from `src/lib/pastel.ts` (and `Button variant="taffy" | "peach"`, default lavender) rather than writing pastel classes by hand. White on a pastel fails (≈1.7:1). A pastel on our light paper is only ~1.5:1, which is why it always has an outline.
 
@@ -96,7 +98,7 @@ All in `src/components/`. Use these before inventing anything new.
 
 | Component | File | What it is |
 | --- | --- | --- |
-| `Module` | `instrument/module.tsx` | the rounded outlined panel: label + sub top left, aside top right. `tone="ink"` for dark |
+| `Module` | `instrument/module.tsx` | the rounded outlined panel: label + sub top left, aside top right. `tone="ink"` inverted, `tone="peach"` the pastel moment |
 | `Readout`, `Readouts` | `instrument/readout.tsx` | tiny label over a big mono value |
 | `Bracket` | `instrument/readout.tsx` | `[ … ]` around a label or count (brackets are hidden from screen readers) |
 | `Switch` | `instrument/switch.tsx` | real ON/OFF control (`role="switch"`) |
@@ -106,22 +108,22 @@ All in `src/components/`. Use these before inventing anything new.
 | `PageHeader` | `layout/page-header.tsx` | inner page top: one module with status row, huge title, lead + aside |
 | `ProjectIndex` | `project/project-index.tsx` | work list: filter chips, live count, numbered dotted rows |
 | `MetaList` | `common/meta-list.tsx` | label / value schedule rows |
-| `StatusDot` | `common/status-dot.tsx` | the square acid LED |
+| `StatusDot` | `common/status-dot.tsx` | the round acid LED |
 | `ThemeToggle` | `navigation/theme-toggle.tsx` | light / dark button in the header |
 | `pastelFill`, `ledOnPastel` | `lib/pastel.ts` | the pastel fill classes and the LED ring |
-| `Button` | `ui/button.tsx` | mono pill; default = lavender, `taffy`, `peach`, `outline`, `ghost`, `link` |
+| `Button` | `ui/button.tsx` | mono pill; default = lavender, `taffy`, `peach`, `ink` (inside a pastel module), `outline`, `ghost`, `link` |
 
 ## Page anatomy
 
 - **Every page** opens with one device panel: a status row (index left, context right), a huge lowercase title, then the lead and an aside (meta readouts or a legend).
 - **Home:** hero device (status row with the grid switch, headline, readout bar with live local time, Studio and Studying modules, the career schedule) → ticker → `work` index with filters → About module with the Currently table → `playground` modules → Experience module → Contact.
 - **Sections** open with `SectionTitle` on the home page and `SectionLabel` on inner pages.
-- **Contact** closes every page: the dark ink module, email set large in mono, a readout card for local time.
+- **Contact** closes every page: the peach module (same in both modes), email set large in mono, a solid black "Email me", an outline "Open for work" status, a readout card for local time.
 - **Footer** is a module too: wordmark, index, elsewhere, colophon, then a dotted bottom bar.
 
 ## Motion
 
-Quick and mechanical. Durations 120 / 200 / 360 ms, `power4.out` arrivals, 10–12 px travel. Headlines rise out of a mask; panels fade up and stagger. The LED blinks in steps. The ticker runs at 38 s per loop. Everything decorative stops under `prefers-reduced-motion`.
+Quick and mechanical. Durations 120 / 200 / 360 ms, `power4.out` arrivals, 10–12 px travel. Headlines rise out of a mask; panels fade up and stagger. The round LED blinks in steps. The ticker runs at 38 s per loop. Everything decorative stops under `prefers-reduced-motion`.
 
 ## Accessibility (non-negotiable)
 
@@ -142,6 +144,8 @@ So nobody brings these back by accident:
 - **Neo-brutalism (pink/lime/purple, offset shadows):** template-like and shouts over the work.
 - **Char-truth #EAFC88 and Cool Whip #FFFEEC** from the 80s palette: the first vanishes on our paper and clashes with the acid LED; the second is the warm cream we dropped.
 - **Acid-green buttons and filters:** the pastels took those jobs; acid green is only the live LED now.
+- **Square LEDs:** round reads as a status light more clearly.
+- **A peach "Open for work" pill:** it looked clickable and wasn't. Status is an outline pill; the whole module goes peach instead.
 
 ## Changing the design
 
