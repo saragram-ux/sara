@@ -53,7 +53,7 @@ Dotted rows use `border-dotted border-ink/60`. `theme-inverse` (the contact modu
 
 | Token | Value | Means | Where |
 | --- | --- | --- | --- |
-| `--lilac` | `#bdb4ff` | **primary** | main buttons ("see the work"), the active nav pill, active filters + matching tags, the live-demo strip, text selection |
+| `--lilac` | `#bdb4ff` | **primary** | main buttons ("see the work"), the active nav pill, active filters + matching tags, the live-demo strip, text selection, the loading screen and the page turn |
 | `--peach` | `#ffb985` | **secondary** | the contact module (`theme-peach`); the `peach` button variant exists but is rarely used |
 | `--on-pastel` | `#141414` | — | the only text and outline colour on a pastel (9.8–11:1) |
 | `--accent` | `#9dc21b` | live | the **round** blinking LED only (status, wordmark, favicon); on a pastel it gets a black ring (`ledOnPastel`) |
@@ -114,6 +114,7 @@ All in `src/components/`. Use these before inventing anything new.
 
 ## Page anatomy
 
+- **Loading screen and page turn** are full-screen lilac with ink type, identical in light and dark: wordmark (LED with its black ring), `UI / PRODUCT / FRONTEND`, `SARA GRAMSTAD`, the `000 / 100` count over an ink bar; the page turn shows the destination's index over its name (`WORK / 002` · **coly**). Nothing faded.
 - **Every page** opens with one device panel: a status row (index left, context right), a huge lowercase title, then the lead and an aside (meta readouts or a legend).
 - **Home:** hero device (status row with the grid switch, headline, readout bar with live local time, Studio and Studying modules, the career schedule) → ticker → `work` index with filters → About module with the Currently table → `playground` modules → Experience module → Contact.
 - **Sections** open with `SectionTitle` on the home page and `SectionLabel` on inner pages.

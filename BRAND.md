@@ -131,7 +131,7 @@ Lines do the work: solid ink for module outlines and table heads, dotted ink for
 
 ## Brand devices
 
-1. **The index.** Everything is numbered like an archive: `000`, `WORK / 001`, `PLAYGROUND / 004`, `FIG. 02`. The page turn shows the destination's number before its title.
+1. **The index.** Everything is numbered like an archive: `000`, `WORK / 001`, `PLAYGROUND / 004`, `FIG. 02`. The page turn (a lilac curtain) shows the destination's number before its title.
 2. **The LED.** One tiny round dot of acid green, in the same shape everywhere: after the name, beside "open for work", on live experiments, on the currently board.
 3. **The lockup.** `sara lou / UI / PRODUCT / FRONTEND` appears in the intro, the header and the footer.
 
