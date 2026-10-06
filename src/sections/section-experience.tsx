@@ -1,6 +1,8 @@
 import { useRef } from 'react'
 
 import { ExperienceList } from '@/components/experience/experience-list'
+import { Module } from '@/components/instrument/module'
+import { Bracket } from '@/components/instrument/readout'
 import { Section } from '@/components/layout/section'
 import { SectionLabel } from '@/components/layout/section-label'
 import { AnimatedLink } from '@/components/motion/animated-link'
@@ -36,18 +38,24 @@ export function SectionExperience({ variant = 'summary', index }: SectionExperie
 
   return (
     <Section ref={ref} aria-labelledby="experience-title">
-      <SectionLabel index={index} id="experience-title" aside="2008—now">
-        Experience
-      </SectionLabel>
-      <div className="mt-12 md:mt-16">
-        <ExperienceList entries={roles} />
-      </div>
-      <div data-reveal className="mt-8 flex flex-wrap items-baseline justify-between gap-4">
-        <p className="text-small text-ink-muted">
-          + {earlier.length} earlier roles in fashion, craft and theatre. I made things by hand long before I made them on screens.
-        </p>
-        <AnimatedLink href="/about#experience">The long version</AnimatedLink>
-      </div>
+      <Module
+        as="div"
+        label={
+          <span id="experience-title" role="heading" aria-level={2}>
+            {index} · Experience
+          </span>
+        }
+        sub="Roles since 2018"
+        aside={<Bracket>2008—now</Bracket>}
+      >
+        <ExperienceList entries={roles} dotted />
+        <div data-reveal className="mt-6 flex flex-wrap items-baseline justify-between gap-4">
+          <p className="text-small text-ink-muted">
+            + {earlier.length} earlier roles in fashion, craft and theatre. I made things by hand long before I made them on screens.
+          </p>
+          <AnimatedLink href="/about#experience">The long version</AnimatedLink>
+        </div>
+      </Module>
     </Section>
   )
 }

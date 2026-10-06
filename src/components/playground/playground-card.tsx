@@ -16,13 +16,13 @@ export function PlaygroundCard({ item }: { item: PlaygroundItem }) {
         <span className="tabular-nums">Playground / {item.id}</span>
         <PlaygroundStatus status={item.status} />
       </div>
-      <h4 className="mt-10 type-display text-display-sm">{item.title}</h4>
+      <h3 className="mt-10 type-display text-display-sm">{item.title}</h3>
       <p className="mt-3 text-small text-ink-muted">{item.description}</p>
       <div className="mt-auto flex items-end justify-between gap-4 pt-8">
         <PlaygroundStack stack={item.stack} />
         <span
           aria-hidden
-          className="grid size-9 shrink-0 place-items-center border border-ink transition-colors duration-fast group-hover/entry:bg-ink group-hover/entry:text-paper"
+          className="grid size-9 shrink-0 place-items-center rounded-full border border-ink transition-colors duration-fast group-hover/entry:bg-ink group-hover/entry:text-paper"
         >
           <ArrowUpRight weight="bold" className="size-3.5" />
         </span>

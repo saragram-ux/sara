@@ -1,11 +1,10 @@
 import { useRef } from 'react'
 
-import { Grid } from '@/components/layout/grid'
+import { Bracket } from '@/components/instrument/readout'
+import { SectionTitle } from '@/components/instrument/section-title'
 import { Section } from '@/components/layout/section'
-import { SectionLabel } from '@/components/layout/section-label'
 import { useScrollReveal } from '@/components/motion/use-reveal'
-import { ProjectList } from '@/components/project/project-list'
-import { pad3 } from '@/data/brand'
+import { ProjectIndex } from '@/components/project/project-index'
 import { projects } from '@/data/projects'
 
 /** Home: the selected-work index. */
@@ -14,15 +13,15 @@ export function SectionProjects() {
   useScrollReveal(ref)
   return (
     <Section ref={ref} id="work" tabIndex={-1} aria-labelledby="work-title" className="outline-none">
-      <SectionLabel index="01" id="work-title" aside={`001 — ${pad3(projects.length)}`}>
-        Work
-      </SectionLabel>
-      <Grid className="mt-10 mb-6 md:mt-14">
-        <p data-reveal className="col-span-4 text-lead text-ink-muted md:col-span-6 lg:col-span-6 lg:col-start-3">
-          A few projects I’ve worked on, mostly through Hellofolk and Handsdown. Brands, websites, online stores and apps.
-        </p>
-      </Grid>
-      <ProjectList projects={projects} />
+      <SectionTitle
+        id="work-title"
+        descriptors={['Brands', 'Websites', 'Online stores', 'Apps']}
+        meta={<Bracket>01 · Project(s)</Bracket>}
+        metaAside={<span className="type-label text-ink-muted">Mostly via Hellofolk + Handsdown</span>}
+      >
+        work
+      </SectionTitle>
+      <ProjectIndex projects={projects} />
     </Section>
   )
 }
