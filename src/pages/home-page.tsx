@@ -1,5 +1,5 @@
 import { Ticker } from '@/components/instrument/ticker'
-import { pageTitle } from '@/data/brand'
+import { pageTitle, ticker } from '@/data/brand'
 import { SectionAbout } from '@/sections/section-about'
 import { SectionContact } from '@/sections/section-contact'
 import { SectionExperience } from '@/sections/section-experience'
@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       <title>{pageTitle()}</title>
       <SectionHero />
-      <Ticker items={['sara lou', 'ui / product / frontend', 'open for work', 'östersund, sweden', 'designed in figma', 'built in webflow']} />
+      <Ticker items={ticker} />
       <SectionProjects />
       <SectionAbout />
       <SectionPlayground />

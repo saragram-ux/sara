@@ -1,10 +1,11 @@
 import { ArrowUp } from '@phosphor-icons/react'
 
 import { Wordmark } from '@/components/brand/wordmark'
+import { ClaudeCodeMark } from '@/components/common/claude-code-mark'
 import { StatusDot } from '@/components/common/status-dot'
 import { TransitionLink } from '@/components/navigation/transition-link'
 import { Kbd } from '@/components/ui/kbd'
-import { brand } from '@/data/brand'
+import { brand, colophon } from '@/data/brand'
 import { currently } from '@/data/currently'
 import { navigation } from '@/data/navigation'
 import { profile } from '@/data/profile'
@@ -75,8 +76,12 @@ export function SiteFooter() {
             <div className="col-span-4 md:col-span-8 lg:col-span-4">
               <h2 className="border-b border-dotted border-ink/60 pb-2 type-label text-ink-muted">Colophon</h2>
               <p className="mt-4 max-w-sm text-small text-ink-muted">
-                Built by hand with React, TypeScript, Vite, Tailwind and a little GSAP. Set in{' '}
-                <span className="font-display text-ink lowercase">Right Grotesk</span>,{' '}
+                {colophon.credit.before}{' '}
+                <span className="whitespace-nowrap text-ink">
+                  <ClaudeCodeMark className="mr-[0.3em]" />
+                  {colophon.credit.tool}
+                </span>
+                {colophon.credit.after} {colophon.stack} Set in <span className="font-display text-ink lowercase">Right Grotesk</span>,{' '}
                 <span className="text-ink">Mori</span> and <span className="font-mono text-[0.9em] text-ink">Supply Mono</span> by Pangram
                 Pangram.
               </p>

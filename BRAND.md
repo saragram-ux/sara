@@ -77,6 +77,10 @@ The look stays strict (mono, caps, numbers, one LED); the words loosen up. That 
 | I'm a designer who's learning to code. | Designer by trade. Builder by increasingly frequent necessity. | too clever |
 | Say hi. Tell me what's up. | Inbox open. / Let's make something together | |
 
+## How the site was made (be upfront)
+
+Sara designed and directed this site; Claude Code wrote most of the code. Say so plainly, never hide it, never make it sound like a gimmick. The footer credit and the "this portfolio" playground entry carry it. Client work is described as it is: Sara **designs in Figma and builds in Webflow**. Don't word it as if this site was made that way.
+
 ## Credibility layer
 
 The personality sits on top of plain facts, stated early: designing interfaces since 2018, five years at Hellofolk, co-founder of Handsdown Studio, design systems, Webflow, BA in Graphic Design, frontend development studies. The brand makes Sara memorable; it must never make her look less experienced.

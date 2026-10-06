@@ -40,8 +40,8 @@ export const playground: PlaygroundItem[] = [
     id: '001',
     title: 'This portfolio',
     description:
-      'Built from scratch in React and TypeScript, as part of learning to code. Typed content, a small design system, everything numbered.',
-    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GSAP', 'Radix'],
+      'Designed and directed by me, coded with Claude Code. I made the calls, it wrote most of the code. Typed content, a small design system, everything numbered.',
+    stack: ['Claude Code', 'React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GSAP'],
     status: 'building',
     date: '2026-10',
     // repoUrl: 'https://github.com/saragram-ux/sara', // uncomment once the repo is public

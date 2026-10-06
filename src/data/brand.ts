@@ -10,6 +10,15 @@ export const brand = {
   country: 'Sweden',
 } as const
 
+/** The running band under the hero. How Sara works for clients, not how this site was made. */
+export const ticker = ['sara lou', 'ui / product / frontend', 'open for work', 'östersund, sweden', 'designs in figma', 'builds in webflow']
+
+/** The footer's credit line. Honest about how the site was made: Sara designed and directed it, Claude Code wrote the code. */
+export const colophon = {
+  credit: { before: 'Designed by me. Built by me, bossing around', tool: 'Claude Code', after: '.' },
+  stack: 'React, TypeScript, Vite, Tailwind and a little GSAP.',
+}
+
 /** Three-digit index: 1 → '001'. The site is numbered like an archive. */
 export const pad3 = (n: number) => String(n).padStart(3, '0')
 
