@@ -88,16 +88,16 @@ Three Pangram Pangram families, chosen 2026-10-06 (combo C). Licensed for web us
 | Label / bracket | PP Supply Mono, caps | `type-label` | 11px, tracking 0.06em |
 | Button | PP Supply Mono Medium, caps | `Button` | tracking 0.04em |
 
-**Sizes are fluid** (`clamp()` in `globals.css`): each grows with the screen between a phone minimum and a desktop maximum.
+**Sizes are fluid** (`clamp()`): each grows with the screen between a minimum and a maximum, in two ranges (phones, and 768 px up). Set in `--fs-display-*` at the top of `globals.css`.
 
-| Token | 320–375 px | 390 px | 768 px | 1024 px | 1440 px+ |
-| --- | --- | --- | --- | --- | --- |
-| `display-xl` | 44 | 45 | 80 | 104 | 136 |
-| `display-lg` | 30–31 | 32 | 50 | 63 | 83 |
-| `display-md` | 24 | 24 | 31 | 36 | 45 |
-| `display-sm` | 20 | 20 | 23 | 25 | 28 |
+| Token | 320 px | 390 px | 430 px | 768 px | 1024 px | 1440 px+ |
+| --- | --- | --- | --- | --- | --- | --- |
+| `display-xl` | 44 | 55 | 62 | 90 | 124 | 168 |
+| `display-lg` | 36 | 41 | 45 | 57 | 79 | 112 |
+| `display-md` | 24 | 24 | 25 | 31 | 36 | 45 |
+| `display-sm` | 20 | 20 | 20 | 23 | 25 | 28 |
 
-xl's phone size is capped by the hero: "i design websites" must fit on one line on a 320 px phone. Each step is about 1.3–1.6× the next, so the levels read as clearly different.
+On phones the hero's "i design websites" breaks onto two lines (from 768 px it's one); xl is sized so "and products." never breaks. Both xl and lg are meant to be big; md and sm are the working sizes.
 
 **Files used (and the only ones published):** `PPRightGrotesk-CompactBlack`, `PPMori-Regular`, `PPMori-Italic`, `PPMori-Semibold`, `PPSupplyMono-Regular`, `PPSupplyMono-Medium` (`.woff2`).
 
