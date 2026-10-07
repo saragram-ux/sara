@@ -27,7 +27,7 @@ export function SectionHero() {
 
   usePageEntrance(ref, (tl) => {
     tl.from('[data-hero="meta"] > *', { autoAlpha: 0, duration: 0.12, ease: 'none', stagger: 0.06 })
-      .from('[data-hero="line"]', { yPercent: 105, duration: 0.6, ease: 'power4.out', stagger: 0.07 }, 0.08)
+      .from('[data-hero="line"]', { yPercent: 105, duration: 0.6, ease: 'power4.out', stagger: 0.07, clearProps: 'transform' }, 0.08)
       .from('[data-hero="fade"]', { autoAlpha: 0, y: 10, duration: 0.45, ease: 'power4.out', stagger: 0.05 }, 0.3)
       .from('[data-hero="panel"]', { autoAlpha: 0, y: 12, duration: 0.5, ease: 'power4.out', stagger: 0.07 }, 0.38)
       .from('[data-hero="step"]', { autoAlpha: 0, duration: 0.12, ease: 'none', stagger: 0.06 }, 0.6)

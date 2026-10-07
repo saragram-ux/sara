@@ -88,6 +88,17 @@ Three Pangram Pangram families, chosen 2026-10-06 (combo C). Licensed for web us
 | Label / bracket | PP Supply Mono, caps | `type-label` | 11px, tracking 0.06em |
 | Button | PP Supply Mono Medium, caps | `Button` | tracking 0.04em |
 
+**Sizes are fluid** (`clamp()` in `globals.css`): each grows with the screen between a phone minimum and a desktop maximum.
+
+| Token | 320–375 px | 390 px | 768 px | 1024 px | 1440 px+ |
+| --- | --- | --- | --- | --- | --- |
+| `display-xl` | 44 | 45 | 80 | 104 | 136 |
+| `display-lg` | 30–31 | 32 | 50 | 63 | 83 |
+| `display-md` | 24 | 24 | 31 | 36 | 45 |
+| `display-sm` | 20 | 20 | 23 | 25 | 28 |
+
+xl's phone size is capped by the hero: "i design websites" must fit on one line on a 320 px phone. Each step is about 1.3–1.6× the next, so the levels read as clearly different.
+
 **Files used (and the only ones published):** `PPRightGrotesk-CompactBlack`, `PPMori-Regular`, `PPMori-Italic`, `PPMori-Semibold`, `PPSupplyMono-Regular`, `PPSupplyMono-Medium` (`.woff2`).
 
 **Where they come from:** the private repo `saragram-ux/fonts`. `scripts/fonts.sh` copies exactly those six into `public/fonts/pp/` (git-ignored). The deploy does this with the `FONTS_TOKEN` secret; locally, run `scripts/fonts.sh ../fonts` after cloning the fonts repo next to this one. Faces are declared in `src/styles/fonts.css`.

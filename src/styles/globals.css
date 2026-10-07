@@ -164,13 +164,15 @@
 
   /* Type scale → text-display-xl, text-lead, text-meta … */
   /* Display sizes are set for bold uppercase grotesk (use with .type-display) */
-  --text-display-xl: clamp(2.6rem, 0.9rem + 6.6vw, 7.25rem);
+  /* Fluid sizes: clamp(phone minimum, scales with viewport width, desktop maximum). xl is sized so the hero's
+     widest line ('i design websites') still fits a 320px phone. */
+  --text-display-xl: clamp(2.75rem, 0.6rem + 9.2vw, 8.5rem);
   --text-display-xl--line-height: 0.9;
   --text-display-xl--letter-spacing: -0.005em;
-  --text-display-lg: clamp(2.1rem, 1rem + 4.2vw, 5rem);
+  --text-display-lg: clamp(1.9rem, 0.8rem + 4.9vw, 5.75rem);
   --text-display-lg--line-height: 0.92;
   --text-display-lg--letter-spacing: 0em;
-  --text-display-md: clamp(1.6rem, 1.05rem + 2.1vw, 2.9rem);
+  --text-display-md: clamp(1.5rem, 1rem + 2vw, 2.9rem);
   --text-display-md--line-height: 0.98;
   --text-display-md--letter-spacing: 0em;
   --text-display-sm: clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
@@ -399,6 +401,7 @@
 @utility reveal-line {
   display: block;
   overflow: clip;
+  contain: paint; /* its own repaint area: Safari otherwise leaves a stale frame of the slide-up in the descender strip */
   padding-bottom: 0.22em; /* room for descenders: g, p, y */
   margin-bottom: -0.22em;
 }
