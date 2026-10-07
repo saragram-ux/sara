@@ -24,7 +24,7 @@ The device gives it calm and structure; the archive gives it numbers, order and 
 2. **Solid ink for structure, dotted ink for rows.** Module outlines and table heads are solid; rows between items are dotted.
 3. **Containers are rounded, details are square.** Modules, inner panels, pills, switches and menus are rounded. Chips, tags, keys and icon tiles stay square.
 4. **Two pastels, with a hierarchy.** Lilac is primary (main buttons, active states, live demos). Peach is secondary (the personal moment: the contact card). Always a fill with black text and a black outline; never text, never white on them, never faded text on them. Acid green is only the live LED.
-5. **Big words are lowercase.** Page titles and section words in Right Grotesk Compact Black, lowercase. Small titles switch to Mori Semibold.
+5. **Big words are lowercase.** Page titles and section words in Right Grotesk Compact Black, lowercase. Small titles switch to Mori Semibold. The one exception is the word **I** ("hi, I’m sara. I design websites"): it stays a capital. Write it as a capital in the source and render headings through `keepI()` (`components/common/keep-i.tsx`).
 6. **Small words are mono caps.** Labels, brackets, buttons and numbers in Supply Mono uppercase.
 7. **Values are readouts.** A fact worth showing gets a tiny label above a big mono value.
 8. **Everything is numbered.** `INDEX / 000`, `WORK / 001`, `[ 01 · PROJECT(S) ]`, `[ 3 / 4 ]`.

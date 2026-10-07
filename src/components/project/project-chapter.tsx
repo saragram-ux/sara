@@ -1,3 +1,4 @@
+import { keepI } from '@/components/common/keep-i'
 import type { CaseSection, Project } from '@/data/types'
 import { cn } from '@/lib/utils'
 import { ProjectPlate } from './project-plate'
@@ -29,7 +30,7 @@ export function ProjectChapter({ chapter, number, project, projectIndex, figureI
             <span aria-hidden> ]</span>
             {chapter.draft && <span className="ml-2 text-accent-ink">(draft · dev only)</span>}
           </h2>
-          {chapter.title && <p className="mt-5 type-display text-display-sm">{chapter.title}</p>}
+          {chapter.title && <p className="mt-5 type-display text-display-sm">{keepI(chapter.title)}</p>}
           <div className="type-prose mt-5">
             {chapter.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

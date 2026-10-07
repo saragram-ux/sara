@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 
+import { keepI } from '@/components/common/keep-i'
 import { StatusDot } from '@/components/common/status-dot'
 import { Module } from '@/components/instrument/module'
 import { Grid } from '@/components/layout/grid'
@@ -28,7 +29,7 @@ export function SectionAbout() {
         <Grid className="gap-y-10">
           <div className="col-span-4 md:col-span-8 lg:col-span-7">
             <p data-reveal className="type-display text-display-md">
-              I started in graphic design, moved into interfaces, and now I’m learning to code.
+              {keepI('I started in graphic design, moved into interfaces, and now I’m learning to code.')}
             </p>
             <div data-reveal className="mt-10 grid gap-5 text-body md:grid-cols-2 md:gap-gutter">
               <p>

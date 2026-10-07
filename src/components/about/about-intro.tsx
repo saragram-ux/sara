@@ -14,11 +14,7 @@ export function AboutIntro() {
           </span>
         </>
       }
-      title={
-        <>
-          I’m a designer who’s learning to code.
-        </>
-      }
+      title="I’m a designer who’s learning to code."
       lead={
         <>
           <p>

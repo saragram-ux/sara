@@ -17,11 +17,7 @@ export default function PlaygroundPage() {
             <span className="tabular-nums">001 — {visiblePlayground[0]?.id ?? '000'}</span>
           </>
         }
-        title={
-          <>
-            Things I build while learning to code.
-          </>
-        }
+        title="Things I build while learning to code."
         lead={
           <>
             <p>Small tools and experiments from my frontend studies. Some are finished, some are still just an idea.</p>

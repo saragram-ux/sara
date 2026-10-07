@@ -1,6 +1,7 @@
 import { ArrowDown } from '@phosphor-icons/react'
 import { useRef } from 'react'
 
+import { keepI } from '@/components/common/keep-i'
 import { LocalTime } from '@/components/common/local-time'
 import { StatusDot } from '@/components/common/status-dot'
 import { Module } from '@/components/instrument/module'
@@ -33,7 +34,7 @@ export function SectionHero() {
       .from('[data-hero="step"]', { autoAlpha: 0, duration: 0.12, ease: 'none', stagger: 0.06 }, 0.6)
   })
 
-  const lines = ['hi, i’m sara.', 'i design websites', 'and products.']
+  const lines = ['hi, I’m sara.', 'I design websites', 'and products.']
 
   return (
     <Section ref={ref} spacing="hero" aria-labelledby="hero-title" className="pt-6 md:pt-10">
@@ -55,7 +56,7 @@ export function SectionHero() {
           {lines.map((line) => (
             <span key={line} className="reveal-line">
               <span data-hero="line" className="block">
-                {line}
+                {keepI(line)}
               </span>
             </span>
           ))}

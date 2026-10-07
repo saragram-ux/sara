@@ -1,6 +1,7 @@
 import { ArrowDownRight } from '@phosphor-icons/react'
 import type { ReactNode } from 'react'
 
+import { keepI } from '@/components/common/keep-i'
 
 interface SectionTitleProps {
   id: string
@@ -20,7 +21,7 @@ export function SectionTitle({ id, children, descriptors, meta, metaAside, class
     <header className={className}>
       <div className="flex items-start justify-between gap-6">
         <h2 id={id} className="type-display text-display-xl">
-          {children}
+          {keepI(children)}
         </h2>
         <ArrowDownRight aria-hidden weight="light" className="mt-[0.15em] size-[clamp(2rem,1.2rem+3vw,4.5rem)] shrink-0" />
       </div>

@@ -1,5 +1,6 @@
 import { type ReactNode, useRef } from 'react'
 
+import { keepI } from '@/components/common/keep-i'
 import { Module } from '@/components/instrument/module'
 import { usePageEntrance } from '@/components/motion/use-reveal'
 import { duration, ease } from '@/lib/motion'
@@ -36,7 +37,7 @@ export function PageHeader({ eyebrow, title, lead, aside, titleSize = 'lg' }: Pa
         <h1 className={cn('mt-10 type-display md:mt-14', titleSize === 'xl' ? 'text-display-xl' : 'text-display-lg')}>
           <span className="reveal-line">
             <span data-page-header="title" className="block">
-              {title}
+              {keepI(title)}
             </span>
           </span>
         </h1>

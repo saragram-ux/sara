@@ -1,5 +1,6 @@
 import { ArrowUpRight } from '@phosphor-icons/react'
 
+import { keepI } from '@/components/common/keep-i'
 import { TransitionLink } from '@/components/navigation/transition-link'
 import type { PlaygroundItem } from '@/data/types'
 import { PlaygroundStack } from './playground-stack'
@@ -16,7 +17,7 @@ export function PlaygroundCard({ item }: { item: PlaygroundItem }) {
         <span className="tabular-nums">Playground / {item.id}</span>
         <PlaygroundStatus status={item.status} />
       </div>
-      <h3 className="mt-10 type-display text-display-sm">{item.title}</h3>
+      <h3 className="mt-10 type-display text-display-sm">{keepI(item.title)}</h3>
       <p className="mt-3 text-small text-ink-muted">{item.description}</p>
       <div className="mt-auto flex items-end justify-between gap-4 pt-8">
         <PlaygroundStack stack={item.stack} />

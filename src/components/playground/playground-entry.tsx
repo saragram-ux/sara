@@ -1,6 +1,7 @@
 import { ArrowUpRight, GithubLogo } from '@phosphor-icons/react'
 import type { ComponentType } from 'react'
 
+import { keepI } from '@/components/common/keep-i'
 import { StatusDot } from '@/components/common/status-dot'
 import { Grid } from '@/components/layout/grid'
 import type { PlaygroundItem } from '@/data/types'
@@ -44,7 +45,7 @@ export function PlaygroundEntry({ item }: { item: PlaygroundItem }) {
       <Grid data-reveal className="mt-8 gap-y-6">
         <div className="col-span-4 md:col-span-5 lg:col-span-8">
           <h2 id={`p-${item.id}-title`} className="type-display text-display-md">
-            {item.title}
+            {keepI(item.title)}
           </h2>
           <p className="mt-4 max-w-xl text-body text-ink-muted">{item.description}</p>
         </div>
