@@ -41,7 +41,7 @@ Everything you'd want to update lives in `src/data/`:
 | `playground.ts` | Lab-notebook entries. `embed` renders a live demo; `draft: true` hides an entry in production |
 | `experience.ts` | Roles and education. `group: 'earlier'` folds the early roles into one line on the home page |
 | `skills.ts` | The honest stack: `fluent` → `building` → `exploring` |
-| `about.ts` | The About page's design + behaviour + code trio |
+| `about.ts` | The About page's behaviour + design + code trio |
 | `navigation.ts` | Main nav |
 
 **Adding images to a case study:** drop files in `public/work/<slug>/` and give a figure a `src`:

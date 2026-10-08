@@ -7,14 +7,14 @@ import { useScrollReveal } from '@/components/motion/use-reveal'
 import { disciplines } from '@/data/about'
 import { cn } from '@/lib/utils'
 
-/** About: graphic design + behavioural science + frontend. What I studied, and what it gave me. */
+/** About: behavioural science + graphic design + frontend, in date order. What I studied, and what it gave me. */
 export function SectionDisciplines() {
   const ref = useRef<HTMLElement>(null)
   useScrollReveal(ref)
   return (
     <Section ref={ref} aria-labelledby="mix-title">
       <SectionLabel index="01" id="mix-title">
-        Design + behaviour + code
+        Behaviour + design + code
       </SectionLabel>
       <ol className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
         {disciplines.map((d) => {
