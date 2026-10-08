@@ -31,7 +31,7 @@ export const projects: Project[] = [
         label: 'Overview',
         title: 'Part shop, part learning space, part community.',
         body: [
-          'Make Your Own is a shop, a place to learn and a community, all in one. I worked with them from 2021 to 2024 through Hellofolk, on the UI, the brand and the Webflow build.',
+          'Make Your Own (MYO) is a shop, a place to learn and a community, all in one. I worked with them from 2021 to 2024 through Hellofolk, on the UI, the brand and the Webflow build.',
         ],
         notes: { label: 'Scope', items: ['Visual identity refresh', 'Store experience', 'Community platform', 'Design system'] },
         figure: { alt: 'MYO overview', caption: 'MYO across store, community and social' },
