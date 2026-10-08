@@ -7,15 +7,15 @@ export const disciplines = [
     discipline: 'Graphic design',
     where: 'Malmö University · BA',
     years: '2015—2018',
-    gives: 'Finished',
+    gives: 'Degree',
     text: 'Typography, layout, identity. Three years of it, and it never really left.',
   },
   {
     discipline: 'Behavioural science',
     where: 'Mälardalen University',
     years: '2012—2013',
-    gives: 'Not finished',
-    text: 'How people think, decide and behave. Studied it, didn’t finish it, still use it.',
+    gives: 'Studied',
+    text: 'How people think, decide and behave. I still lean on it every time I design something.',
   },
   {
     discipline: 'Frontend development',
