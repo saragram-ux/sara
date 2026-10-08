@@ -22,7 +22,7 @@ export const projects: Project[] = [
     summary: 'A craft brand in Åre. Identity, online store and a community platform, built in Webflow.',
     description:
       'Through Hellofolk, I did the UI, the brand work and the Webflow build for MYO. One identity that works on Shopify, Webflow and social, a new store and a community platform. It started with research and workshops, and a design system holds it all together.',
-    tools: ['Figma', 'Webflow', 'Shopify'],
+    tools: ['Figma', 'Webflow'],
     plate: { mark: 'MYO', icon: Needle, tone: 'sand' },
     status: 'shipped',
     sections: [
@@ -68,8 +68,9 @@ export const projects: Project[] = [
         title: 'Built in Webflow.',
         body: [
           'I also built it in Webflow, so the design and the build stayed close together.',
+          'The store runs on Shopify. I designed it and worked with a development team who built it.',
         ],
-        notes: { label: 'Built with', items: ['Webflow', 'Shopify', 'Figma'] },
+        notes: { label: 'Built with', items: ['Webflow', 'Figma'] },
         figure: { alt: 'MYO design system components', caption: 'Design system, in use' },
       },
       {
