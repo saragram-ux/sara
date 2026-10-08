@@ -52,7 +52,6 @@ export const skills: SkillGroup[] = [
       { name: 'Git', level: 'building' },
       { name: 'GitHub', level: 'building' },
       { name: 'VS Code', level: 'building' },
-      { name: 'Shopify', level: 'fluent' },
     ],
   },
 ]
