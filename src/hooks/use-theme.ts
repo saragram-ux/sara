@@ -1,37 +1,21 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 
 export type Theme = 'light' | 'dark'
 
 const KEY = 'sg:theme'
-const read = (): Theme => (document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light')
+const BAR: Record<Theme, string> = { light: '#e8ebe4', dark: '#141414' }
+const read = (): Theme => (document.documentElement.dataset.theme === 'light' ? 'light' : 'dark')
 
 /**
- * Light / dark. The pre-paint script in index.html sets <html data-theme> before first paint
- * (saved choice, else the system setting); this keeps React in sync and saves a choice.
+ * Light / dark. Dark is the default: the pre-paint script in index.html sets <html data-theme>
+ * before first paint (saved choice, else dark); this keeps React in sync and saves a choice.
  */
 export function useTheme() {
   const [theme, setThemeState] = useState<Theme>(read)
 
-  // Follow the system setting until someone picks one.
-  useEffect(() => {
-    const mq = matchMedia('(prefers-color-scheme: dark)')
-    const onChange = () => {
-      let saved: string | null = null
-      try {
-        saved = localStorage.getItem(KEY)
-      } catch {
-        /* storage blocked: just follow the system */
-      }
-      if (saved) return
-      document.documentElement.dataset.theme = mq.matches ? 'dark' : 'light'
-      setThemeState(read())
-    }
-    mq.addEventListener('change', onChange)
-    return () => mq.removeEventListener('change', onChange)
-  }, [])
-
   const setTheme = useCallback((next: Theme) => {
     document.documentElement.dataset.theme = next
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', BAR[next])
     try {
       localStorage.setItem(KEY, next)
     } catch {

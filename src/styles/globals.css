@@ -93,7 +93,7 @@
 }
 
 /* Dark mode: the paper and the lines flip; the pastels and the acid LED stay exactly the same.
-   Set by the pre-paint script in index.html (saved choice, else the system setting). */
+   Dark is the default: the pre-paint script in index.html sets it unless you've picked light. */
 :root[data-theme='dark'] {
   color-scheme: dark;
   --paper: #141414;

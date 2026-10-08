@@ -64,7 +64,7 @@ Use `pastelFill` from `src/lib/pastel.ts` (and `Button`: default lilac, `peach` 
 
 ### Light / dark mode
 
-- `<html data-theme="light|dark">` is set before first paint by a script in `index.html`: a saved choice (`localStorage` `sg:theme`) wins, else the system setting.
+- `<html data-theme="light|dark">` is set before first paint by a script in `index.html`: a saved choice (`localStorage` `sg:theme`) wins, else **dark** (the default since 2026-10-08, whatever the system setting). The script also sets the browser-bar `theme-color`.
 - `useTheme` (`src/hooks/use-theme.ts`) keeps React in sync; `ThemeToggle` in the header and a ⌘K action switch it.
 - Never hard-code ink or paper hex in components. Use tokens, or `on-pastel` for text on a fixed colour.
 
