@@ -34,14 +34,17 @@ jobs:
           if [ -z "$FONTS_TOKEN" ]; then echo "No FONTS_TOKEN: building with the fallback fonts"; exit 0; fi
           git clone --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/saragram-ux/fonts.git" "$RUNNER_TEMP/fonts"
           scripts/fonts.sh "$RUNNER_TEMP/fonts"
+      # Ask Pages where the site lives: "/sara" on saragram-ux.github.io, "" on a custom domain (saralou.co).
+      - id: pages
+        uses: actions/configure-pages@v5
       - name: Build
         run: npm run build
         env:
-          # A repo named <user>.github.io is served from the root; any other repo from /<repo>/
-          BASE_PATH: ${{ endsWith(github.event.repository.name, '.github.io') && '/' || format('/{0}/', github.event.repository.name) }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+          # Full address for link previews (og:image needs an absolute URL)
+          VITE_SITE_URL: ${{ steps.pages.outputs.base_url }}/
       # GitHub Pages has no SPA rewrites: serve the app for unknown paths so deep links work
       - run: cp dist/index.html dist/404.html
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

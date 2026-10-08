@@ -13,7 +13,7 @@ npm run lint      # oxlint
 
 ### Deploying
 
-- **GitHub Pages** (current): every push to `master` runs `.github/workflows/deploy.yml`, which builds with `BASE_PATH=/sara/` (the repo name) and publishes `dist/`. A copy of `index.html` is saved as `404.html` so deep links like `/sara/about` work. In the repo settings, **Pages → Source** must be **GitHub Actions**.
+- **GitHub Pages** (current): every push to `master` runs `.github/workflows/deploy.yml`. It asks Pages where the site lives (`actions/configure-pages`): `/sara/` on saragram-ux.github.io, `/` once the custom domain **saralou.co** is set, and builds with that `BASE_PATH` and the full `VITE_SITE_URL` for link previews. Switching domains needs no code change, just a redeploy.
 - **Vercel / Netlify / a custom domain**: build without `BASE_PATH` (the site lives at `/`). `vercel.json` already rewrites routes to `index.html`.
 
 Internal links go through `withBase()` (`src/lib/base.ts`) and wouter's `<Router base>`, so the same code works at `/` and at `/sara/`.
