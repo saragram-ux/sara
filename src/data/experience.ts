@@ -22,7 +22,7 @@ export const experience: ExperienceEntry[] = [
       'Five years designing and building for clients across Europe. UI design and Webflow development, usually both at once. Startups and established brands, always hands-on.',
   },
   {
-    company: 'MYO — Make Your Own',
+    company: 'Make Your Own',
     role: 'Product Designer, via Hellofolk',
     start: '2021',
     end: '2024',
