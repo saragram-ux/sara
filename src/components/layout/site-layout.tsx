@@ -58,7 +58,7 @@ export function SiteLayout() {
             </Suspense>
           </main>
           <SiteFooter />
-          {grid && <GridOverlay />}
+          {grid && <GridOverlay onHide={toggleGrid} />}
           {commandLoaded && (
             <Suspense fallback={null}>
               <CommandMenu open={commandOpen} onOpenChange={setCommandOpen} />

@@ -1,11 +1,11 @@
 import { Container } from './container'
 import { Grid } from './grid'
 
-/** The layout grid, made visible. Toggle with G. */
-export function GridOverlay() {
+/** The layout grid, made visible. Toggle with G, or tap the label to hide it (phones and tablets have no G). */
+export function GridOverlay({ onHide }: { onHide: () => void }) {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-[80]">
-      <Container className="h-full">
+    <div className="pointer-events-none fixed inset-0 z-[80]">
+      <Container aria-hidden className="h-full">
         <Grid className="h-full">
         {Array.from({ length: 12 }, (_, i) => (
           <div
@@ -19,12 +19,18 @@ export function GridOverlay() {
         ))}
         </Grid>
       </Container>
-      <Container className="absolute inset-x-0 bottom-4">
-        <span className="inline-block bg-accent px-2 py-1 type-label text-on-pastel">
+      <Container className="absolute inset-x-0 bottom-[max(1rem,env(safe-area-inset-bottom))]">
+        <button
+          type="button"
+          onClick={onHide}
+          className="pointer-events-auto inline-flex min-h-8 cursor-pointer items-center bg-accent px-2 type-label text-on-pastel"
+        >
           <span className="md:hidden">4</span>
           <span className="hidden md:inline lg:hidden">8</span>
-          <span className="hidden lg:inline">12</span> col · press G to hide
-        </span>
+          <span className="hidden lg:inline">12</span>&nbsp;col ·&nbsp;
+          <span className="pointer-coarse:hidden">press G to hide</span>
+          <span className="hidden pointer-coarse:inline">tap to hide</span>
+        </button>
       </Container>
     </div>
   )
