@@ -12,7 +12,7 @@ import type { Project } from './types'
 export const projects: Project[] = [
   {
     slug: 'myo',
-    title: 'MYO',
+    title: 'Make Your Own',
     client: 'Make Your Own',
     via: 'Hellofolk',
     year: '2021—2024',
