@@ -21,7 +21,7 @@ export const projects: Project[] = [
     disciplines: ['UI design', 'Brand', 'Webflow', 'Design system'],
     summary: 'A craft brand in Åre. Identity, online store and a community platform, built in Webflow.',
     description:
-      'Through Hellofolk, I did the UI, the brand work and the Webflow build for MYO. One identity that works on Shopify, Webflow and social, a new store and a community platform. It started with research and workshops, and a design system holds it all together.',
+      'Through Hellofolk, I did the UI, the brand work and the Webflow build for Make Your Own (MYO). One identity that works on Shopify, Webflow and social, a new store and a community platform. It started with research and workshops, and a design system holds it all together.',
     tools: ['Figma', 'Webflow'],
     plate: { mark: 'MYO', icon: Needle, tone: 'sand' },
     status: 'shipped',
