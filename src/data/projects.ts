@@ -68,7 +68,7 @@ export const projects: Project[] = [
         title: 'Built in Webflow.',
         body: [
           'I also built it in Webflow, so the design and the build stayed close together.',
-          'The store runs on Shopify. I designed it and worked with a development team who built it.',
+          'The store runs on Shopify. I designed it and worked with Inly, the development team who built it.',
         ],
         notes: { label: 'Built with', items: ['Webflow', 'Figma'] },
         figure: { alt: 'MYO design system components', caption: 'Design system, in use' },
