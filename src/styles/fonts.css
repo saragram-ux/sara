@@ -8,6 +8,10 @@
  *   title    PP Mori Semibold                 small titles (display-sm)
  *   text     PP Mori Regular / Italic         reading
  *   mono     PP Supply Mono Regular / Medium  labels, brackets, readouts, buttons
+ *
+ * Supply Mono's capitals sit 0.1em above the middle of its line box (ascent 71%, descent 21%,
+ * caps 70%), so uppercase labels looked high in pills and buttons. The overrides below move
+ * the box so the caps are centred (ascent − descent = cap height); line heights don't change.
  */
 
 @font-face {
@@ -38,12 +42,18 @@
 @font-face {
   font-family: 'PP Supply Mono';
   src: url('/fonts/pp/PPSupplyMono-Regular.woff2') format('woff2');
+  ascent-override: 80%;
+  descent-override: 10%;
+  line-gap-override: 0%;
   font-weight: 300 450;
   font-display: swap;
 }
 @font-face {
   font-family: 'PP Supply Mono';
   src: url('/fonts/pp/PPSupplyMono-Medium.woff2') format('woff2');
+  ascent-override: 80%;
+  descent-override: 10%;
+  line-gap-override: 0%;
   font-weight: 451 800;
   font-display: swap;
 }
