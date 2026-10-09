@@ -8,7 +8,7 @@ export const profile = {
   disciplines: ['UI', 'Product', 'Frontend'],
   location: 'Östersund, Sweden',
   timeZone: 'Europe/Stockholm',
-  email: 'sara.gramstad@gmail.com',
+  email: 'hi@saralou.co',
   linkedin: 'https://www.linkedin.com/in/sara-gramstad',
   studio: { name: 'Handsdown Studio', role: 'Co-founder' },
   availability: {

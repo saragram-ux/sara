@@ -38,7 +38,7 @@ Sara Gramstad is always present as plain metadata: the index strip, About, the f
 
 ## Domain
 
-**saralou.co** for the site and email (the site is live there since 2026-10, DNS at GoDaddy). **saragramstad.com** can be registered later and redirect to it. The domain isn't the brand; the site is.
+**saralou.co** for the site and email: the site is live there since 2026-10 (DNS at GoDaddy), and the address is **hi@saralou.co**. **saragramstad.com** can be registered later and redirect to it. The domain isn't the brand; the site is.
 
 ## The idea
 
