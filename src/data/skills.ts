@@ -33,6 +33,8 @@ export const skills: SkillGroup[] = [
       { name: 'JavaScript', level: 'building' },
       { name: 'TypeScript', level: 'building' },
       { name: 'React', level: 'building' },
+      { name: 'Node.js', level: 'building' },
+      { name: 'Express', level: 'building' },
       { name: 'Vite', level: 'building' },
       { name: 'Tailwind CSS', level: 'building' },
     ],
@@ -40,7 +42,6 @@ export const skills: SkillGroup[] = [
   {
     label: 'Backend & data',
     items: [
-      { name: 'Express', level: 'exploring' },
       { name: 'SQLite', level: 'exploring' },
       { name: 'PostgreSQL', level: 'exploring' },
       { name: 'Supabase', level: 'exploring' },
