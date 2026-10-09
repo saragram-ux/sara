@@ -42,7 +42,7 @@ export const skills: SkillGroup[] = [
   {
     label: 'Backend & data',
     items: [
-      { name: 'SQLite', level: 'exploring' },
+      { name: 'SQLite', level: 'building' },
       { name: 'PostgreSQL', level: 'exploring' },
       { name: 'Supabase', level: 'exploring' },
     ],
